@@ -6,7 +6,7 @@ from nicegui import ui
 class Header(ui.header):
     """Define the header component."""
 
-    def __init__(self, title: str) -> None:
+    def __init__(self, *, title: str) -> None:
         # Set up the header the way we like it.
         super().__init__(
             value=True,
@@ -19,4 +19,4 @@ class Header(ui.header):
         # Add the contents of the header.
         with self:
             # Add the title.
-            ui.markdown(f"### {title}")
+            ui.markdown(f"#### {title}")

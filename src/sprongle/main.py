@@ -2,13 +2,19 @@
 
 from nicegui import ui
 
-from .components import Page
+from .components import Header, HeaderButton
+
+
+def page_template() -> None:
+    """Build the page template."""
+    Header(title="Sprongle")
 
 
 @ui.page("/")
 def home() -> None:
     """Build the home page."""
-    Page(ui.markdown("Welcome to sprongle!"))
+    page_template()
+    ui.markdown("Welcome to sprongle!")
 
 
 def main() -> None:
@@ -16,5 +22,4 @@ def main() -> None:
     ui.run()
 
 
-if __name__ == "__main__":
-    main()
+main()
