@@ -2,12 +2,18 @@
 
 from nicegui import ui
 
-from .components import Header, HeaderButton
+from . import components as c
 
 
 def page_template() -> None:
     """Build the page template."""
-    Header(title="Sprongle")
+    ui.add_head_html(
+        '<link href="https://unpkg.com/eva-icons@1.1.3/style/eva-icons.css" rel="stylesheet" />'  # noqa: E501
+    )
+
+    c.Header(title="Sprongle")
+    c.LeftDrawer()
+    c.RightDrawer()
 
 
 @ui.page("/")
