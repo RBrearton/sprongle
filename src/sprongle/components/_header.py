@@ -2,6 +2,8 @@
 
 from nicegui import ui
 
+from ._header_button import HeaderButton
+
 
 class Header(ui.header):
     """Define the header component."""
@@ -18,5 +20,28 @@ class Header(ui.header):
 
         # Add the contents of the header.
         with self:
-            # Add the title.
-            ui.markdown(f"#### {title}")
+            # Make three equally spaced sections.
+            with ui.row().classes("flex justify-between items-center w-full"):
+                # Add the title.
+                ui.markdown(f"#### {title}")
+
+                # Add the central buttons.
+                with ui.row():
+                    HeaderButton("Home", "/")
+                    HeaderButton("Physics", "/physics")
+
+                # Add the right section.
+                with ui.row():
+                    # The github link, including a tooltip.
+                    with (
+                        ui.icon("eva-github")
+                        .classes("text-4xl hover:text-orange-200")
+                        .on(
+                            "click",
+                            lambda: ui.navigate.to(
+                                "https://github.com/RBrearton/sprongle",
+                                new_tab=True,
+                            ),
+                        )
+                    ):
+                        ui.tooltip("This site's source code").props("rounded")
