@@ -3,12 +3,20 @@ name = "sprongle"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-authors = [
-    { name = "Richard Brearton", email = "richardbrearton@gmail.com" }
-]
+authors = [{ name = "Richard Brearton", email = "richardbrearton@gmail.com" }]
 requires-python = ">=3.13"
 dependencies = []
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+ignore = ["PLR0913", "SIM117", "COM812", "T201", "D413", "PD901"]
+select = ["ALL"]
+unfixable = [
+    "F401", # Ignore unused imports.
+]
