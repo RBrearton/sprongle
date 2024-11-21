@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 authors = [{ name = "Richard Brearton", email = "richardbrearton@gmail.com" }]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = ["nicegui>=2.5.0"]
 
 [build-system]
 requires = ["hatchling"]
@@ -20,3 +20,6 @@ select = ["ALL"]
 unfixable = [
     "F401", # Ignore unused imports.
 ]
+
+[project.scripts]
+sprongle = "sprongle.main:main"
