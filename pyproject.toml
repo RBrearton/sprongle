@@ -12,7 +12,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.ruff]
-line-length = 88
+line-length = 80
 
 [tool.ruff.lint]
 ignore = ["PLR0913", "SIM117", "COM812", "T201", "D413", "PD901"]
