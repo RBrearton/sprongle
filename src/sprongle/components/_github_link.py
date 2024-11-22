@@ -17,7 +17,10 @@ class GithubLink(ui.button):
 
         # Make the icon button round, and without a background.
         self.props("round flat")
-        self.classes("text-white")
+        self.classes("text-white text-xl")
+
+        self.on("mouseover", lambda: self.props('color="amber"'))
+        self.on("mouseout", lambda: self.props('color="white"'))
 
         with self:
             ui.tooltip("Source code here :)")
