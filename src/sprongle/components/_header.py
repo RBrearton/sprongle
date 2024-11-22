@@ -2,6 +2,7 @@
 
 from nicegui import ui
 
+from ._github_link import GithubLink
 from ._header_button import HeaderButton
 
 
@@ -32,16 +33,4 @@ class Header(ui.header):
 
                 # Add the right section.
                 with ui.row():
-                    # The github link, including a tooltip.
-                    with (
-                        ui.icon("eva-github")
-                        .classes("text-4xl hover:text-orange-200")
-                        .on(
-                            "click",
-                            lambda: ui.navigate.to(
-                                "https://github.com/RBrearton/sprongle",
-                                new_tab=True,
-                            ),
-                        )
-                    ):
-                        ui.tooltip("This site's source code").props("rounded")
+                    GithubLink()
