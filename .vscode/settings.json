@@ -1,11 +1,19 @@
 {
   "cSpell.words": [
+    "anharmonic",
     "Brearton",
+    "coul",
+    "Debye's",
+    "Dulong",
+    "eigenstates",
+    "exponentials",
     "extremal",
     "infty",
+    "Lennard",
     "mathbb",
     "mathrm",
     "nicegui",
+    "plotly",
     "pmatrix",
     "setuptools",
     "spacelike",
@@ -13,6 +21,8 @@
     "timelike",
     "Unitarity",
     "venv",
+    "Waals",
+    "wavevector",
     "worldline"
   ]
 }
