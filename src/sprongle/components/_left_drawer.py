@@ -2,6 +2,8 @@
 
 from nicegui import ui
 
+from ._menu import Menu
+
 
 class LeftDrawer(ui.left_drawer):
     """The sprongle app's left drawer component."""
@@ -17,4 +19,4 @@ class LeftDrawer(ui.left_drawer):
         )
 
         with self:
-            ui.markdown("Placeholder left menu.")
+            Menu()
