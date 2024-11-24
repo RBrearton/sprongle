@@ -4,6 +4,7 @@ from nicegui import app, ui
 
 from . import components as c
 from .config import parsed_config as config
+from .scss_utils import compile_scss
 
 
 def page_template() -> None:
@@ -45,4 +46,6 @@ def main() -> None:
     ui.run()
 
 
+# Every time we reload the page, make sure that we recompile the scss.
+compile_scss()
 main()
