@@ -9,8 +9,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Config(BaseSettings):
     """The app's configuration is defined by this class."""
 
-    static_dir: DirectoryPath = Path(__file__).parent.parent / "static"
-    assets_dir: DirectoryPath = Path(__file__).parent.parent / "assets"
+    static_dir: DirectoryPath = Path(__file__).parent.parent.parent / "static"
+    assets_dir: DirectoryPath = Path(__file__).parent.parent.parent / "assets"
     scss_file: FilePath = assets_dir / "styles.scss"
 
     model_config = SettingsConfigDict(env_prefix="sprongle_")
