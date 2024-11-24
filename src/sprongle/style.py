@@ -4,7 +4,8 @@ from .color import light
 
 # Tailwind classes.
 _tw_menu_active = (
-    f"active:bg-{light.neutral} active:text-{light.neutral_content}"
+    f"active:bg-{light.neutral} active:text-{light.neutral_content} "
+    f"hover:bg-{light.base_300}"
 )
 _tw_menu_rounded = "rounded-3xl"
 _tw_header_hover = f"hover:bg-{light.secondary}"
