@@ -13,8 +13,9 @@ _tw_menu_rounded = "rounded-3xl"
 # Header items.
 _tw_header_hover = (
     f"text-{light.primary_content} "
-    f"hover:bg-{light.secondary} hover:opacity-30"
+    f"hover:bg-{light.base_200} hover:bg-opacity-30"
 )
+_tw_header_active = f"active:bg-{light.base_100} active:bg-opacity-40"
 
 # Menu items always occupy the full width. It makes hovering etc. way nicer.
 # We never want to be able to select the text in a menu item.
@@ -24,4 +25,4 @@ _tw_header_hover = (
 # a menu item.
 menu_item = f"w-full select-none {_tw_menu_rounded} {_tw_menu_active}"
 
-header_clickable = f"{_tw_header_hover}"
+header_clickable = f"{_tw_header_hover} {_tw_header_active}"

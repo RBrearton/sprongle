@@ -2,25 +2,29 @@
 
 from nicegui import ui
 
+from sprongle import style
 
-class GithubLink(ui.button):
+
+class GithubLink(ui.element):
     """The sprongle app's GitHub link component."""
 
     def __init__(self) -> None:
-        super().__init__(
-            icon="eva-github",
-            on_click=lambda: ui.navigate.to(
-                "https://github.com/RBrearton/sprongle",
-                new_tab=True,
+        super().__init__(tag="q-btn")
+
+        self.on(
+            "click",
+            lambda: ui.navigate.to(
+                "https://github.com/RBrearton/sprongle", new_tab=True
             ),
         )
 
-        # Make the icon button round, and without a background.
+        # Make the github icon button round and flat.
+        self.props('icon="eva-github"')
         self.props("round flat")
-        self.classes("text-white text-xl")
 
-        self.on("mouseover", lambda: self.props('color="amber"'))
-        self.on("mouseout", lambda: self.props('color="white"'))
+        # Set the size and style.
+        self.classes("text-xl")
+        self.classes(style.header_clickable)
 
         with self:
             ui.tooltip("Source code here :)")
