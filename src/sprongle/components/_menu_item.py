@@ -2,6 +2,8 @@
 
 from nicegui import ui
 
+from sprongle import style
+
 
 class MenuItem(ui.item):
     """A menu item that links to a page."""
@@ -10,4 +12,4 @@ class MenuItem(ui.item):
         super().__init__(text=text, on_click=lambda: ui.navigate.to(link))
 
         self.props("flat")
-        self.classes("w-full")
+        self.classes(style.menu_item)
