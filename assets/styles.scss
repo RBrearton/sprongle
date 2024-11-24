@@ -19,22 +19,22 @@ body.desktop .q-focus-helper:before {
 body.desktop .q-focusable:focus > .q-focus-helper,
 body.desktop .q-hoverable:hover > .q-focus-helper,
 body.desktop .q-manual-focusable--focused > .q-focus-helper {
-    opacity: 0.25;
+    opacity: 0; //.25;
 }
 
 body.desktop .q-focusable:focus > .q-focus-helper::before,
 body.desktop .q-hoverable:hover > .q-focus-helper::before,
 body.desktop .q-manual-focusable--focused > .q-focus-helper::before {
-    opacity: 0.2;
+    opacity: 0; //.2;
 }
 
 body.desktop .q-focusable:focus > .q-focus-helper::after,
 body.desktop .q-hoverable:hover > .q-focus-helper::after,
 body.desktop .q-manual-focusable--focused > .q-focus-helper::after {
-    opacity: 0.5;
+    opacity: 0; //.5;
 }
 
 body.desktop .q-focusable:focus > .q-focus-helper,
 body.desktop .q-manual-focusable--focused > .q-focus-helper {
-    opacity: 0.32;
+    opacity: 0; //.32;
 }
