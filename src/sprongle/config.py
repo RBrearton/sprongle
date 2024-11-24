@@ -9,11 +9,20 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Config(BaseSettings):
     """The app's configuration is defined by this class."""
 
-    static_dir: DirectoryPath = Path(__file__).parent.parent.parent / "static"
-    assets_dir: DirectoryPath = Path(__file__).parent.parent.parent / "assets"
-    scss_file: FilePath = assets_dir / "styles.scss"
-    static_css_file: FilePath = static_dir / "styles.css"
+    # Define some file and directory names.
+    static_dir_name: str = "static"
+    assets_dir_name: str = "assets"
+    styles_css_name: str = "styles.css"
+    styles_scss_name: str = "styles.scss"
 
+    # Define some paths to important files and directories.
+    project_dir: DirectoryPath = Path(__file__).parent.parent.parent
+    static_dir_path: DirectoryPath = project_dir / static_dir_name
+    assets_dir: DirectoryPath = project_dir / assets_dir_name
+    scss_file: FilePath = assets_dir / styles_scss_name
+    static_css_file: FilePath = static_dir_path / styles_css_name
+
+    # The settings config.
     model_config = SettingsConfigDict(env_prefix="sprongle_")
 
 
