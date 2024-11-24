@@ -13,7 +13,6 @@ class Menu(ui.list):
         super().__init__()
 
         self.classes("w-full rounded-borders")
-        self.props("bordered clickable v-ripple")
 
         with self:
             MenuHeader("Physics")
