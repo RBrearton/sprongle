@@ -12,6 +12,7 @@ class Config(BaseSettings):
     static_dir: DirectoryPath = Path(__file__).parent.parent.parent / "static"
     assets_dir: DirectoryPath = Path(__file__).parent.parent.parent / "assets"
     scss_file: FilePath = assets_dir / "styles.scss"
+    static_css_file: FilePath = static_dir / "styles.css"
 
     model_config = SettingsConfigDict(env_prefix="sprongle_")
 
