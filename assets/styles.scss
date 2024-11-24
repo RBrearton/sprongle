@@ -2,13 +2,45 @@
 $primary: #75f0cd;
 $secondary: #ffca28;
 
-// give me back the entire viewport
-.nicegui-content {
-    padding: 0;
-    margin: 0 auto;
-}
-
 // example quasar override
 .q-btn {
-    text-transform: lowercase;
+    text-transform: uppercase;
+}
+
+// This simply speeds up transitions compared to the quasar defaults.
+body.desktop .q-focus-helper {
+    transition:
+        background-color 0.1s ease-in,
+        opacity 0.1s ease-in;
+}
+body.desktop .q-focus-helper:after,
+body.desktop .q-focus-helper:before {
+    transition:
+        background-color 0.1s ease-in,
+        opacity 0.1s ease-in;
+}
+
+// Make all the focus helpers slightly more intense.
+body.desktop .q-focusable:focus > .q-focus-helper,
+body.desktop .q-hoverable:hover > .q-focus-helper,
+body.desktop .q-manual-focusable--focused > .q-focus-helper {
+    background: currentcolor;
+    opacity: 0.25;
+}
+
+body.desktop .q-focusable:focus > .q-focus-helper::before,
+body.desktop .q-hoverable:hover > .q-focus-helper::before,
+body.desktop .q-manual-focusable--focused > .q-focus-helper::before {
+    opacity: 0.2;
+}
+
+body.desktop .q-focusable:focus > .q-focus-helper::after,
+body.desktop .q-hoverable:hover > .q-focus-helper::after,
+body.desktop .q-manual-focusable--focused > .q-focus-helper::after {
+    opacity: 0.5;
+}
+
+body.desktop .q-focusable:focus > .q-focus-helper,
+body.desktop .q-manual-focusable--focused > .q-focus-helper {
+    opacity: 0.32;
 }
