@@ -1,17 +1,13 @@
-.q-btn {
-  text-transform: uppercase; }
-
 body.desktop .q-focus-helper {
-  transition: background-color 0.1s ease-in, opacity 0.1s ease-in; }
+  transition: background-color 0.05s ease-in, opacity 0.05s ease-in; }
 
 body.desktop .q-focus-helper:after,
 body.desktop .q-focus-helper:before {
-  transition: background-color 0.1s ease-in, opacity 0.1s ease-in; }
+  transition: background-color 0.05s ease-in, opacity 0.05s ease-in; }
 
 body.desktop .q-focusable:focus > .q-focus-helper,
 body.desktop .q-hoverable:hover > .q-focus-helper,
 body.desktop .q-manual-focusable--focused > .q-focus-helper {
-  background: currentcolor;
   opacity: 0.25; }
 
 body.desktop .q-focusable:focus > .q-focus-helper::before,

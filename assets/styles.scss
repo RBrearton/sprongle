@@ -2,11 +2,6 @@
 $primary: #75f0cd;
 $secondary: #ffca28;
 
-// example quasar override
-.q-btn {
-    text-transform: uppercase;
-}
-
 // This simply speeds up transitions compared to the quasar defaults.
 body.desktop .q-focus-helper {
     transition:
