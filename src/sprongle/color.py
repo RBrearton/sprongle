@@ -48,7 +48,7 @@ class ColorSchemeModel(BaseModel):
 
 light = ColorSchemeModel(
     primary="emerald-400",
-    primary_content="gray-950",
+    primary_content="gray-50",
     secondary="amber-400",
     secondary_content="gray-950",
     accent="violet-400",
