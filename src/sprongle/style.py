@@ -3,12 +3,18 @@
 from .color import light
 
 # Tailwind classes.
+# Menu items.
 _tw_menu_active = (
     f"active:bg-{light.neutral} active:text-{light.neutral_content} "
     f"hover:bg-{light.base_300}"
 )
 _tw_menu_rounded = "rounded-3xl"
-_tw_header_hover = f"hover:bg-{light.secondary}"
+
+# Header items.
+_tw_header_hover = (
+    f"text-{light.primary_content} "
+    f"hover:bg-{light.secondary} hover:opacity-30"
+)
 
 # Menu items always occupy the full width. It makes hovering etc. way nicer.
 # We never want to be able to select the text in a menu item.
