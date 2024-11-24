@@ -43,7 +43,7 @@ def main() -> None:
     )
 
     # Run the website.
-    ui.run()
+    ui.run(fastapi_docs=True, show=False)
 
 
 # Every time we reload the page, make sure that we recompile the scss.
