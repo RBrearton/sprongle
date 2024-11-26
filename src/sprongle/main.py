@@ -7,11 +7,12 @@ from .config import parsed_config as config
 from .scss_utils import compile_scss
 
 
-def page_template() -> None:
+def page_template(subdomain: str) -> None:
     """Build the page template."""
     # This is needed for the github logo.
     eva_icons = "https://unpkg.com/eva-icons@1.1.3/style/eva-icons.css"
     ui.add_head_html(f'<link href={eva_icons} rel="stylesheet" />')
+    ui.page_title("Sprongle")
 
     # Add our static styles.css file. This is built automatically from our
     # assets/styles.scss file.
@@ -21,17 +22,16 @@ def page_template() -> None:
 
     # Now build the core page components.
     c.Header(title="Sprongle")
-    c.LeftDrawer()
+    with c.LeftDrawer():
+        c.Menu.from_subdomain(subdomain)
     c.RightDrawer()
-    ui.query("q-focus-helper").classes("active:bg-amber-400")
 
 
 @ui.page("/")
 def home() -> None:
     """Build the home page."""
-    page_template()
+    page_template("/physics")
     ui.markdown("Welcome to sprongle!")
-    ui.button("defaults")
 
 
 def main() -> None:
