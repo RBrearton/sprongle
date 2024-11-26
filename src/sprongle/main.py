@@ -26,6 +26,7 @@ def page_template(subdomain: str) -> ui.element:
     with c.LeftDrawer():
         c.Menu.from_subdomain(subdomain)
     c.RightDrawer()
+    c.Footer()
 
     page = ui.element().classes(f"w-full h-full {bg_100}")
     return page.classes("min-h-screen")
