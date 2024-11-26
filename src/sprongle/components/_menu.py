@@ -1,6 +1,5 @@
 """Define the menu component."""
 
-from functools import lru_cache
 from typing import Self
 
 from nicegui import ui
@@ -25,7 +24,6 @@ class Menu(ui.list):
             MenuHeader(header)
 
     @classmethod
-    @lru_cache
     def from_subdomain(cls, subdomain: str) -> Self:
         """Create a menu from the subdomain passed as an argument.
 
