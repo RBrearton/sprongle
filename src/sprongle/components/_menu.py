@@ -5,6 +5,7 @@ from typing import Self
 
 from nicegui import ui
 
+from sprongle import utils
 from sprongle.config import parsed_config as config
 
 from ._menu_expansion_item import MenuExpansionItem
@@ -37,7 +38,10 @@ class Menu(ui.list):
 
         # Get all the files and directories in the subdomain other than the
         # home.md file.
-        subdomain_dir = config.project_dir / subdomain
+        subdomain_dir = config.pages_dir / subdomain
+        subdomain_dir = utils.get_case_sensitive_path(subdomain_dir)
+        print(f"Found {subdomain_dir}")
+
         subdomain_contents = [
             item for item in subdomain_dir.iterdir() if item.name != "home.md"
         ]
