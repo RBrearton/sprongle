@@ -14,9 +14,11 @@ class Config(BaseSettings):
     assets_dir_name: str = "assets"
     styles_css_name: str = "styles.css"
     styles_scss_name: str = "styles.scss"
+    pages_dir_name: str = "pages"
 
     # Define some paths to important files and directories.
     project_dir: DirectoryPath = Path(__file__).parent.parent.parent
+    pages_dir: DirectoryPath = project_dir / pages_dir_name
     static_dir_path: DirectoryPath = project_dir / static_dir_name
     assets_dir: DirectoryPath = project_dir / assets_dir_name
     scss_file: FilePath = assets_dir / styles_scss_name
