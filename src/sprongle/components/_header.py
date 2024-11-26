@@ -2,6 +2,7 @@
 
 from nicegui import ui
 
+from ._dark_mode_toggle import DarkModeToggle
 from ._github_link import GithubLink
 from ._header_button import HeaderButton
 
@@ -32,5 +33,8 @@ class Header(ui.header):
                     HeaderButton("Physics", "/physics")
 
                 # Add the right section.
-                with ui.row().classes("max-lg:hidden"):
+                with ui.element().classes(
+                    "max-md:hidden flex flex-row items-center h-full"
+                ):
+                    DarkModeToggle()
                     GithubLink()
