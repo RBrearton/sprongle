@@ -47,7 +47,7 @@ class ColorSchemeModel(BaseModel):
 
 
 light = ColorSchemeModel(
-    primary="emerald-400",
+    primary="teal-600",
     primary_content="gray-50",
     secondary="amber-400",
     secondary_content="gray-950",
@@ -70,18 +70,18 @@ light = ColorSchemeModel(
 )
 
 dark = ColorSchemeModel(
-    primary="emerald-400",
-    primary_content="emerald-950",
+    primary="teal-600",
+    primary_content="gray-50",
     secondary="pink-400",
     secondary_content="pink-950",
     accent="amber-400",
     accent_content="amber-950",
     neutral="slate-900",
-    neutral_content="gray-200",
-    base_100="slate-800",
-    base_200="slate-900",
-    base_300="slate-950",
-    base_content="slate-200",
+    neutral_content="neutral-200",
+    base_100="zinc-800",
+    base_200="zinc-900",
+    base_300="zinc-950",
+    base_content="neutral-200",
     info="sky-500",
     info_content="sky-950",
     success="green-500",

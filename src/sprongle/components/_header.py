@@ -2,6 +2,8 @@
 
 from nicegui import ui
 
+from sprongle.style import bg_primary
+
 from ._dark_mode_toggle import DarkModeToggle
 from ._github_link import GithubLink
 from ._header_button import HeaderButton
@@ -15,10 +17,10 @@ class Header(ui.header):
         super().__init__(
             value=True,
             fixed=False,
-            bordered=True,
             elevated=False,
             add_scroll_padding=True,
         )
+        self.classes(bg_primary)
 
         # Add the contents of the header.
         with self:
