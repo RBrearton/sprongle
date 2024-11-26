@@ -9,9 +9,6 @@ def get_case_sensitive_path(path: Path) -> Path:
     def get_err(path: Path) -> FileNotFoundError:
         return FileNotFoundError(f"The path {path} does not exist.")
 
-    if not path.exists():
-        raise get_err(path)
-
     parts = path.parts
     correct_parts: list[str] = []
 
@@ -22,15 +19,17 @@ def get_case_sensitive_path(path: Path) -> Path:
         else:
             # Get the directory contents
             parent_dir = Path(*correct_parts)
-            try:
-                # Find the correct case for the current part
-                correct_part = next(
-                    item
-                    for item in parent_dir.iterdir()
-                    if item.name.lower() == part.lower()
-                ).name
-                correct_parts.append(correct_part)
-            except StopIteration as e:
-                raise get_err(path) from e
+            children = [child.name for child in parent_dir.iterdir()]
+            matching_child = next(
+                (child for child in children if child.lower() == part.lower()),
+                None,
+            )
+
+            # Make sure the child exists.
+            if matching_child is None:
+                raise get_err(Path(*correct_parts, part))
+
+            # Add the child to the correct parts.
+            correct_parts.append(matching_child)
 
     return Path(*correct_parts)
