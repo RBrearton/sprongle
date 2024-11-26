@@ -25,7 +25,7 @@ class Menu(ui.list):
 
     @classmethod
     @lru_cache
-    async def from_subdomain(cls, subdomain: str) -> Self:
+    def from_subdomain(cls, subdomain: str) -> Self:
         """Create a menu from the subdomain passed as an argument.
 
         This is cached, so whenever a brand new page is added, you'll need to
