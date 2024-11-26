@@ -3,7 +3,7 @@
 from pathlib import Path
 
 
-def get_case_correct_path(path: Path) -> Path:
+def get_case_sensitive_path(path: Path) -> Path:
     """Given a Path object, return the case-correct version of the path."""
 
     def get_err(path: Path) -> FileNotFoundError:
