@@ -28,5 +28,6 @@
     "Waals",
     "wavevector",
     "worldline"
-  ]
+  ],
+  "python.analysis.typeCheckingMode": "strict"
 }
