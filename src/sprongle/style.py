@@ -1,12 +1,13 @@
 """Define a load of style utilities."""
 
-from .color import light
+from .color import dark, light
 
 # Tailwind classes.
 # Menu items.
 _tw_menu_active = (
-    f"active:bg-{light.neutral} active:text-{light.neutral_content} "
-    f"hover:bg-{light.base_300}"
+    f"active:bg-{light.neutral} "
+    f"active:text-{light.neutral_content} "
+    f"hover:bg-{light.base_300} "
 )
 _tw_menu_rounded = "rounded-3xl"
 
@@ -26,3 +27,8 @@ _tw_header_active = f"active:bg-{light.base_100} active:bg-opacity-40"
 menu_item = f"w-full select-none {_tw_menu_rounded} {_tw_menu_active}"
 
 header_clickable = f"{_tw_header_hover} {_tw_header_active}"
+
+# Some simple convenience auto dark mode classes.
+bg_100 = f"bg-{light.base_100} dark:bg-{dark.base_100}"
+bg_200 = f"bg-{light.base_200} dark:bg-{dark.base_200}"
+bg_300 = f"bg-{light.base_300} dark:bg-{dark.base_300}"
