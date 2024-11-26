@@ -38,11 +38,6 @@ class MenuExpansionItem(ui.element):
         # want the dropdown contents to glow when we hover over the title!
         self.props(f'header-class="{style.menu_item}"')
 
-        with self:
-            MenuItem("Problem set 1", "physics/b2/ps1/")
-            MenuItem("Problem set 2", "physics/b2/ps2/")
-            MenuItem("Problem set 3", "physics/b2/ps3/")
-
     @classmethod
     def from_dir_path(cls, dir_path: Path, level: int) -> Self:
         """Create a menu expansion item from the path to a directory."""
