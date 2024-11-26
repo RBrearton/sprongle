@@ -5,9 +5,10 @@ from nicegui import app, ui
 from . import components as c
 from .config import parsed_config as config
 from .scss_utils import compile_scss
+from .style import bg_100
 
 
-def page_template(subdomain: str) -> None:
+def page_template(subdomain: str) -> ui.element:
     """Build the page template."""
     # This is needed for the github logo.
     eva_icons = "https://unpkg.com/eva-icons@1.1.3/style/eva-icons.css"
@@ -26,12 +27,17 @@ def page_template(subdomain: str) -> None:
         c.Menu.from_subdomain(subdomain)
     c.RightDrawer()
 
+    page = ui.element().classes(f"w-full h-full {bg_100}")
+    return page.classes("min-h-screen")
+
 
 @ui.page("/")
 def home() -> None:
     """Build the home page."""
-    page_template("/physics")
-    ui.markdown("Welcome to sprongle!")
+    page = page_template("/physics")
+
+    with page:
+        ui.markdown("Welcome to sprongle!")
 
 
 def main() -> None:
