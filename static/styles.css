@@ -1,25 +1,57 @@
-body.desktop .q-focus-helper {
+.nicegui-content {
+  padding: 0;
+  margin: 0 auto; }
+
+body.desktop .q-expansion-item .q-focus-helper,
+body.desktop .q-btn .q-focus-helper,
+body.desktop .q-item .q-focus-helper {
   transition: background-color 0.05s ease-in, opacity 0.05s ease-in; }
 
-body.desktop .q-focus-helper:after,
-body.desktop .q-focus-helper:before {
+body.desktop .q-expansion-item .q-focus-helper:after,
+body.desktop .q-btn .q-focus-helper:after,
+body.desktop .q-item .q-focus-helper:after,
+body.desktop .q-expansion-item .q-focus-helper:before,
+body.desktop .q-btn .q-focus-helper:before,
+body.desktop .q-item .q-focus-helper:before {
   transition: background-color 0.05s ease-in, opacity 0.05s ease-in; }
 
-body.desktop .q-focusable:focus > .q-focus-helper,
-body.desktop .q-hoverable:hover > .q-focus-helper,
-body.desktop .q-manual-focusable--focused > .q-focus-helper {
+body.desktop .q-expansion-item .q-focus-helper,
+body.desktop .q-btn .q-focusable:focus > .q-focus-helper,
+body.desktop .q-item .q-focusable:focus > .q-focus-helper,
+body.desktop .q-expansion-item .q-focus-helper:after,
+body.desktop .q-btn .q-hoverable:hover > .q-focus-helper,
+body.desktop .q-item .q-hoverable:hover > .q-focus-helper,
+body.desktop .q-expansion-item .q-focus-helper:before,
+body.desktop .q-btn .q-manual-focusable--focused > .q-focus-helper,
+body.desktop .q-item .q-manual-focusable--focused > .q-focus-helper {
   opacity: 0; }
 
-body.desktop .q-focusable:focus > .q-focus-helper::before,
-body.desktop .q-hoverable:hover > .q-focus-helper::before,
-body.desktop .q-manual-focusable--focused > .q-focus-helper::before {
+body.desktop .q-expansion-item .q-focus-helper:after,
+body.desktop .q-btn .q-focusable:focus > .q-focus-helper::before,
+body.desktop .q-item .q-focusable:focus > .q-focus-helper::before,
+body.desktop .q-expansion-item .q-focus-helper:before,
+body.desktop .q-btn .q-hoverable:hover > .q-focus-helper::before,
+body.desktop .q-item .q-hoverable:hover > .q-focus-helper::before,
+body.desktop .q-expansion-item .q-focus-helper:before,
+body.desktop .q-btn .q-manual-focusable--focused > .q-focus-helper::before,
+body.desktop .q-item .q-manual-focusable--focused > .q-focus-helper::before {
   opacity: 0; }
 
-body.desktop .q-focusable:focus > .q-focus-helper::after,
-body.desktop .q-hoverable:hover > .q-focus-helper::after,
-body.desktop .q-manual-focusable--focused > .q-focus-helper::after {
+body.desktop .q-expansion-item .q-focus-helper:after,
+body.desktop .q-btn .q-focusable:focus > .q-focus-helper::after,
+body.desktop .q-item .q-focusable:focus > .q-focus-helper::after,
+body.desktop .q-expansion-item .q-focus-helper:before,
+body.desktop .q-btn .q-hoverable:hover > .q-focus-helper::after,
+body.desktop .q-item .q-hoverable:hover > .q-focus-helper::after,
+body.desktop .q-expansion-item .q-focus-helper:before,
+body.desktop .q-btn .q-manual-focusable--focused > .q-focus-helper::after,
+body.desktop .q-item .q-manual-focusable--focused > .q-focus-helper::after {
   opacity: 0; }
 
-body.desktop .q-focusable:focus > .q-focus-helper,
-body.desktop .q-manual-focusable--focused > .q-focus-helper {
+body.desktop .q-expansion-item .q-focus-helper,
+body.desktop .q-btn .q-focusable:focus > .q-focus-helper,
+body.desktop .q-item .q-focusable:focus > .q-focus-helper,
+body.desktop .q-expansion-item .q-focus-helper:after,
+body.desktop .q-btn .q-manual-focusable--focused > .q-focus-helper,
+body.desktop .q-item .q-manual-focusable--focused > .q-focus-helper {
   opacity: 0; }
