@@ -1,6 +1,7 @@
 """All the web components for the sprongle app."""
 
 from ._dark_mode_toggle import DarkModeToggle
+from ._footer import Footer
 from ._github_link import GithubLink
 from ._header import Header
 from ._header_button import HeaderButton
@@ -12,6 +13,7 @@ from ._right_drawer import RightDrawer
 
 __all__ = [
     "DarkModeToggle",
+    "Footer",
     "GithubLink",
     "Header",
     "HeaderButton",
