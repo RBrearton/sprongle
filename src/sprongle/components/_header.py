@@ -24,7 +24,7 @@ class Header(ui.header):
             # Make three equally spaced sections.
             with ui.row().classes("flex justify-between items-center w-full"):
                 # Add the title.
-                ui.markdown(f"#### {title}")
+                ui.markdown(f"#### {title}").classes("max-md:hidden")
 
                 # Add the central buttons.
                 with ui.row():
@@ -32,5 +32,5 @@ class Header(ui.header):
                     HeaderButton("Physics", "/physics")
 
                 # Add the right section.
-                with ui.row():
+                with ui.row().classes("max-lg:hidden"):
                     GithubLink()
