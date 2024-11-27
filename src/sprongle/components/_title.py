@@ -1,22 +1,42 @@
 """Define a simple Title component."""
 
-from typing import Self
+from typing import TYPE_CHECKING, Self
 
 from nicegui import ui
 
+from sprongle.types import MenuData
 
-class Title(ui.html):
+if TYPE_CHECKING:
+    from sprongle._sprongle_page import SpronglePage
+
+
+class Title(ui.markdown):
     """A simple Title."""
 
     def __init__(self, text: str, *, level: int = 1) -> None:
-        super().__init__(tag=f"h{level}", content=text)
+        md_text = f"{'#' * level} {text}"
+        super().__init__(md_text)
 
-        self.children: list[ui.element] = []
+        self._title_text: str = text
+        self.children: list[Self] = []
+
+    def to_menu_data(self) -> tuple[str, ui.element | MenuData]:
+        """Convert this title to menu data."""
+        if not self.children:
+            return (self._title_text, self)
+        return (
+            self._title_text,
+            [child.to_menu_data() for child in self.children],
+        )
 
     @classmethod
-    def menu_title(cls, text: str, level: int, *, parent: Self | None) -> Self:
+    def menu_title(
+        cls, text: str, *, level: int, parent: "Self | SpronglePage"
+    ) -> Self:
         """Create a menu title."""
         title = cls(text, level=level)
-        if parent:
+        if isinstance(parent, Title):
             parent.children.append(title)
+        else:
+            parent.titles.append(title)
         return title
