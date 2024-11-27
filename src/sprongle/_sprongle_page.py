@@ -1,5 +1,7 @@
 """Define the SpronglePage class."""
 
+from typing import TYPE_CHECKING
+
 from nicegui import ui
 
 from . import components as c
@@ -7,12 +9,18 @@ from ._page_builder import PageBuilder
 from .config import parsed_config as config
 from .style import bg_100, text_bg_content
 
+if TYPE_CHECKING:
+    from .types import MenuData
+
 
 class SpronglePage(PageBuilder):
     """A page builder with some defaults set for the sprongle app."""
 
     def __init__(self, subdomain_name: str) -> None:
         self._subdomain_name = subdomain_name
+
+        # This is what we use to recursively build the right menu.
+        self._right_menu_data: MenuData = []
 
     def make_header(self) -> None:
         # This is needed for the github logo.
@@ -39,6 +47,21 @@ class SpronglePage(PageBuilder):
 
     def make_right_drawer(self) -> ui.element:
         return c.RightDrawer()
+
+    def make_right_drawer_content(self) -> ui.element | None:
+        # If there's nothing to put in the drawer, return None.
+        if not self._right_menu_data:
+            return None
+
+        # Otherwise, build the menu!
+        right_menu = c.Menu(header="Contents")
+        with right_menu:
+            for menu_item in self._right_menu_data:
+                item_name, item_data = menu_item
+                if isinstance(item_data, list):
+                    c.MenuExpansionItem.from_menu_data(item_name, item_data, 0)
+                else:
+                    c.MenuItem.from_menu_data(item_name, item_data)
 
     def make_left_drawer_content(self) -> ui.element:
         return c.Menu.from_subdomain(self._subdomain_name)
