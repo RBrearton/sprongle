@@ -2,7 +2,7 @@
 
 from nicegui import ui
 
-from sprongle.style import bg_100, text_bg_content
+from sprongle.style import bg_100, bg_content
 
 
 class RightDrawer(ui.right_drawer):
@@ -17,5 +17,5 @@ class RightDrawer(ui.right_drawer):
             top_corner=False,
             bottom_corner=False,
         )
-
-        self.classes(f"{bg_100} {text_bg_content}")
+        self.props("breakpoint=1250")
+        self.classes(f"{bg_100} {bg_content}")
