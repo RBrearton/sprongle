@@ -40,3 +40,8 @@ class Title(ui.markdown):
         else:
             parent.titles.append(title)
         return title
+
+    @classmethod
+    def page_title(cls, text: str) -> Self:
+        """Create a page title."""
+        return cls(text, level=1)
