@@ -1,11 +1,16 @@
 """Running this file runs the website."""
 
+from collections.abc import Callable
+
+from fastapi import Request
+from fastapi.responses import HTMLResponse
 from nicegui import app, ui
 
 from . import components as c
 from .config import parsed_config as config
 from .scss_utils import compile_scss
 from .style import bg_100, text_bg_content
+from .utils import get_markdown
 
 
 def page_template(subdomain: str) -> tuple[ui.element, ui.element]:
@@ -59,6 +64,23 @@ def page_template(subdomain: str) -> tuple[ui.element, ui.element]:
     return central_div, content_area
 
 
+@app.middleware("http")
+async def clear_cache_if_auto_reloading(
+    request: Request,
+    call_next: Callable,  # type: ignore  # noqa: PGH003
+) -> HTMLResponse:
+    """Clear the cache if auto-reloading is enabled.
+
+    This middleware is used to clear the cache of the render_markdown function
+    if auto-reloading is enabled. This is useful for development purposes, as it
+    means that changes to the markdown files will be immediately reflected in
+    the rendered HTML.
+    """
+    if config.auto_reload:
+        get_markdown.cache_clear()
+    return await call_next(request)  # type: ignore  # noqa: PGH003
+
+
 @ui.page("/")
 def home() -> None:
     """Build the home page."""
@@ -72,7 +94,9 @@ def home() -> None:
 def physics() -> None:
     """Build the physics page."""
     # Currently this is the same as the home page.
-    return home()
+    _, content_area = page_template("/physics")
+    with content_area:
+        ui.markdown(get_markdown("/physics"))
 
 
 def main() -> None:
@@ -84,7 +108,9 @@ def main() -> None:
     )
 
     # Run the website.
-    ui.run(fastapi_docs=True, show=False)
+    ui.run(
+        fastapi_docs=True, show=False, reload=config.auto_reload, favicon="🤓"
+    )
 
 
 # Every time we reload the page, make sure that we recompile the scss.
