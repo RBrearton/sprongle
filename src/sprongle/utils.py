@@ -14,6 +14,10 @@ def url_from_topic_name(topic_name: str) -> str:
     Please also note that topic names (e.g. "Problem set 3") are taken directly
     from directory names, and must match subdirs in the pages directory.
     """
+    # If the topic name has a file extension, remove it.
+    if "." in topic_name:
+        topic_name = topic_name.split(".")[0]
+
     if topic_name == "Physics":
         return "physics"
     if topic_name == "Research":
