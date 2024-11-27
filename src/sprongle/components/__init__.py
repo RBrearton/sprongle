@@ -1,5 +1,6 @@
 """All the web components for the sprongle app."""
 
+from ._admonition import Admonition
 from ._dark_mode_toggle import DarkModeToggle
 from ._footer import Footer
 from ._github_link import GithubLink
@@ -14,6 +15,7 @@ from ._text import Text
 from ._title import Title
 
 __all__ = [
+    "Admonition",
     "DarkModeToggle",
     "Footer",
     "GithubLink",
