@@ -28,6 +28,18 @@ class PageBuilder(ABC):
         """Build the ui element that should live in the main content area."""
 
     @abstractmethod
+    def make_left_drawer(self) -> ui.element:
+        """Build the ui element that represents the left drawer."""
+
+    @abstractmethod
+    def make_right_drawer(self) -> ui.element | None:
+        """Build the ui element that represents the right drawer.
+
+        This is an optional element; return None if you don't want a right
+        drawer.
+        """
+
+    @abstractmethod
     def make_left_drawer_content(self) -> ui.element:
         """Build the ui element that should live in the left drawer."""
 
@@ -38,3 +50,7 @@ class PageBuilder(ABC):
         This is an optional element; return None if you don't want a right
         drawer.
         """
+
+    @abstractmethod
+    def make_entire_page(self) -> None:
+        """Call this method to build the entire page."""
