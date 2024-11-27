@@ -68,6 +68,13 @@ def home() -> None:
         ui.markdown("Welcome to sprongle!")
 
 
+@ui.page("/physics")
+def physics() -> None:
+    """Build the physics page."""
+    # Currently this is the same as the home page.
+    return home()
+
+
 def main() -> None:
     """Run the website."""
     # Make sure that our static directory is being served.
