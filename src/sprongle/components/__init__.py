@@ -10,6 +10,7 @@ from ._menu import Menu
 from ._menu_expansion_item import MenuExpansionItem
 from ._menu_item import MenuItem
 from ._right_drawer import RightDrawer
+from ._text import Text
 from ._title import Title
 
 __all__ = [
@@ -23,5 +24,6 @@ __all__ = [
     "MenuExpansionItem",
     "MenuItem",
     "RightDrawer",
+    "Text",
     "Title",
 ]
