@@ -7,6 +7,7 @@ authors = [{ name = "Richard Brearton", email = "richardbrearton@gmail.com" }]
 requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.115.5",
+    "latex2mathml>=3.77.0",
     "libsass>=0.23.0",
     "nicegui>=2.5.0",
     "pydantic-settings>=2.6.1",
