@@ -17,6 +17,7 @@ class Header(ui.header):
         super().__init__(
             value=True,
             fixed=False,
+            bordered=True,
             elevated=False,
             add_scroll_padding=True,
         )
@@ -25,18 +26,27 @@ class Header(ui.header):
         # Add the contents of the header.
         with self:
             # Make three equally spaced sections.
-            with ui.row().classes("flex justify-between items-center w-full"):
-                # Add the title.
-                ui.markdown(f"#### {title}").classes("max-md:hidden")
+            with ui.element().classes(
+                "flex flex-row justify-between items-center w-full"
+            ):
+                # Everything here lives on the left.
+                with ui.element().classes(
+                    "flex flex-row items-center justify-start flex-1"
+                ):
+                    # Add the title.
+                    ui.markdown(f"#### {title}").classes("py-2")
 
                 # Add the central buttons.
-                with ui.row():
+                with ui.element().classes(
+                    "flex flex-row items-center justify-center flex-1"
+                ):
                     HeaderButton("Home", "/")
                     HeaderButton("Physics", "/physics")
 
                 # Add the right section.
                 with ui.element().classes(
-                    "max-md:hidden flex flex-row items-center h-full"
+                    "max-md:hidden flex flex-row items-center justify-end "
+                    "flex-1"
                 ):
                     DarkModeToggle()
                     GithubLink()
