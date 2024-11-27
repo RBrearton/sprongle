@@ -9,6 +9,10 @@ class PageBuilder(ABC):
     """Implement PageBuilder to make your page visible on the sprongle app."""
 
     @abstractmethod
+    def set_styles(self) -> None:
+        """Set the styles for the page."""
+
+    @abstractmethod
     def make_header(self) -> ui.element:
         """Build the header for the page."""
 
