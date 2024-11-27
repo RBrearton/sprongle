@@ -39,3 +39,25 @@ class Admonition(ui.expansion):
     def show_working(cls) -> Self:
         """For showing working out."""
         return cls.info("Show working", is_open=False)
+
+    @classmethod
+    def success(cls, title: str, *, is_open: bool) -> Self:
+        """Create a new success admonition."""
+        success = cls(
+            title,
+            icon="check",
+            is_open=is_open,
+        )
+
+        success.props["header-class"] += (
+            f"{style.bg_success} {style.success_content}"
+        )
+        success.classes(
+            f"border-{color.light.success} dark:border-{color.dark.success}"
+        )
+        return success
+
+    @classmethod
+    def show_answer(cls) -> Self:
+        """For showing the answer."""
+        return cls.success("Show answer", is_open=False)
