@@ -9,3 +9,4 @@ class MenuHeader(ui.html):
     def __init__(self, text: str) -> None:
         super().__init__(content=text, tag="q-item-label")
         self.props("header")
+        self.classes("font-bold")
