@@ -26,11 +26,7 @@ class Menu(ui.list):
 
     @classmethod
     def from_subdomain(cls, subdomain: str) -> Self:
-        """Create a menu from the subdomain passed as an argument.
-
-        This is cached, so whenever a brand new page is added, you'll need to
-        restart the app to see it in the menu.
-        """
+        """Create a menu from the subdomain passed as an argument."""
         # Make the subdomain string safe to use with the '/' operator.
         if subdomain.startswith("/"):
             subdomain = subdomain[1:]
