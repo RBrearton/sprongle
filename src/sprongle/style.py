@@ -23,27 +23,23 @@ _tw_header_active = f"active:bg-{light.base_100} active:bg-opacity-40"
 bg_100 = f"bg-{light.base_100} dark:bg-{dark.base_100}"
 bg_200 = f"bg-{light.base_200} dark:bg-{dark.base_200}"
 bg_300 = f"bg-{light.base_300} dark:bg-{dark.base_300}"
-text_bg_content = f"text-{light.base_content} dark:text-{dark.base_content}"
+bg_content = f"text-{light.base_content} dark:text-{dark.base_content}"
 bg_primary = (
     f"bg-{light.primary} dark:bg-{dark.primary}"
     f" text-{light.primary_content} dark:text-{dark.primary_content}"
 )
-bg_info = (
-    f"bg-{light.info} dark:bg-{dark.info} "
-    f"text-{light.info_content} dark:text-{dark.info_content}"
-)
-bg_success = (
-    f"bg-{light.success} dark:bg-{dark.success} "
+bg_info = f"bg-{light.info} dark:bg-{dark.info} "
+info_content = f"text-{light.info_content} dark:text-{dark.info_content}"
+bg_success = f"bg-{light.success} dark:bg-{dark.success} "
+success_content = (
     f"text-{light.success_content} dark:text-{dark.success_content}"
 )
-bg_warning = (
-    f"bg-{light.warning} dark:bg-{dark.warning} "
+bg_warning = f"bg-{light.warning} dark:bg-{dark.warning} "
+warning_content = (
     f"text-{light.warning_content} dark:text-{dark.warning_content}"
 )
-bg_error = (
-    f"bg-{light.error} dark:bg-{dark.error} "
-    f"text-{light.error_content} dark:text-{dark.error_content}"
-)
+bg_error = f"bg-{light.error} dark:bg-{dark.error} "
+error_content = f"text-{light.error_content} dark:text-{dark.error_content}"
 
 # Menu items always occupy the full width. It makes hovering etc. way nicer.
 # We never want to be able to select the text in a menu item.
@@ -51,6 +47,6 @@ bg_error = (
 # `_tw_menu_rounded` variable.
 # We also specify the active state here to make it pop a lot more when we click
 # a menu item.
-menu_item = f"w-full select-none {rounded} {_tw_menu_active} {text_bg_content}"
+menu_item = f"w-full select-none {rounded} {_tw_menu_active} {bg_content}"
 
 header_clickable = f"{_tw_header_hover} {_tw_header_active}"
