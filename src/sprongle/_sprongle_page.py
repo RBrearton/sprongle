@@ -7,7 +7,7 @@ from nicegui import ui
 from . import components as c
 from ._page_builder import PageBuilder
 from .config import parsed_config as config
-from .style import bg_100, text_bg_content
+from .style import bg_100, bg_content
 
 if TYPE_CHECKING:
     from .types import MenuData
@@ -38,7 +38,7 @@ class SpronglePage(PageBuilder):
         ui.add_head_html(f'<link rel= "stylesheet" href="{styles_ref}">')
 
     def make_navbar(self) -> ui.element:
-        return c.Header(title="Sprongle")
+        return c.Header(title="Sprongle.com")
 
     def make_footer(self) -> ui.element:
         return c.Footer()
@@ -82,7 +82,7 @@ class SpronglePage(PageBuilder):
 
         # The central div left aligns content with no padding.
         central_div = ui.element().classes(
-            f"w-full h-full {bg_100} {text_bg_content} min-h-screen"
+            f"w-full h-full {bg_100} {bg_content} min-h-screen"
         )
 
         # We also want to make a neat material-mkdocs style content area with a
