@@ -6,6 +6,7 @@ from typing import Self
 from nicegui import ui
 
 from sprongle import style
+from sprongle.types import MenuData
 
 from ._menu_item import MenuItem
 
@@ -60,5 +61,23 @@ class MenuExpansionItem(ui.element):
                     continue
                 else:
                     MenuItem.from_file_path(subtopic_path)
+
+        return expansion_item
+
+    @classmethod
+    def from_menu_data(
+        cls, item_name: str, item_data: MenuData, level: int
+    ) -> Self:
+        """Build an expansion item from a menu data tuple."""
+        # Make the expansion item.
+        expansion_item = cls(text=item_name, level=level)
+
+        # Now add all the items in the data as child menu items or expansion
+        # items.
+        for sub_item_name, sub_item_data in item_data:
+            if isinstance(sub_item_data, list):
+                cls.from_menu_data(sub_item_name, sub_item_data, level + 1)
+            else:
+                MenuItem.from_menu_data(sub_item_name, sub_item_data)
 
         return expansion_item
