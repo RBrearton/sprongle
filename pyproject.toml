@@ -29,3 +29,6 @@ unfixable = [
 
 [project.scripts]
 sprongle = "sprongle.main:main"
+
+[tool.ruff.lint.per-file-ignores]
+"src/sprongle/pages/**.py" = ["E501"]
