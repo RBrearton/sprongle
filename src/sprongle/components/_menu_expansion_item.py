@@ -44,19 +44,21 @@ class MenuExpansionItem(ui.element):
     def from_dir_path(cls, dir_path: Path, level: int) -> Self:
         """Create a menu expansion item from the path to a directory."""
         # Make the expansion item.
-        expansion_item = cls(text=dir_path.name, level=level)
+        topic_name = dir_path.name
+        expansion_item = cls(text=topic_name, level=level)
 
         # Now we want to add all the in the directory as menu items, and all the
         # directories as expansion items.
         with expansion_item:
-            for item in dir_path.iterdir():
-                if item.is_dir():
-                    cls.from_dir_path(item, level + 1)
-                elif item.name == "home.md":
+            for subtopic_path in dir_path.iterdir():
+                if subtopic_path.is_dir():
+                    cls.from_dir_path(subtopic_path, level + 1)
+                elif subtopic_path.name == "home.md":
                     # The home.md file is the default page associated with a
-                    # subdomain. We don't add it to the menu.
+                    # subdomain. We don't add it to the menu. I'd like to handle
+                    # these separately, TBD how to do that.
                     continue
                 else:
-                    MenuItem.from_file_path(item)
+                    MenuItem.from_file_path(subtopic_path)
 
         return expansion_item
