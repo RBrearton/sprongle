@@ -73,11 +73,6 @@ class SpronglePage(PageBuilder):
         with self.make_left_drawer():
             self.make_left_drawer_content()
 
-        # The right drawer is optional.
-        right_drawer = self.make_right_drawer()
-        with right_drawer:
-            self.make_right_drawer_content()
-
         # The central div left aligns content with no padding.
         central_div = ui.element().classes(
             f"w-full h-full {bg_100} {text_bg_content} min-h-screen"
@@ -100,3 +95,9 @@ class SpronglePage(PageBuilder):
                 )
                 with content_area:
                     self.make_content()
+
+        # The right drawer is optional. We make it last so that, if make_content
+        # is used to populate data needed to make the right drawer, it's ready.
+        right_drawer = self.make_right_drawer()
+        with right_drawer:
+            self.make_right_drawer_content()
