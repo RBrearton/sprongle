@@ -20,9 +20,6 @@ class MarkdownPage(SpronglePage):
         self._page_path = page_path
         self._parsed_markdown = utils.get_markdown(self._page_path)
 
-    def make_right_drawer(self) -> None:
-        return None
-
     def make_right_drawer_content(self) -> None:
         return None
 
