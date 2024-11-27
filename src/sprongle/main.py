@@ -99,6 +99,17 @@ def physics() -> None:
         ui.markdown(get_markdown("/physics"))
 
 
+@ui.page("/physics/b2/ps2")
+def b2_ps2() -> None:
+    """Build the B2 PS2 page."""
+    _, content_area = page_template("/physics")
+    with content_area:
+        ui.markdown(
+            get_markdown("/physics/b2/ps2"),
+            extras=["fenced-code-blocks", "tables", "latex"],
+        )
+
+
 def main() -> None:
     """Run the website."""
     # Make sure that our static directory is being served.
