@@ -49,8 +49,11 @@ class Admonition(ui.expansion):
             is_open=is_open,
         )
 
+        # Because the header color has a low opacity, the background is actually
+        # closer to the bg-100 color than the bg-info color. As a result, we
+        # make sure to keep the text as bg-content instead of info-content.
         success.props["header-class"] += (
-            f"{style.bg_success} {style.success_content}"
+            f"{style.bg_success} {style.bg_content}"
         )
         success.classes(
             f"border-{color.light.success} dark:border-{color.dark.success}"
