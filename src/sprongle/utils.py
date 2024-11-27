@@ -1,5 +1,25 @@
 """Define some general utilities used in the sprongle app."""
 
+from functools import lru_cache
+
+from .config import parsed_config as config
+
+
+@lru_cache
+def get_markdown(*, url_name: str) -> str:
+    """Return the content of a markdown file associated with a url name."""
+    # Split the url name on the '/' character, and get the topic name for each
+    # part of the url.
+    url_names = url_name.split("/")
+    topic_names = [topic_name_from_url(url) for url in url_names]
+    markdown_path = config.pages_dir / "/".join(topic_names)
+
+    # If this is a path to a directory, get the home.md file.
+    if markdown_path.is_dir():
+        markdown_path /= "home.md"
+
+    return markdown_path.read_text()
+
 
 def url_from_topic_name(topic_name: str) -> str:
     """Return the relative part of the url associated with a topic name.
