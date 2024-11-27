@@ -7,6 +7,7 @@ from nicegui import ui
 
 from sprongle import style
 from sprongle.config import parsed_config as config
+from sprongle.utils import url_from_topic_name
 
 
 class MenuItem(ui.item):
@@ -21,16 +22,15 @@ class MenuItem(ui.item):
     @classmethod
     def from_file_path(cls, file_path: Path) -> Self:
         """Create a menu item from the path to a file."""
-        # The start of the path has to be the same as the config.pages_dir. The
-        # link that we generate will be the path relative to the pages_dir.
-        # Get the relative path to the file.
-        relative_path = str(file_path.relative_to(config.pages_dir))
+        # Start by figuring out the relative path to the file in the pages dir.
+        relative_path = file_path.relative_to(config.pages_dir)
 
-        # Make sure that the relative path takes the form /relative/path.
-        # Obviously this wouldn't normally be a valid relative path, but we're
-        # providing a link to a page on our website.
-        relative_path = f"/{relative_path}"
+        # Now we need to convert each segment of this path to its url
+        # equivalent, including a "/" prefix.
+        url_path = "/" + "/".join(
+            url_from_topic_name(segment) for segment in relative_path.parts
+        )
 
         # The text will be the name of the file, without the extension.
-        text = file_path.stem
-        return cls(text, str(relative_path))
+        topic_name = file_path.stem
+        return cls(topic_name, url_path)

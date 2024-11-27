@@ -44,6 +44,9 @@ def url_from_topic_name(topic_name: str) -> str:
 
     More awkward onces are things like "B2: Symmetry and relativity" which is
     associated with the url "/b2".
+
+    Please also note that topic names (e.g. "Problem set 3") are taken directly
+    from directory names, and must match subdirs in the pages directory.
     """
     if topic_name == "Physics":
         return "physics"
