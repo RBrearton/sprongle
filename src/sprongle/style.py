@@ -28,7 +28,22 @@ bg_primary = (
     f"bg-{light.primary} dark:bg-{dark.primary}"
     f" text-{light.primary_content} dark:text-{dark.primary_content}"
 )
-
+bg_info = (
+    f"bg-{light.info} dark:bg-{dark.info}"
+    f" text-{light.info_content} dark:text-{dark.info_content}"
+)
+bg_success = (
+    f"bg-{light.success} dark:bg-{dark.success}"
+    f" text-{light.success_content} dark:text-{dark.success_content}"
+)
+bg_warning = (
+    f"bg-{light.warning} dark:bg-{dark.warning}"
+    f" text-{light.warning_content} dark:text-{dark.warning_content}"
+)
+bg_error = (
+    f"bg-{light.error} dark:bg-{dark.error}"
+    f" text-{light.error_content} dark:text-{dark.error_content}"
+)
 
 # Menu items always occupy the full width. It makes hovering etc. way nicer.
 # We never want to be able to select the text in a menu item.
