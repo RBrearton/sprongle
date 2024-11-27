@@ -617,6 +617,7 @@ name = "sprongle"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "fastapi" },
     { name = "libsass" },
     { name = "nicegui" },
     { name = "pydantic-settings" },
@@ -624,6 +625,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "fastapi", specifier = ">=0.115.5" },
     { name = "libsass", specifier = ">=0.23.0" },
     { name = "nicegui", specifier = ">=2.5.0" },
     { name = "pydantic-settings", specifier = ">=2.6.1" },
