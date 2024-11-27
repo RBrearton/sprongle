@@ -10,6 +10,7 @@ from ._menu import Menu
 from ._menu_expansion_item import MenuExpansionItem
 from ._menu_item import MenuItem
 from ._right_drawer import RightDrawer
+from ._title import Title
 
 __all__ = [
     "DarkModeToggle",
@@ -22,4 +23,5 @@ __all__ = [
     "MenuExpansionItem",
     "MenuItem",
     "RightDrawer",
+    "Title",
 ]
