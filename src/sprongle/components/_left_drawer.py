@@ -2,7 +2,7 @@
 
 from nicegui import ui
 
-from sprongle.style import bg_100
+from sprongle.style import bg_100, text_bg_content
 
 
 class LeftDrawer(ui.left_drawer):
@@ -18,4 +18,4 @@ class LeftDrawer(ui.left_drawer):
             bottom_corner=False,
         )
 
-        self.classes(bg_100)
+        self.classes(f"{bg_100} {text_bg_content}")

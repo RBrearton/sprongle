@@ -35,8 +35,10 @@ class MenuExpansionItem(ui.element):
         self.props("expand-separator")
 
         # It's really important that we only apply this to the header. We don't
-        # want the dropdown contents to glow when we hover over the title!
-        self.props(f'header-class="{style.menu_item}"')
+        # want the dropdown contents to glow when we hover over the title! Note
+        # that these menus always appear on bg-100 backgrounds, so we set the
+        # color to text-bg-content.
+        self.props(f'header-class="{style.menu_item} {style.text_bg_content}"')
 
     @classmethod
     def from_dir_path(cls, dir_path: Path, level: int) -> Self:

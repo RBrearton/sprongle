@@ -2,7 +2,7 @@
 
 from nicegui import ui
 
-from sprongle.style import bg_100
+from sprongle.style import bg_100, text_bg_content
 
 
 class RightDrawer(ui.right_drawer):
@@ -18,7 +18,7 @@ class RightDrawer(ui.right_drawer):
             bottom_corner=False,
         )
 
-        self.classes(bg_100)
+        self.classes(f"{bg_100} {text_bg_content}")
 
         with self:
             ui.markdown("Placeholder right menu.")
