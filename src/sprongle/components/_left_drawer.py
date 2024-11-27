@@ -11,7 +11,7 @@ class LeftDrawer(ui.left_drawer):
     def __init__(self) -> None:
         super().__init__(
             value=True,
-            fixed=False,
+            fixed=True,
             bordered=False,
             elevated=False,
             top_corner=False,
