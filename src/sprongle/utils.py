@@ -14,12 +14,14 @@ def get_markdown(url_name: str) -> str:
     topic_names = [topic_name_from_url(url) for url in url_names]
 
     # Now the [1:] is to remove the leading '/' character.
-    markdown_path = config.pages_dir / ("/".join(topic_names)[1:] + ".md")
-    print(markdown_path)
+    markdown_path = config.pages_dir / ("/".join(topic_names)[1:])
 
     # If this is a path to a directory, get the home.md file.
     if markdown_path.is_dir():
         markdown_path /= "home.md"
+    else:
+        # If this is a path to a file, add the .md extension.
+        markdown_path = markdown_path.with_suffix(".md")
 
     return markdown_path.read_text()
 
