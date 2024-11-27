@@ -9,14 +9,14 @@ class PageBuilder(ABC):
     """Implement PageBuilder to make your page visible on the sprongle app."""
 
     @abstractmethod
-    def make_header(self) -> ui.element:
+    def make_header(self) -> None:
         """Build the header for the page.
 
-        This should include header styles, favicon setting etc.
+        This should set header styles, favicon etc.
         """
 
     @abstractmethod
-    def make_navbar(self) -> None:
+    def make_navbar(self) -> ui.element:
         """Set the page's navbar."""
 
     @abstractmethod
