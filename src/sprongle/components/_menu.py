@@ -19,6 +19,7 @@ class Menu(ui.list):
         super().__init__()
 
         self.classes("w-full rounded-borders")
+        self.classes("sticky top-0")
 
         with self:
             MenuHeader(header)
