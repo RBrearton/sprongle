@@ -32,6 +32,7 @@ header_clickable = f"{_tw_header_hover} {_tw_header_active}"
 bg_100 = f"bg-{light.base_100} dark:bg-{dark.base_100}"
 bg_200 = f"bg-{light.base_200} dark:bg-{dark.base_200}"
 bg_300 = f"bg-{light.base_300} dark:bg-{dark.base_300}"
+text_bg_content = f"text-{light.base_content} dark:text-{dark.base_content}"
 bg_primary = (
     f"bg-{light.primary} dark:bg-{dark.primary}"
     f" text-{light.primary_content} dark:text-{dark.primary_content}"
