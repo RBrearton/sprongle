@@ -20,6 +20,7 @@ class SpronglePage(PageBuilder):
         self._subdomain_name = subdomain_name
 
         # This is what we use to recursively build the right menu.
+        self.titles: list[c.Title] = []
         self._right_menu_data: MenuData = []
 
     def make_header(self) -> None:
@@ -50,8 +51,14 @@ class SpronglePage(PageBuilder):
 
     def make_right_drawer_content(self) -> ui.element | None:
         # If there's nothing to put in the drawer, return None.
-        if not self._right_menu_data:
+        if not self._right_menu_data and not self.titles:
             return None
+
+        # If we were given titles, build the menu from them.
+        if self.titles:
+            self._right_menu_data = [
+                title.to_menu_data() for title in self.titles
+            ]
 
         # Otherwise, build the menu!
         right_menu = c.Menu(header="Contents")
