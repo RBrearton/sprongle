@@ -9,6 +9,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Config(BaseSettings):
     """The app's configuration is defined by this class."""
 
+    auto_reload: bool = True
+
     # Define some file and directory names.
     static_dir_name: str = "static"
     assets_dir_name: str = "assets"
