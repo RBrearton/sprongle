@@ -8,6 +8,7 @@ from nicegui import app, ui
 
 from ._markdown_page import MarkdownPage
 from .config import parsed_config as config
+from .pages.physics.b2.problem_set_2 import B2ProblemSet2
 from .scss_utils import compile_scss
 from .utils import get_markdown
 
@@ -49,9 +50,7 @@ def physics() -> None:
 @ui.page("/physics/b2/ps2")
 def b2_ps2() -> None:
     """Build the B2 PS2 page."""
-    MarkdownPage(
-        subdomain_name="physics", page_path="/physics/b2/ps2"
-    ).make_entire_page()
+    B2ProblemSet2().make_entire_page()
 
 
 def main() -> None:
