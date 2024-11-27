@@ -1,3 +1,3 @@
 # Sprongle
 
-The home of the sprongle website.
+The home of the [sprongle.com website](https://www.sprongle.com/).
