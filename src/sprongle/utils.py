@@ -6,7 +6,7 @@ from .config import parsed_config as config
 
 
 @lru_cache
-def get_markdown(*, url_name: str) -> str:
+def get_markdown(url_name: str) -> str:
     """Return the content of a markdown file associated with a url name."""
     # Split the url name on the '/' character, and get the topic name for each
     # part of the url.
