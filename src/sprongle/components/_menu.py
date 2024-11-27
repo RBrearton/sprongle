@@ -50,7 +50,7 @@ class Menu(ui.list):
         subtopic_paths.sort(key=lambda item: item.name)
 
         # Create the menu.
-        menu = cls(header=subdomain_dir.name)
+        menu = cls(header=utils.topic_name_from_url(subdomain_dir.name))
         with menu:
             for subtopic_path in subtopic_paths:
                 if subtopic_path.is_dir():
