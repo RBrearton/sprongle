@@ -15,3 +15,4 @@ class Text(ui.markdown):
                 "latex",
             ],
         )
+        self.classes("w-full")
