@@ -13,7 +13,11 @@ from sprongle.utils import url_from_topic_name
 class MenuItem(ui.item):
     """A menu item that links to a page."""
 
-    def __init__(self, text: str, link: str) -> None:
+    def __init__(self, text: str, link: str | ui.element) -> None:
+        # If we were given an element, build a reference to it.
+        if isinstance(link, ui.element):
+            link = f"#c{link.id}"
+
         super().__init__(text=text, on_click=lambda: ui.navigate.to(link))
 
         self.props("flat")
@@ -34,3 +38,8 @@ class MenuItem(ui.item):
         # The text will be the name of the file, without the extension.
         topic_name = file_path.stem
         return cls(topic_name, url_path)
+
+    @classmethod
+    def from_menu_data(cls, item_name: str, item_to_link: ui.element) -> Self:
+        """Create a menu item from a menu data tuple."""
+        return cls(item_name, item_to_link)
