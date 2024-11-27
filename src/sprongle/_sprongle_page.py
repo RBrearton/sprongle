@@ -37,6 +37,9 @@ class SpronglePage(PageBuilder):
     def make_left_drawer(self) -> ui.element:
         return c.LeftDrawer()
 
+    def make_right_drawer(self) -> ui.element:
+        return c.RightDrawer()
+
     def make_left_drawer_content(self) -> ui.element:
         return c.Menu.from_subdomain(self._subdomain_name)
 
@@ -49,9 +52,8 @@ class SpronglePage(PageBuilder):
 
         # The right drawer is optional.
         right_drawer = self.make_right_drawer()
-        if right_drawer is not None:
-            with right_drawer:
-                self.make_right_drawer_content()
+        with right_drawer:
+            self.make_right_drawer_content()
 
         # The central div left aligns content with no padding.
         central_div = ui.element().classes(
