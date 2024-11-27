@@ -19,6 +19,3 @@ class RightDrawer(ui.right_drawer):
         )
 
         self.classes(f"{bg_100} {text_bg_content}")
-
-        with self:
-            ui.markdown("Placeholder right menu.")
