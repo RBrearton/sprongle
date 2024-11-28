@@ -96,8 +96,9 @@ class SpronglePage(PageBuilder):
                 # w-full encourages the div to reach exactly that width, even if
                 # the content isn't particularly wide. This keeps sizes
                 # consistent. flex-shrink makes this div shrinkable when screen
-                # space decreases.
-                content_area = ui.element().classes(
+                # space decreases. Finally, we make it an article to improve
+                # text formatting.
+                content_area = ui.element(tag="article").classes(
                     "max-w-[850px] w-full flex-shrink py-6"
                 )
                 with content_area:
