@@ -30,8 +30,13 @@ def render_markdown(markdown_text: str) -> str:
 
 
 class Text(ui.html):
-    """A simple text component."""
+    """A simple text component.
 
-    def __init__(self, text: str, *, is_span: bool = False) -> None:
-        super().__init__(content=text, tag="span" if is_span else "p")
+    The text can be any markdown text, and it will be rendered for you by this
+    component. If you don't want the text to be a paragraph, you can set the
+    is_paragraph parameter to False.
+    """
+
+    def __init__(self, text: str, *, is_paragraph: bool = True) -> None:
+        super().__init__(content=text, tag="p" if is_paragraph else "span")
         self.classes("w-full")
