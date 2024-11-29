@@ -21,9 +21,10 @@ class DropdownReference(ui.dropdown_button):
         super().__init__(text)
         self.classes("inline")
         self.props("flat no-caps")
-        self.props('dense size="small"')
+        self.props("dense")
         self.props(f"label={text}")
 
         with self:
             with ui.card():
+                ui.markdown(ref.content)
                 ui.link("Reference", target=ref)
