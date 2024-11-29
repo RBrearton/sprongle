@@ -101,7 +101,7 @@ class SpronglePage(PageBuilder):
                 content_area = (
                     ui.element(tag="article")
                     .classes("max-w-[850px] w-full flex-shrink py-6")
-                    .classes("text-xs md:text-md 2xl:text-lg")
+                    .classes("text-md 2xl:text-lg")
                 )
                 with content_area:
                     self.make_content()
