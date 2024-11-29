@@ -2,11 +2,11 @@
 
 from ._admonition import Admonition
 from ._dark_mode_toggle import DarkModeToggle
+from ._dropdown_reference import DropdownReference
 from ._footer import Footer
 from ._github_link import GithubLink
 from ._header import Header
 from ._header_button import HeaderButton
-from ._hover_reference import HoverReference
 from ._left_drawer import LeftDrawer
 from ._menu import Menu
 from ._menu_expansion_item import MenuExpansionItem
@@ -22,7 +22,7 @@ __all__ = [
     "GithubLink",
     "Header",
     "HeaderButton",
-    "HoverReference",
+    "DropdownReference",
     "LeftDrawer",
     "Menu",
     "MenuExpansionItem",
