@@ -18,6 +18,7 @@ class Admonition(ui.expansion):
         self.classes(f"{style.bg_200}")
         self.props["header-class"] = "bg-opacity-50 dark:bg-opacity-40 "
         self.classes("border-2")
+        self.classes("my-4 2xl:my-8")
 
     @classmethod
     def info(cls, title: str, *, is_open: bool) -> Self:
