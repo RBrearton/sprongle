@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0 auto; }
 
+math {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
 body.desktop .q-expansion-item .q-focus-helper,
 body.desktop .q-btn .q-focus-helper,
 body.desktop .q-item .q-focus-helper {
