@@ -98,8 +98,10 @@ class SpronglePage(PageBuilder):
                 # consistent. flex-shrink makes this div shrinkable when screen
                 # space decreases. Finally, we make it an article to improve
                 # text formatting.
-                content_area = ui.element(tag="article").classes(
-                    "max-w-[850px] w-full flex-shrink py-6"
+                content_area = (
+                    ui.element(tag="article")
+                    .classes("max-w-[850px] w-full flex-shrink py-6")
+                    .classes("text-xs md:text-md 2xl:text-lg")
                 )
                 with content_area:
                     self.make_content()
