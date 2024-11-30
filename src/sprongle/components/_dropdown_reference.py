@@ -2,6 +2,8 @@
 
 from nicegui import ui
 
+from sprongle.style import bg_200
+
 from ._text import Text
 
 
@@ -23,8 +25,11 @@ class DropdownReference(ui.dropdown_button):
         self.props("flat no-caps")
         self.props("dense")
         self.props(f"label={text}")
-
+        self._ref = ref
         with self:
-            with ui.card():
+            with ui.card().classes().classes(bg_200):
                 ui.markdown(ref.content).classes("text-xl")
-                ui.link("Go to definition", target=ref)
+                ui.button(
+                    "Go to definition",
+                    on_click=lambda: ui.navigate.to(self._ref),
+                ).props('color="teal" no-caps')
