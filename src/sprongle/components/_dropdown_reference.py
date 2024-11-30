@@ -27,4 +27,4 @@ class DropdownReference(ui.dropdown_button):
         with self:
             with ui.card():
                 ui.markdown(ref.content).classes("text-xl")
-                ui.link("Reference", target=ref)
+                ui.link("Go to definition", target=ref)
