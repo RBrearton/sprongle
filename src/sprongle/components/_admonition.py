@@ -20,6 +20,14 @@ class Admonition(ui.expansion):
         self.classes("border-2")
         self.classes("my-4 2xl:my-8")
 
+        # All our content should be in an <article> tag.
+        with self:
+            self.article = ui.element("article")
+
+        # Make our default slot be the article's default slot, so that all
+        # content is wrapped in the article element.
+        self.default_slot = self.article.default_slot
+
     @classmethod
     def info(cls, title: str, *, is_open: bool) -> Self:
         """Create a new info admonition."""
