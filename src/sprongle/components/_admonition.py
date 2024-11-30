@@ -39,7 +39,7 @@ class Admonition(ui.expansion):
     @classmethod
     def show_working(cls) -> Self:
         """For showing working out."""
-        return cls.info("Show working", is_open=False)
+        return cls.info("Show working", is_open=True)
 
     @classmethod
     def success(cls, title: str, *, is_open: bool) -> Self:
@@ -64,4 +64,4 @@ class Admonition(ui.expansion):
     @classmethod
     def show_answer(cls) -> Self:
         """For showing the answer."""
-        return cls.success("Show answer", is_open=False)
+        return cls.success("Show answer", is_open=True)
