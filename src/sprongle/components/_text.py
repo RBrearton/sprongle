@@ -37,7 +37,7 @@ class Text(ui.html):
     is_paragraph parameter to False.
     """
 
-    def __init__(self, text: str, *, is_paragraph: bool = True) -> None:
+    def __init__(self, text: str, *, is_paragraph: bool = False) -> None:
         rendered_text = render_markdown(text)
 
         # This always renders as a paragraph, which we never want, because this
