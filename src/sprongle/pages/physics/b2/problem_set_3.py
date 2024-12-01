@@ -751,4 +751,381 @@ This is because lengths are contracting in the direction of motion in the instan
 As it gets further away from $A$ in $S$, lengths contract in $S_t$ by exactly the right amount to keep the distance constant.
 """)
 
+            q4_title = c.Title.menu_title(
+                "Q4: Circular motion in a magnetic field",
+                level=2,
+                parent=self,
+            )
+            c.Text(R"""
+We're asked to consider a particle of mass $m$ and charge $q$ moving in a constant magnetic field $\vec{B}$ in an inertial frame $S$, and to neglect radiation effects.
+""")
+            c.Title.menu_title("Part a", level=3, parent=q4_title)
+            c.Text(R"""
+<blockquote>
+Show that the energy $E$ of the particle, its Lorentz factor $\gamma_v$, and the magnitude of its momentum $p$ are conserved.
+</blockquote>
+""")
+            with c.Admonition.show_working():
+                c.Text(R"""
+For the Lorentz force, $\vec{f} = q\vec{v} \times \vec{B}$, the orthogonality of $\vec{v}$ and $\vec{F}$ gives
+
+$$
+\frac{dE}{dt} = \vec{f} \cdot \vec{v} = 0 \, .
+$$
+
+This means that
+
+$$
+E = \gamma_v m c^2 = \mathrm{constant} \, ,
+$$
+
+which is possible only if $\gamma_v$ is also constant.
+This means then that the momentum must be constant, as
+
+$$
+E^2 = p^2 c^2 + m^2 c^4 \, .
+$$
+""")
+            c.Title.menu_title("Part b", level=3, parent=q4_title)
+            c.Text(R"""
+<blockquote>
+Show that, in a plane perpendicular to $\vec{B}$, the particle moves in a circle and calculate its angular frequency $\omega$.
+Find its radius $r$ in terms of the momentum of the particle.
+</blockquote>
+""")
+            with c.Admonition.show_working():
+                c.Text(R"""
+The equation of motion is
+
+$$
+\frac{d\vec{p}}{dt} = \gamma_v m \frac{d\vec{v}}{dt} = q\vec{v} \times \vec{B} \, .
+$$
+
+From here it's basically just classical mechanics, because $\gamma_v$ is constant.
+Using the usual trick of aligning the field $\vec{B}$ with the $z$-axis without loss of generality, we can write
+
+$$
+\frac{dv_x}{dt} = \frac{qB}{\gamma_v m} v_y \, , ~~~ \frac{dv_y}{dt} = -\frac{qB}{\gamma_v m} v_x \, .
+$$
+
+Guessing that $v_x = A \sin \omega t$ and $v_y = A \cos \omega t$, we can find
+""")
+
+                cyclotron_frequency = c.Text(R"""
+$$
+\omega = \frac{qB}{\gamma_v m} \, .
+$$
+""")
+                c.Text(R"""
+The momentum is $p = \sqrt{p_\perp^2 + p_z^2}$, where $\vec{p}_\perp$ is the component of $\vec{p}$ in the plane perpendicular to $\vec{B}$.
+We have $p_perp = \gamma_v m v_\perp = \gamma_v m r \omega$.
+Substituting in the""")
+                c.DropdownReference(
+                    ref=cyclotron_frequency, text="cyclotron frequency"
+                )
+                c.Text(R"""
+gives
+
+$$
+r = \frac{p_\perp}{qB}
+$$
+""")
+            c.Title.menu_title("Part c", level=3, parent=q4_title)
+            c.Text(R"""
+<blockquote>
+In $S$, the speed of the particle is constant.
+Show that $v'$ as seen by an observer moving with speed $u$ along the $x$-axis is not constant.
+How can the energy of the particle change in the observer's frame.
+</blockquote>
+""")
+            with c.Admonition.show_working():
+                c.Text(R"""
+
+The 4-velocity of the particle in $S$ is
+
+$$
+U^\mu = \left( \gamma_v c, \gamma_v \vec{v} \right) \, .
+$$
+
+In $S'$, it transforms to
+
+$$
+U'^\mu = \left( \gamma_v' c, \gamma_v' \vec{v}' \right) \, ,
+$$
+
+where
+
+$$
+\gamma_v' c = \gamma_u \left( \gamma_v c - \frac{u}{c} \gamma_v v_x \right)
+=
+\gamma_v \gamma_u \left( c - \frac{u}{c} A \sin\omega t \right)
+$$
+
+This isn't actually enough by itself to prove that the speed isn't constant, because the time $t$ could be a constant.
+To make this rigorous, we should swap out $t$ for the proper time $\tau$, which can never be constant.
+As $dt/d\tau = \gamma_v$ which *is* constant, we can write
+
+$$
+\gamma_v' c = \gamma_v \gamma_u \left( c - \frac{u}{c} A \sin\omega \gamma_v \tau \right) \, .
+$$
+
+Now we can see clearly that $v'$ isn't constant.
+If it was, then $\gamma_v'$ would be constant, which is only possible if the proper time is constant, which isn't possible.
+This means that the energy of the particle is fluctuating in the observer's frame.
+This is fine!
+In the frame $S'$ moving along the $x$-axis, there is an electric field field acting on the particle, which can change its energy.
+So fundamentally, this is all related to the transformation between magnetic and electric fields in different frames.
+""")
+            c.Title.menu_title("Part d", level=3, parent=q4_title)
+            c.Text(R"""
+<blockquote>
+We're shown a figure depicting a cyclotron.
+We're asked to comment on the magnetic field in the cyclotron, how many turns the particles undergo, and the total time required to accelerate them.
+</blockquote>
+""")
+            with c.Admonition.show_working():
+                c.Text(R"""
+
+For the particles to be accelerated by the electric field each time they cross the gaps, the field's oscillation period must be half the orbital period of the particles, meaning $2\pi/\omega = 2/23 \, \mu\mathrm{s}$.
+For $\omega$ to remain constant, $B$ must increase proportionally with $\gamma_v$.
+
+The kinetic energy of the particles as they leave the cyclotron is
+
+$$
+(\gamma_\mathrm{max} - 1)mc^2 = 520 \, \mathrm{MeV} \, .
+$$
+
+The rest mass energy of $H^-$ is $938 \, \mathrm{MeV}$, so $\gamma_\mathrm{max} = 1 + 520/938 = 1.55$, corresponding to a velocity of $0.77c$.
+At the outer edge of the cyclotron, the field is given by
+
+$$
+B = \frac{\gamma_\mathrm{max} m \omega}{q} = 0.44\, \mathrm{T} \, .
+$$
+
+Since the particle gains 380 KeV per turn, it must undergo 1368 turns to reach its final energy.
+This gives a total time of $1368 \times 2/23 \, \mu\mathrm{s} = 119 \, \mu\mathrm{s}$.
+""")
+            c.Title.menu_title(
+                "Q5: Motion in a magnetic dipole",
+                level=2,
+                parent=self,
+            )
+            c.Text(R"""
+We're asked to consider a particle in a dipole field with moment $\vec{M} = M \hat{z}$, and to neglect radiation effects.
+
+<blockquote>
+Show that the motion of the particle remains in the $x$-$y$ plane.
+Show that its motion is confined within
+
+$$
+r_\mathrm{min} = \frac{\alpha r_0}{2} \left(
+    -1 + \sqrt{1 + \frac{4}{\alpha}}
+\right) \, , ~~~
+r_\mathrm{max} = \frac{\alpha r_0}{2} \left(
+    1 + \sqrt{1 - \frac{4}{\alpha}}
+\right) \, ,
+$$
+
+Use the Lagrangian""")
+            c.Text(R"""
+$$
+L = \frac{-mc^2}{\gamma} + q\vec{v} \cdot \vec{A}
+\, , ~~~
+\vec{A} = \frac{\mu_0}{4\pi} \frac{\vec{M} \times \vec{r}}{r^3}
+$$
+""")
+            c.Text(R"""
+and identify a conserved quantity.
+
+</blockquote>""")
+            with c.Admonition.show_working():
+                c.Text(R"""
+Let's start by evaluating the Lagrangian in spherical coordinates.
+Note that $\vec{M} \times \vec{r} = Mr\sin\theta \hat{\phi}$ in spherical polars, and $\vec{v} = \dot{r} \hat{r} + r\dot{\theta} \hat{\theta} + r\sin\theta \dot{\phi} \hat{\phi}$.
+Using these gives
+
+$$
+L(r, \theta, \phi) = \frac{-mc^2}{\gamma} + q \vec{v} \cdot \frac{\mu_0}{4\pi} \frac{M \sin\theta}{r^2} \hat{\phi}
+=
+\frac{-mc^2}{\gamma} + \frac{q\mu_0 M \sin^2\theta}{4\pi r} \dot{\phi} \, .
+$$
+
+Here the question isn't quite precise.
+It states that the particle is in the $x-y$ plane at $t = 0$; I'm going to assume that the velocity is also in the $x-y$ plane at $t = 0$, as well as the position.
+We're told that the initial velocity is $v_0 \hat{r}$, so we're guessing that this radial velocity is in the $x-y$ plane.
+This means that $\theta = \pi/2$ and $\dot{\theta} = 0$ forever, which simplifies the Lagrangian to
+
+$$
+L = \frac{-mc^2}{\gamma} + \frac{q\mu_0 M}{4\pi r} \dot{\phi} \, .
+$$
+
+Note that we have a conserved quantity
+
+$$
+p_\phi = \frac{\partial L}{\partial \dot{\phi}} = m \gamma r^2 \dot{\phi}  + \frac{q\mu_0 M}{4\pi} = C \, ,
+$$
+
+where $C$ is a constant determined by the initial conditions.
+Initially, $\vec{v}$ is aligned with $\hat{r}$, so that $\dot{\phi} = 0$.
+Defining $r(t=0) = r_0$ gives
+
+$$
+m\gamma r^2 \dot{\phi} + q\frac{\mu_0 M}{4\pi r} = q \frac{\mu_0}{4\pi} \frac{M}{r_0}
+$$
+
+At an extremal point $r_e$, we must have $\dot{r} = 0$ so that $v = r_e \dot{\phi}$.
+Also, $\gamma$ and $v$ are constants (as shown in question 4), so $r_e \dot{\phi} = \pm v_0$.
+Subbing this into our conservation law gives
+
+$$
+q \frac{\mu_0}{4\pi} \frac{M}{r_e} \pm m \gamma r_e v_0 = q \frac{\mu_0}{4\pi} \frac{M}{r_0} \, .
+$$
+
+This can be rewritten as
+
+$$
+\pm x^2 - \alpha x + \alpha = 0
+$$
+
+and solved to give
+
+$$
+x = \frac{r_e}{r_0} = \pm \frac{\alpha}{2}\left(1 \pm \sqrt{1 - \frac{4\epsilon}{\alpha}} \right) \, .
+$$
+
+Keeping only positive values of $r_e$ gives
+
+$$
+x_1 = \frac{\alpha}{2} \left( 1 + \sqrt{1 - \frac{4}{\alpha}} \right)
+\, , ~~~
+x_2 = \frac{\alpha}{2} \left( 1 - \sqrt{1 + \frac{4}{\alpha}} \right)
+\, , ~~~
+x_3 = \frac{\alpha}{2} \left( 1 - \sqrt{1 - \frac{4}{\alpha}} \right)
+$$
+
+where $x_1$ is the maximum radius and $x_2$ is the minimum radius.
+$x_3$ is an intermediate radius that could represent something like a saddle point of the Hamiltonian.
+""")
+            q6_title = c.Title.menu_title(
+                "Q6: The relativistic rocket",
+                level=2,
+                parent=self,
+            )
+            c.Text(R"""
+<blockquote>
+Consider a rocket that converts mass into photons and spits them out the back.
+Let $S$ be attached to earth and be considered inertial.
+The rocket has mass $M(t)$ and velocity $v(t)$ in $S$ along the $x$-axis.
+</blockquote>
+""")
+            c.Title.menu_title("Part a", level=3, parent=q6_title)
+            c.Text(R"""
+<blockquote>
+Show that
+
+$$
+\frac{dM}{M} = -\frac{dv/c}{1 - v^2/c^2} \, .
+$$
+Integrate this equation to derive the relationship between $v$ and $M$.
+Assume $v(t=0)=0$ and $M(t=0) = M_0$.
+</blockquote>
+""")
+            with c.Admonition.show_working():
+                c.Text(R"""
+To get the first relationship, use conservation of momentum in $S$.
+Between times $t$ and $t + dt$, the rocket's mass decreases by $dM = M(t + dt) - M(t)$.
+Define $dm = -dM$ as the positive mass converted into photons in this time period.
+In the instantaneous rest frame of the rocket, the energy of the rocket decreases by $dm c^2$.
+The total momentum of the photons emitted during $dt$ in $S_t$ must be
+
+$$
+dp'_\gamma = - cdm
+$$
+
+This corresponds to a momentum in $S$ of
+
+$$
+dp_\gamma = \gamma_t\left(
+    dp'_\gamma + \frac{v}{c} \frac{dE'_\gamma}{c}
+\right)
+=
+\gamma_t \left(
+    -1 + \frac{v}{c}
+\right)cdm
+$$
+
+Conservation of momentum gives $p(t) = p(t + dt) + dp_\gamma$, so
+""")
+                momentum_conservation = c.Text(R"""
+$$
+p(t + dt) - p(t) = -dp_\gamma = \gamma_t \left(
+    1 - \frac{v}{c}
+\right)c \, dm
+$$
+""")
+                c.Text(R"""
+The left hand side can also be written as
+
+$$
+d[\gamma_t M(t) v(t)] = \gamma_t^3 \frac{v dv}{c^2} M(t) v(t) + \gamma_t v(t) dM + \gamma_t M(t) dv
+$$
+""")
+                c.Text(R"""
+where we used $d\gamma_t = \gamma_t^3 v dv/c^2$.
+Subbing this back into the""")
+                c.DropdownReference(
+                    ref=momentum_conservation, text="momentum conservation"
+                )
+                c.Text("equation gives")
+                c.Text(R"""
+$$
+\gamma_t^3 \frac{v dv}{c^2} M(t) v(t) + \gamma_t v(t) dM + \gamma_t M(t) dv = \gamma_t \left(
+    1 - \frac{v}{c}
+\right)c \, dm
+$$
+
+This simplifies to
+
+$$
+\gamma_t^2 \frac{dv}{c} = - \frac{dM}{M}
+$$
+
+Now integrating up until time $t$ gives
+
+$$
+\int^M_{M_0} \frac{dM}{M} = \frac{1}{2}\int^v_0 \left(
+    \frac{-1}{1 + v/c} + \frac{-1}{1 - v/c}
+\right)dv
+$$
+
+which leads to
+
+$$
+\frac{M}{M_0} = \sqrt{\frac{1 - v/c}{1 + v/c}}
+$$""")
+            c.Title.menu_title("Part b", level=3, parent=q6_title)
+            c.Text(R"""
+<blockquote>
+Derive the energy of the rocket in frame $S$ as a function of its velocity.
+If all the mass is converted into photons, what's the final energy of the rocket in frame $S$?
+</blockquote>""")
+            with c.Admonition.show_working():
+                c.Text(R"""
+The energy of the rocket in $S$ is
+
+$$
+E(t) = \gamma_t M(t) c^2 =
+\frac{M_0 c^2}{\sqrt{1 - v^2/c^2}} \sqrt{
+    \frac{1 - v/c}{1 + v/c}
+}
+$$
+
+which simplifies to
+
+$$
+E(t) = \frac{M_0 c^2}{ 1 + v/c} \, .
+$$
+
+If all the mass is converted into photons, the final mass $M = 0$, which gives exactly $v = c$.
+This would give $E = M_0 c^2 / 2$.""")
         return div
