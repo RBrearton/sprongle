@@ -21,7 +21,7 @@ build-backend = "hatchling.build"
 line-length = 80
 
 [tool.ruff.lint]
-ignore = ["PLR0913", "SIM117", "COM812", "T201", "D413", "PD901"]
+ignore = ["PLR0913", "SIM117", "COM812", "T201", "D413", "PD901", "RUF001"]
 select = ["ALL"]
 unfixable = [
     "F401", # Ignore unused imports.
