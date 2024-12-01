@@ -2,7 +2,7 @@
 
 from functools import lru_cache
 
-from markdown2 import markdown  # type: ignore  # noqa: PGH003
+from markdown2 import markdown  # type: ignore
 from nicegui import ui
 
 # These are all of the extras that we opt into by default. To see all the
@@ -45,8 +45,10 @@ class Text(ui.html):
         # we didn't do this and we asked for a paragraph, our html would look
         # like <p><p>...</p></p>, which is never what we want.
         if rendered_text.startswith("<p>"):
+            rendered_text = rendered_text[3:]
+        if rendered_text.endswith("</p>"):
             # We still check for the <p>, just in case!
-            rendered_text = rendered_text[3:-5]
+            rendered_text = rendered_text[:-5]
 
         super().__init__(
             content=rendered_text, tag="p" if is_paragraph else "span"
