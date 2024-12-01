@@ -7,6 +7,11 @@
 // Make all math font a bit bigger.
 math {
     font-size: 110%;
+
+    @media (max-width: 768px) {
+        // Medium and small screens
+        font-size: 100%;
+    }
 }
 
 // Big equations need big margins to stay readable. Also further increase font
@@ -15,6 +20,11 @@ math[display="block"] {
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 120%;
+
+    @media (max-width: 768px) {
+        // Medium and small screens
+        font-size: 110%;
+    }
 }
 
 // This simply speeds up transitions compared to the quasar defaults.
