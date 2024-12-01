@@ -11,15 +11,21 @@
     "hoverable",
     "infty",
     "intercal",
+    "legendgroup",
     "Lennard",
     "libsass",
     "mathbb",
     "mathrm",
     "mouseout",
+    "ndarray",
     "nicegui",
     "plotly",
     "pmatrix",
+    "powderblue",
+    "prefactor",
+    "propto",
     "setuptools",
+    "showlegend",
     "skyrmions",
     "spacelike",
     "Sprongle",
@@ -28,7 +34,10 @@
     "venv",
     "Waals",
     "wavevector",
-    "worldline"
+    "wavevectors",
+    "worldline",
+    "xaxis",
+    "yaxis"
   ],
-  "python.analysis.typeCheckingMode": "strict"
+  "python.analysis.typeCheckingMode": "standard"
 }
