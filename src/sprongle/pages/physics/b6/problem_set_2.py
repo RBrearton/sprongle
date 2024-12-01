@@ -287,13 +287,15 @@ What is the physical meaning of the exponent 6?
 </blockquote>
 """)
             with c.Admonition.show_working():
-                c.Text(R"""
+                c.Text(
+                    R"""
 The exponent 6 comes from the fact that the Lennard-Jones potential is used to model Van der Waals interactions.
 There are a few interesting things to note here:
 
 - Lennard-Jones is one guy with a double-barrelled surname!
 - If we wanted to study interactions in a crystal, we might want to use something like the [Morse potential](https://en.wikipedia.org/wiki/Morse_potential).
-- The twelfth power is wrong. It models Pauli repulsion, which has a very different functional form. We keep it because it's extremely easy to square numbers with a computer, and we've already had to calculate the sixth power to get the attractive part of the potential! Really, any power greater than 6 would have worked, and we choose 12 for computational efficiency.""")
+- The twelfth power is wrong. It models Pauli repulsion, which has a very different functional form. We keep it because it's extremely easy to square numbers with a computer, and we've already had to calculate the sixth power to get the attractive part of the potential! Really, any power greater than 6 would have worked, and we choose 12 for computational efficiency."""
+                )
             c.Title.menu_title("Part b", level=3, parent=q3_title)
             c.Text(R"""
 <blockquote>
