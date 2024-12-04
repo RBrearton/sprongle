@@ -8,3 +8,6 @@ wheels/
 typings
 # Virtual environments
 .venv
+
+# Server-side storage for dark mode persistence goes here.
+.nicegui
