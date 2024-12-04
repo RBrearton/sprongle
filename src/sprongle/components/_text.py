@@ -45,10 +45,13 @@ class Text(ui.html):
         # we didn't do this and we asked for a paragraph, our html would look
         # like <p><p>...</p></p>, which is never what we want.
         if rendered_text.startswith("<p>"):
-            rendered_text = rendered_text[3:]
-        if rendered_text.endswith("</p>"):
-            # We still check for the <p>, just in case!
-            rendered_text = rendered_text[:-5]
+            rendered_text = rendered_text[3:-5]
+
+        # For some reason that I haven't yet figured out, sometimes the rendered
+        # text now ends in a <. I don't know what tag this comes from. Tough
+        # luck if you want to actually end a paragraph with a <!
+        if rendered_text.endswith("<"):
+            rendered_text = rendered_text[:-1]
 
         super().__init__(
             content=rendered_text, tag="p" if is_paragraph else "span"
