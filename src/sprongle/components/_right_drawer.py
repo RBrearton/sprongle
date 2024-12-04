@@ -10,7 +10,6 @@ class RightDrawer(ui.right_drawer):
 
     def __init__(self) -> None:
         super().__init__(
-            value=True,
             fixed=True,
             bordered=False,
             elevated=False,
