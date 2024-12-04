@@ -69,6 +69,7 @@ light = ColorSchemeModel(
     error_content="gray-950",
 )
 
+dark_base_100 = "#374151"
 dark = ColorSchemeModel(
     primary=light.primary,
     primary_content=light.primary_content,
