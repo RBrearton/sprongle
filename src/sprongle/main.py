@@ -77,7 +77,11 @@ def main() -> None:
 
     # Run the website.
     ui.run(
-        fastapi_docs=True, show=False, reload=config.auto_reload, favicon="🤓"
+        fastapi_docs=True,
+        show=False,
+        reload=config.auto_reload,
+        favicon="🤓",
+        storage_secret=config.storage_secret,
     )
 
 

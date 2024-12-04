@@ -26,6 +26,9 @@ class Config(BaseSettings):
     scss_file: FilePath = assets_dir / styles_scss_name
     static_css_file: FilePath = static_dir_path / styles_css_name
 
+    # The secret for the storage.
+    storage_secret: str = "sprongle"
+
     # The settings config.
     model_config = SettingsConfigDict(env_prefix="sprongle_")
 
