@@ -50,3 +50,8 @@ error_content = f"text-{light.error_content} dark:text-{dark.error_content}"
 menu_item = f"w-full select-none {rounded} {_tw_menu_active} {bg_content}"
 
 header_clickable = f"{_tw_header_hover} {_tw_header_active}"
+
+
+# This translates "lg" in tailwind, which represents a 1280px screen width, to
+# a pixel value that we can use in quasar.
+large_screen_px = 1280

@@ -2,7 +2,7 @@
 
 from nicegui import ui
 
-from sprongle.style import bg_100, bg_content
+from sprongle.style import bg_100, bg_content, large_screen_px
 
 
 class LeftDrawer(ui.left_drawer):
@@ -17,5 +17,5 @@ class LeftDrawer(ui.left_drawer):
             top_corner=False,
             bottom_corner=False,
         )
-        self.props("breakpoint=1300")
+        self.props(f"breakpoint={large_screen_px}")
         self.classes(f"{bg_100} {bg_content}")
