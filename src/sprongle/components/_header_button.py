@@ -17,4 +17,4 @@ class HeaderButton(ui.html):
 
         # These are specific to the fact that this is a button.
         self.props("rounded flat no-caps")
-        self.classes("py-2 px-4 text-lg")
+        self.classes("pt-3.5 px-4 text-lg")
