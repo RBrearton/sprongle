@@ -17,5 +17,5 @@ class LeftDrawer(ui.left_drawer):
             top_corner=False,
             bottom_corner=False,
         )
-
+        self.props("breakpoint=1250")
         self.classes(f"{bg_100} {bg_content}")
