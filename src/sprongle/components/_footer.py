@@ -11,7 +11,10 @@ class Footer(ui.footer):
     def __init__(self) -> None:
         super().__init__(fixed=False)
         self.classes(bg_primary)
-        self.classes("relative z-50")
+
+        # It's a bit ridiculous, but a z-index of 10_000 is actually necessary
+        # to make the footer have a greater z-index than the right drawer.
+        self.style("z-index: 10000;")
 
         with self:
             ui.markdown("© 2024 Dr. Richard Brearton")

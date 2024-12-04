@@ -14,12 +14,6 @@ math {
     }
 }
 
-// This is very important to make sure that the drawer shows up below the
-// footer.
-.q-drawer {
-    z-index: 20;
-}
-
 // Big equations need big margins to stay readable. Also further increase font
 // size for readability.
 math[display="block"] {
