@@ -5,7 +5,6 @@ from typing import Self
 from nicegui import ui
 
 from sprongle import utils
-from sprongle.config import parsed_config as config
 
 from ._menu_expansion_item import MenuExpansionItem
 from ._menu_header import MenuHeader
@@ -25,6 +24,22 @@ class Menu(ui.list):
             MenuHeader(header)
 
     @classmethod
+    def from_physics_subdomain(cls) -> Self:
+        """Create the menu for the physics subdomain."""
+        menu = cls(header="Physics")
+        with menu:
+            with MenuExpansionItem(text="B2: Symmetry and relativity", level=0):
+                MenuItem(text="Problem set 2", link="/physics/b2/ps2")
+                MenuItem(text="Problem set 3", link="/physics/b2/ps3")
+                MenuItem(text="Problem set 4", link="/physics/b2/ps4")
+            with MenuExpansionItem(
+                text="B6: Condensed matter physics", level=0
+            ):
+                MenuItem(text="Problem set 2", link="/physics/b6/ps2")
+
+        return menu
+
+    @classmethod
     def from_subdomain(cls, subdomain: str) -> Self:
         """Create a menu from the subdomain passed as an argument.
 
@@ -38,24 +53,7 @@ class Menu(ui.list):
         # Replace the subdomain with the topic name so that we can find the
         # topic on the filesystem.
         subdomain = utils.url_from_topic_name(subdomain)
+        if subdomain == "physics":
+            return cls.from_physics_subdomain()
 
-        # Get all the files and directories in the subdomain other than the
-        # home.md file.
-        subdomain_dir = config.pages_dir / subdomain
-        subtopic_paths = [
-            item for item in subdomain_dir.iterdir() if item.name != "home.md"
-        ]
-
-        # Order these alphabetically by their file/directory name.
-        subtopic_paths.sort(key=lambda item: item.name)
-
-        # Create the menu.
-        menu = cls(header=utils.topic_name_from_url(subdomain_dir.name))
-        with menu:
-            for subtopic_path in subtopic_paths:
-                if subtopic_path.is_dir():
-                    MenuExpansionItem.from_dir_path(subtopic_path, level=0)
-                else:
-                    MenuItem.from_file_path(subtopic_path)
-
-        return menu
+        return cls(header="Unknown subdomain")
