@@ -7,6 +7,9 @@ math {
   @media (max-width: 768px) {
     math {
       font-size: 100%; } }
+.q-drawer {
+  z-index: 20; }
+
 math[display="block"] {
   margin-top: 2rem;
   margin-bottom: 2rem;
