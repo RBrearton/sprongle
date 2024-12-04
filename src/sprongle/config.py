@@ -26,6 +26,10 @@ class Config(BaseSettings):
     scss_file: FilePath = assets_dir / styles_scss_name
     static_css_file: FilePath = static_dir_path / styles_css_name
 
+    # The port on which we want to serve the website. Default to 10k, to be
+    # compatible with render.com.
+    port: int = 10_000
+
     # The secret for the storage.
     storage_secret: str = "sprongle"
 

@@ -82,6 +82,7 @@ def main() -> None:
         reload=config.auto_reload,
         favicon="🤓",
         storage_secret=config.storage_secret,
+        port=config.port,
     )
 
 
