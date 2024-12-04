@@ -18,7 +18,7 @@ from .utils import get_markdown
 @app.middleware("http")
 async def clear_cache_if_auto_reloading(
     request: Request,
-    call_next: Callable,  # type: ignore  # noqa: PGH003
+    call_next: Callable,  # type: ignore
 ) -> HTMLResponse:
     """Clear the cache if auto-reloading is enabled.
 
@@ -29,7 +29,7 @@ async def clear_cache_if_auto_reloading(
     """
     if config.auto_reload:
         get_markdown.cache_clear()
-    return await call_next(request)  # type: ignore  # noqa: PGH003
+    return await call_next(request)  # type: ignore
 
 
 @ui.page("/")
