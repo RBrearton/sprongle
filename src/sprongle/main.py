@@ -10,6 +10,7 @@ from ._markdown_page import MarkdownPage
 from .config import parsed_config as config
 from .pages.physics.b2.problem_set_2 import B2ProblemSet2
 from .pages.physics.b2.problem_set_3 import B2ProblemSet3
+from .pages.physics.b2.problem_set_4 import B2ProblemSet4
 from .pages.physics.b6.problem_set_2 import B6ProblemSet2
 from .scss_utils import compile_scss
 from .utils import get_markdown
@@ -59,6 +60,12 @@ def b2_ps2() -> None:
 def b2_ps3() -> None:
     """Build the B2 PS3 page."""
     B2ProblemSet3().make_entire_page()
+
+
+@ui.page("/physics/b2/ps4")
+def b2_ps4() -> None:
+    """Build the B2 PS4 page."""
+    B2ProblemSet4().make_entire_page()
 
 
 @ui.page("/physics/b6/ps2")
