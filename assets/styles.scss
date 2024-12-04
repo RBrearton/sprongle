@@ -2,6 +2,11 @@
 .nicegui-content {
     padding: 0;
     margin: 0 auto;
+
+    // I don't think there's any reasonable way to make this site work with
+    // very small phone screens. Instead, we basically own up to that fact and
+    // make the site scrollable on tiny phone screens, with a width of 550px.
+    min-width: 550px;
 }
 
 // Make all math font a bit bigger.

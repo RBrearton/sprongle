@@ -1,6 +1,7 @@
 .nicegui-content {
   padding: 0;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-width: 550px; }
 
 math {
   font-size: 110%; }
