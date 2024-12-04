@@ -16,7 +16,7 @@ class Header(ui.header):
         # Set up the header the way we like it.
         super().__init__(
             value=True,
-            fixed=False,
+            fixed=True,
             bordered=True,
             elevated=False,
             add_scroll_padding=True,
