@@ -3,6 +3,9 @@
   margin: 0 auto;
   min-width: 550px; }
 
+footer {
+  min-width: 550px; }
+
 math {
   font-size: 110%; }
   @media (max-width: 768px) {
