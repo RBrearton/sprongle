@@ -4,8 +4,6 @@ from typing import Self
 
 from nicegui import ui
 
-from sprongle import utils
-
 from ._menu_expansion_item import MenuExpansionItem
 from ._menu_header import MenuHeader
 from ._menu_item import MenuItem
@@ -46,14 +44,12 @@ class Menu(ui.list):
         The subdomain should take the form /physics, /research etc. This method
         expects a "top level" subdomain.
         """
-        # Make the subdomain string safe to use with the '/' operator.
+        # We should do the same thing whether or not the subdomain has a leading
+        # slash.
         if subdomain.startswith("/"):
             subdomain = subdomain[1:]
 
-        # Replace the subdomain with the topic name so that we can find the
-        # topic on the filesystem.
-        subdomain = utils.url_from_topic_name(subdomain)
-        if subdomain == "physics":
+        if subdomain.lower() == "physics":
             return cls.from_physics_subdomain()
 
         return cls(header="Unknown subdomain")
