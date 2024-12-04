@@ -6,6 +6,7 @@ from nicegui import ui
 
 from . import components as c
 from ._page_builder import PageBuilder
+from .color import dark_base_100
 from .config import parsed_config as config
 from .style import bg_100, bg_content
 
@@ -27,6 +28,8 @@ class SpronglePage(PageBuilder):
         # This is needed for the github logo.
         eva_icons = "https://unpkg.com/eva-icons@1.1.3/style/eva-icons.css"
         ui.add_head_html(f'<link href={eva_icons} rel="stylesheet" />')
+        ui.query("body").classes(bg_100)
+        ui.colors(dark_page=dark_base_100)
 
         # Set the page title. This is what you see when you hover over the tab
         # in a browser.
