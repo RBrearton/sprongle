@@ -33,7 +33,7 @@ class SpronglePage(PageBuilder):
 
         # Set the page title. This is what you see when you hover over the tab
         # in a browser.
-        ui.page_title("Sprongle")
+        ui.page_title("s p r o n g l e")
 
         # Add our static styles.css file. This is built automatically from our
         # assets/styles.scss file.
