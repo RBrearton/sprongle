@@ -40,13 +40,13 @@ class SpronglePage(PageBuilder):
         styles_ref = f"/{config.static_dir_name}/styles.css"
         ui.add_head_html(f'<link rel= "stylesheet" href="{styles_ref}">')
 
-    def make_navbar(self) -> ui.element:
+    def make_navbar(self) -> c.Header:
         return c.Header(title="Sprongle.com")
 
     def make_footer(self) -> ui.element:
         return c.Footer()
 
-    def make_left_drawer(self) -> ui.element:
+    def make_left_drawer(self) -> c.LeftDrawer:
         return c.LeftDrawer()
 
     def make_right_drawer(self) -> ui.element:
@@ -78,10 +78,11 @@ class SpronglePage(PageBuilder):
 
     def make_entire_page(self) -> None:
         self.make_header()
-        self.make_navbar()
+        navbar = self.make_navbar()
         self.make_footer()
-        with self.make_left_drawer():
+        with self.make_left_drawer() as left_drawer:
             self.make_left_drawer_content()
+            navbar.set_drawer_ref(left_drawer)
 
         # The central div left aligns content with no padding.
         central_div = ui.element().classes(
