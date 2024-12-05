@@ -170,7 +170,7 @@ E_1 = \gamma \left( E'_1 - \beta p'_1 c \right)
 $$
 
 $$
-E_2 = \gamma \left( E'_2 - \beta p'_2 c \right)
+E_2 = \gamma \left( E'_2 + \beta p'_2 c \right)
 $$
 
 (2) emitted at right angles to the CM line of flight, $p'_\parallel = 0$, so
