@@ -493,6 +493,7 @@ where $T^{\alpha\beta}$ is the stress-energy tensor.
 Show that $\partial_\alpha M^{\alpha\beta\gamma} = 0$ (note that this equality would not hold if $T^{\alpha\beta}$ were not symmetric).""")
             with c.Admonition.show_working():
                 # TODO: ELABORATE ON "Using $\partial_\alpha T^{\alpha\beta}=..."
+                # TODO: discuss derivation of stress-energy density from Lagrangians.
                 c.Text(R"""
 We have:
 
