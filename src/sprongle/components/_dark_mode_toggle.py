@@ -11,6 +11,7 @@ class DarkModeToggle(ui.element):
 
         self.dark_mode = ui.dark_mode()
         self.dark_mode.bind_value(app.storage.user)
+        self.classes("px-4")
 
         with self.classes("flex flex-row items-center h-full"):
             ui.icon("light_mode").classes("text-2xl")
