@@ -513,16 +513,16 @@ Using the symmetry of $\sigma_{ij}$, the term $- x_j \sigma_{ki} + x_i \sigma_{k
 Thus, the equation $\partial_\alpha M^{\alpha ij} = 0$ is a continuity equation for angular momentum:
 
 $$
-\frac{\partial L_k}{\partial t} + \nabla \cdot (\vec{r} \times \vec{T}(k)) = 0.
+\frac{\partial L_k}{\partial t} + \partial_i  (\vec{r} \times \vec{T}(k))_i = 0.
 $$
 
-Integrating this equation over the entire volume $\mathcal{V}$ gives the conservation of the $k$-component of angular momentum:
+Inspired by the fact that the term on the right is a divergence, we can integrate this equation over the entire volume $\mathcal{V}$ to find the conservation of the $k$-component of angular momentum:
 
 $$
 \int_{\mathcal{V}} L_k \, dV = \text{constant},
 $$
 
-since the integral of the divergence term vanishes, as it is a boundary term (by definition of the volume $\mathcal{V}$, the electromagnetic field vanishes at the boundaries).
+where we found that the integral of the divergence term is zero using the divergence theorem; by the definition of the volume $\mathcal{V}$, the electromagnetic field vanishes at the boundaries.
 """)
             c.Title.menu_title("Part c", level=3, parent=q7_title)
             c.Text(R"""
