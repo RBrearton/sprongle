@@ -495,11 +495,11 @@ Recall that the stress on a surface with a normal in the $k$-direction is given 
 The components of $M^{\alpha ij}$ are:
 
 $$
-M^{0ij} = X^j T^0i - X^i T^0j = c x_j g_i - c x_i g_j = - c (\vec{r} \times \vec{g})_k = - c L_k,
+M^{0ij} = X^j T^{0i} - X^i T^{0j} = c x_j g_i - c x_i g_j = - c (\vec{r} \times \vec{g})_k = - c L_k,
 $$
 
 $$
-M^{kij} = X^j T^k i - X^i T^k j = - x_j \sigma_{ki} + x_i \sigma_{kj}.
+M^{kij} = X^j T^{k i} - X^i T^{k j} = - x_j \sigma_{ki} + x_i \sigma_{kj}.
 $$
 
 Substituting into the equation $\partial_\alpha M^{\alpha ij} = 0$ gives:
