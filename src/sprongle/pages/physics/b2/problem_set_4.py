@@ -426,7 +426,7 @@ recovering the familiar form of Ohm's law in the rest frame and confirming that 
 Show that the current in frame (S) is given by:
 
 $$
-\vec{j} = \rho v + \gamma_v \sigma_0 \left[ \vec{E} + \frac{\vec{v} \times \vec{B}}{c} - \frac{\vec{v} (\vec{v} \cdot \vec{E})}{c^2} \right].
+\vec{j} = \rho v + \gamma_v \sigma_0 \left[ \vec{E} + \vec{v} \times \vec{B} - \frac{\vec{v} (\vec{v} \cdot \vec{E})}{c^2} \right].
 $$""")
             with c.Admonition.show_working():
                 c.Text("Starting with the")
