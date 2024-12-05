@@ -163,6 +163,8 @@ $E_1$ and $E_2$ when the products are emitted (1) along the line of flight, and
 (2) at right angles to the line of flight in the CM frame.""")
             with c.Admonition.show_working():
                 c.Text(R"""
+To solve this problem, we just Lorentz transform from the CM frame.
+
 (1) Along the line of flight,
 
 $$
