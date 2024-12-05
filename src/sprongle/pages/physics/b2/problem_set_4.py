@@ -201,16 +201,16 @@ What condition must the fields satisfy for such a frame to exist?
 """)
             with c.Admonition.show_working():
                 c.Text(R"""
-The fields in frame (S') are related to those in frame (S) by the transformations:
-
+The fields in frame (S') are related to those in frame (S) by the transformations:""")
+                electric_field_transformation = c.Text(R"""
 $$
 \vec{E'}_{\parallel} = \vec{E}_{\parallel}, \quad \vec{E'}_{\perp} = \gamma_v \left( \vec{E}_{\perp} + \vec{v} \times \vec{B} \right),
-$$
-
+$$""")
+                magnetic_field_transformation = c.Text(R"""
 $$
 \vec{B'}_{\parallel} = \vec{B}_{\parallel}, \quad \vec{B'}_{\perp} = \gamma_v \left( \vec{B}_{\perp} - \frac{\vec{v} \times \vec{E}}{c^2} \right),
-$$
-
+$$""")
+                c.Text(R"""
 where the subscripts $\parallel$ and $\perp$ denote components parallel and perpendicular to the velocity $\vec{v}$, respectively. Since $\vec{v}$ and $\vec{E}$ are orthogonal, $\vec{E}_{\parallel}$ and thus $\vec{E'}_{\parallel}$ equal zero. For $\vec{E'}_{\perp}$ to vanish, we require $\vec{E}_{\perp} + \vec{v} \times \vec{B} = \vec{E} + \vec{v} \times \vec{B} = 0$, which gives:
 
 $$
@@ -275,14 +275,26 @@ initially at rest in this frame (S').
 """)
             with c.Admonition.show_working():
                 c.Text(R"""
-In this case, we have $E/B > c$. From equation (2), for $\vec{B'}_{\perp}$ to vanish, the condition $\vec{B'}_{\perp} - \vec{v} \times \vec{E}/c^2 = \vec{B} - \vec{v} \times \vec{E}/c^2 = 0$ must hold. This leads to:
+In this case, we have $E/B > c$. """)
+                c.Text("Looking at the")
+                c.DropdownReference(
+                    "magnetic field transformations",
+                    ref=magnetic_field_transformation,
+                )
+                c.Text(R"""
+for $\vec{B'}_{\perp}$ to vanish, the condition $\vec{B'}_{\perp} - \vec{v} \times \vec{E}/c^2 = \vec{B} - \vec{v} \times \vec{E}/c^2 = 0$ must hold. This leads to:
 
 $$
 \vec{v} = \frac{c^2 \vec{E} \times \vec{B}}{E^2} = \frac{c^2 \vec{B}}{E} \hat{z}.
 $$
 
-Since $E/B > c$, we verify that $v < c$. Using equation (1), the electric field in frame (S') is given as:
-
+Since $E/B > c$, we verify that $v < c$.""")
+                c.Text("Now using the")
+                c.DropdownReference(
+                    "electric field transformations",
+                    ref=electric_field_transformation,
+                )
+                c.Text(R"""the electric field in frame (S') is given as:
 $$
 \vec{E'}_{\perp} = \vec{E}_{\perp} = \gamma_v \left( \vec{E} - \frac{\vec{E} v^2}{c^2} \right) \hat{x} = \frac{\vec{E}}{\gamma_v}.
 $$
@@ -386,8 +398,10 @@ This establishes $\sigma_0$ as the conductivity in the rest frame.
             with c.Admonition.show_working():
                 c.Text(R"""
 In the rest frame of the conductor, the 4-velocity is $U^\mu = (c, 0)$ and the 4-current is $J^\nu = (\rho_0 c, j_0)$. Consequently, $U_\nu J^\nu = - \rho_0 c^2$ and $F^{\mu\nu} U_\nu = - c F^{\mu 0}$.
-
-Substituting into equation (3) for $\mu = 0$ gives $\rho_0 c - \rho_0 c = 0$.
+""")
+                c.Text("Now using the expression for")
+                c.DropdownReference("Ohm's law", ref=ohms_law)
+                c.Text(R"""and setting $\mu = 0$ gives $\rho_0 c - \rho_0 c = 0$.
 
 For $\mu = i$, we obtain
 
