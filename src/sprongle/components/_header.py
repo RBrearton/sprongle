@@ -59,6 +59,7 @@ class Header(ui.header):
                 ):
                     HeaderButton("Home", "/")
                     HeaderButton("Physics", "/physics")
+                    HeaderButton("Research", "/research")
 
                 # Add the right section.
                 with ui.element().classes(
