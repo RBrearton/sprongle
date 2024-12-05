@@ -320,7 +320,7 @@ $$
 x = x', \quad y = y' = 0, \quad z = \gamma_v v t'.
 $$
 """)
-            c.Title.menu_title(
+            q5_title = c.Title.menu_title(
                 "Q5: Interactions between two charged beams in a magnetic field",
                 level=2,
                 parent=self,
@@ -328,7 +328,7 @@ $$
             c.Text(R"""
 A pair of parallel particle beams separated by a distance $d$ have the same uniform charge per unit length $\lambda$. In the laboratory frame, a magnetic field is applied with a direction and strength just sufficient to overcome the repulsion between the beams, so that they both propagate in a straight line at constant speed $v$. Find the size $B$ of this magnetic field, by both of the following methods:
 """)
-            c.Title.menu_title("Part a", level=3, parent=q4_title)
+            c.Title.menu_title("Part a", level=3, parent=q5_title)
             c.Text("Do the whole calculation in the lab frame.")
             with c.Admonition.show_working():
                 c.Text(R"""
@@ -345,7 +345,7 @@ $$
 B = \frac{E}{v} - B_\lambda = \frac{\lambda}{2 \pi \epsilon_0 d v} \left( 1 - \frac{v^2}{c^2} \right).
 $$
 """)
-            c.Title.menu_title("Part b", level=3, parent=q4_title)
+            c.Title.menu_title("Part b", level=3, parent=q5_title)
             c.Text(R"""
 Start with a calculation of the force exerted by either beam on a particle in the
 other, in the rest frame of the beams. Transform this force to the laboratory frame
