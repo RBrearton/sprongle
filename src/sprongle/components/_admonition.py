@@ -22,7 +22,7 @@ class Admonition(ui.expansion):
 
         # All our content should be in an <article> tag.
         with self:
-            self.article = ui.element("article")
+            self.article = ui.element("article").classes("w-full")
 
         # Make our default slot be the article's default slot, so that all
         # content is wrapped in the article element.
