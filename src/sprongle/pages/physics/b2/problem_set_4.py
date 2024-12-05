@@ -191,7 +191,7 @@ an inertial frame (S).
 """)
             c.Title.menu_title("Part a", level=3, parent=q4_title)
             c.Text(R"""
-a) Consider a frame (S') moving with velocity $\vec{v} = v \hat{z}$ relative
+Consider a frame (S') moving with velocity $\vec{v} = v \hat{z}$ relative
 to (S). Write the fields $\vec{E'}$ and $\vec{B'}$ in this frame in terms
 of $\vec{E}$, $\vec{B}$, and $\vec{v}$. Calculate $\vec{v}$
 corresponding to $\vec{E'} = 0$ in (S') and show that this leads
@@ -384,7 +384,7 @@ The tensor $F^{\mu \nu}$ describes the electromagnetic field in frame (S) and $\
 """)
             c.Title.menu_title("Part a", level=3, parent=q6_title)
             c.Text(R"""
-a) Show that this equation reduces to $j_0 = \sigma_0 E_0$ in the rest frame of the conductor, where the subscript '0' denotes quantities in that frame.
+Show that this equation reduces to $j_0 = \sigma_0 E_0$ in the rest frame of the conductor, where the subscript '0' denotes quantities in that frame.
 This establishes $\sigma_0$ as the conductivity in the rest frame.
 """)
             with c.Admonition.show_working():
@@ -409,7 +409,7 @@ recovering the familiar form of Ohm's law in the rest frame and confirming that 
 """)
             c.Title.menu_title("Part b", level=3, parent=q6_title)
             c.Text(R"""
-b) Show that the current in frame (S) is given by:
+Show that the current in frame (S) is given by:
 
 $$
 \vec{j} = \rho v + \gamma_v \sigma_0 \left[ \vec{E} + \frac{\vec{v} \times \vec{B}}{c} - \frac{\vec{v} (\vec{v} \cdot \vec{E})}{c^2} \right].
