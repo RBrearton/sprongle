@@ -294,7 +294,9 @@ Since $E/B > c$, we verify that $v < c$.""")
                     "electric field transformations",
                     ref=electric_field_transformation,
                 )
-                c.Text(R"""the electric field in frame (S') is given as:
+                c.Text(R"""
+the electric field in frame (S') is given as:
+
 $$
 \vec{E'}_{\perp} = \vec{E}_{\perp} = \gamma_v \left( \vec{E} - \frac{\vec{E} v^2}{c^2} \right) \hat{x} = \frac{\vec{E}}{\gamma_v}.
 $$
