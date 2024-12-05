@@ -303,10 +303,6 @@ Transforming this motion back into frame (S), we obtain:
 $$
 x = x', \quad y = y' = 0, \quad z = \gamma_v v t'.
 $$
-
-Note: Suppose instead the particle starts at rest in frame (S). Transforming into (S'), $x'$ remains as above, but now $z' = -v t'$. Transforming back to (S), we recover $x$ as above, but $z = 0$. This result cannot be correct, as the $x$-component of the particle's velocity should generate a Lorentz force along the $z$-axis. What is the issue here?
-
-I think the problem lies in the timing of the transformation. By starting the particle at rest in (S) and transforming to (S') before allowing the particle to develop any motion perpendicular to the magnetic field, a singular situation is created. In frame (S), motion along the $z$-axis due to $\vec{B}$ arises only because of motion along the $x$-axis caused by $\vec{E}$. Transforming to (S') before this motion develops removes critical information about the system.
 """)
             c.Title.menu_title(
                 "Q5: Interactions between two charged beams in a magnetic field",
