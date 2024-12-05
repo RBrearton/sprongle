@@ -122,13 +122,13 @@ $$
 $$
 
 $$
-E'_2 = \frac{1}{2M} \left( -m_1^2 + M^2 + m_2^2 \right) c^2 = \frac{M^2 + m_2^2 - m_1^2 c^2}{2M}
+E'_2 = \frac{1}{2M} \left( -m_1^2 + M^2 + m_2^2 \right) c^2 = \frac{M^2c^2 + m_2^2c^2 - m_1^2 c^2}{2M}
 $$
 
 and similarly
 
 $$
-E'_1 = \frac{M^2 + m_1^2 - m_2^2 c^2}{2M}
+E'_1 = \frac{M^2c^2 + m_1^2c^2 - m_2^2 c^2}{2M}
 $$
 """)
             c.Title.menu_title("Part b", level=3, parent=q3_title)
