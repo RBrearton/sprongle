@@ -93,6 +93,7 @@ background radiation, which can be regarded as a gas of photons of energy
 $2.3 \times 10^{-4} \, \text{eV}$. Calculate the threshold energy of the
 galactic photons for the production of electron-positron pairs.
 """)
+            # NOTE: comment on rest mass of literal fucking animals.
             with c.Admonition.show_answer():
                 c.Text(R"""
 $$
@@ -491,11 +492,12 @@ where $T^{\alpha\beta}$ is the stress-energy tensor.
             c.Text(R"""
 Show that $\partial_\alpha M^{\alpha\beta\gamma} = 0$ (note that this equality would not hold if $T^{\alpha\beta}$ were not symmetric).""")
             with c.Admonition.show_working():
+                # TODO: ELABORATE ON "Using $\partial_\alpha T^{\alpha\beta}=..."
                 c.Text(R"""
 We have:
 
 $$
-\partial_\alpha M^{\alpha\beta\gamma} = X^\gamma \partial_\alpha T^{\alpha\beta} + T^{\gamma\beta} - X^\beta \partial_\alpha T^{\alpha\gamma} - T^\beta\gamma.
+\partial_\alpha M^{\alpha\beta\gamma} = X^\gamma \partial_\alpha T^{\alpha\beta} + T^{\gamma\beta} - X^\beta \partial_\alpha T^{\alpha\gamma} - T^{\beta\gamma}.
 $$
 
 Using $\partial_\alpha T^{\alpha\beta} = 0$ and $T^{\beta\gamma} = T^{\gamma\beta}$, we obtain $\partial_\alpha M^{\alpha\beta\gamma} = 0$.
