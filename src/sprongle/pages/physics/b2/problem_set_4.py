@@ -417,8 +417,9 @@ $$""")
             with c.Admonition.show_working():
                 c.Text("Starting with the")
                 c.DropdownReference("expression for Ohm's law", ref=ohms_law)
-                c.Text("we find:")
                 c.Text(R"""
+and setting $\mu = 0$, we find:
+
 $$
 \rho c + \frac{1}{c^2} \left( -\gamma_\nu \rho c^2 + \gamma_\nu \vec{v} \cdot \vec{j} \right) \gamma_\nu c = \sigma_0 \gamma_\nu \frac{\vec{v} \cdot \vec{E}}{c}.
 $$
