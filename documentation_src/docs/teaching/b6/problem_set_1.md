@@ -1,3 +1,11 @@
+---
+title: B6 problem set 1
+subtitle: Condensed matter physics
+description: Problem set 1 for the third year condensed matter physics course at Oxford University
+# status: new
+---
+
+
 ## Q1: Einstein solid
 
 We're asked to consider a single simple harmonic oscillator, given by $H = \frac{p^2}{2m} + \frac{1}{2}kx^2$
