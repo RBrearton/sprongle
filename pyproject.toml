@@ -43,3 +43,9 @@ sprongle = "sprongle.main:main"
 
 [tool.ruff.lint.per-file-ignores]
 "src/sprongle/pages/**.py" = ["E501"]
+
+[dependency-groups]
+dev = [
+    "mkdocs-material>=9.5.49",
+    "mkdocs>=1.6.1",
+]
