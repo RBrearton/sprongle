@@ -1,0 +1,85 @@
+site_name: sprongle.com
+
+# Details about the theme used in the website.
+theme:
+  name: material
+  font:
+    code: Fira Code
+  palette:
+    # The dark theme.
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+    # The light theme.
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: cyan
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  icon:
+    annotation: material/plus-circle
+    repo: fontawesome/brands/github
+
+  features:
+    # This sets up the next/previous page links in the footer.
+    - navigation.footer
+    # This sets up the header tabs.
+    - navigation.tabs
+    # This lets users copy code snippets.
+    - content.code.copy
+
+# This sets up the structure of the website.
+nav:
+  - Home: index.md
+  - "Problem sets":
+      - "B2: Symmetry and relativity":
+          - "B2: problem set 2": teaching/b2/problem_set_2.md
+          - "B2: problem set 3": teaching/b2/problem_set_3.md
+          - "B2: problem set 4": teaching/b2/problem_set_4.md
+          - "B2: problem set 5": teaching/b2/problem_set_5.md
+      - "B6: Condensed matter physics":
+          - "B6: problem set 1": teaching/b6/problem_set_1.md
+          - "B6: problem set 2": teaching/b6/problem_set_2.md
+          - "B6: problem set 3": teaching/b6/problem_set_3.md
+          - "B6: problem set 4": teaching/b6/problem_set_4.md
+          - "B6: problem set 5": teaching/b6/problem_set_5.md
+  - "Oxphys numerics":
+      - "Introduction": oxphys_numerics/introduction.md
+      - "Getting started": oxphys_numerics/getting_started.md
+
+# Some necessary extensions.
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.arithmatex:
+      generic: true
+extra:
+  generator: false
+
+# Set up the github repo link.
+repo_url: https://github.com/RBrearton/sprongle
+repo_name: RBrearton/sprongle
+
+copyright: Copyright &copy; 2024 Richard Brearton
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
