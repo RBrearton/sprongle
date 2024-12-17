@@ -32,8 +32,15 @@ theme:
     - navigation.footer
     # This sets up the header tabs.
     - navigation.tabs
+    # Shows the breadcrumbs for the current page. Note: this only works with the
+    # insiders version.
+    - navigation.path
     # This lets users copy code snippets.
     - content.code.copy
+    # The table of contents follows the current anchor.
+    - toc.follow
+    # Adds the navigate to top button when users start scrolling up.
+    - navigation.top
 
 # This sets up the structure of the website.
 nav:
