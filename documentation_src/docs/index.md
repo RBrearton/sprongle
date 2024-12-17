@@ -17,8 +17,11 @@ I've taught around half of the courses offered at Oxford physics over the last f
 
 I'm running with the *it's easier to ask forgiveness than permission* approach here.
 If you're a lecturer and you're annoyed that I've shared solutions to your course, please contact me.
-My intent is never to plagiarize private solutions, although I have consulted *tutor only* solutions to check my own work.
+My intent is never to plagiarize private solutions, although I have consulted *tutor only* solutions to check my own work(1).
 If I have shared something that you would consider to be private, please let me know.
+{.annotate}
+
+1. Okay... my first pass at the relativity solutions contain a fair amount of the tutor only material :sweat_smile:. There was only very small time between the solutions being published and when we had to teach the material! I'll try to fix this soon.
 
 I know that the philosophy of the Oxford physics department is, generally, to keep solutions private.
 I appreciate that there is a worry that, instead of properly getting to grips with the material, students will simply copy down solutions.
