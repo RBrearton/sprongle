@@ -1,6 +1,9 @@
-<!--  -->
-
-# B2 problem set 3
+---
+title: B2 problem set 23
+subtitle: Symmetry and relativity
+description: Problem set 3 for the third year symmetry and relativity course at Oxford University
+# status: new
+---
 
 ## Q1: Evaluation of derivatives for a four-vector field
 
