@@ -117,7 +117,7 @@ Once again, we're going to insert the metric tensor to get this one quite easily
 ??? success "Answer"
 
     $$
-    \partial^\mu X^\nu = g^{\mu \lambda} \partial\_\lambda X^\nu = g^{\mu \nu}
+    \partial^\mu X^\nu = g^{\mu \lambda} \partial_\lambda X^\nu = g^{\mu \nu}
     $$
 
 ### Part e
@@ -125,7 +125,7 @@ Once again, we're going to insert the metric tensor to get this one quite easily
 !!! question
 
     $$
-    \partial\_\lambda F^\lambda
+    \partial_\lambda F^\lambda
     $$
 
 Subbing in the expression for the four-vector field(1), and once again using the gradient of the dot product(2), we get
@@ -134,19 +134,19 @@ Subbing in the expression for the four-vector field(1), and once again using the
 1. <h2> Four-vector field </h2>
    This is the thing we're given in the question!
    $$
-   F^\mu = 2X^\mu + K^\mu (X^\nu X\_\nu)
+   F^\mu = 2X^\mu + K^\mu (X^\nu X_\nu)
    $$
 
 2. <h2> Gradient of the dot product </h2>
    We just derived this in part b!!
    $$
-   \partial^\mu (X\_lambda X^\lambda) = 2X^\mu
+   \partial^\mu (X_\lambda X^\lambda) = 2X^\mu
    $$
 
 ??? success "Answer"
 
     $$
-    \partial_\lambda F^\lambda = 2 \partial_\lambda X^\lambda + K^\lambda \partial_\lambda (X^\nu X_\nu) = 8 + 2K^\lambda X\_\lambda
+    \partial_\lambda F^\lambda = 2 \partial_\lambda X^\lambda + K^\lambda \partial_\lambda (X^\nu X_\nu) = 8 + 2K^\lambda X_\lambda
     $$
 
 ### Part f
@@ -212,8 +212,10 @@ This one is a bit more tricky, but we've built up the tools we need to tackle it
     -K_\mu \partial^\mu \left( K_\lambda X^\lambda \right) \sin \left( K_\lambda X^\lambda \right)
     =
     -K_\mu \partial^\mu \left( K_\lambda g^{\lambda \nu} X_\nu \right) \sin \left( K_\lambda X^\lambda \right)
-    =
-    -K_\mu K_\lambda g^{\lambda \mu} \sin \left( K_\lambda X^\lambda \right)
+    $$
+
+    $$
+    = -K_\mu K_\lambda g^{\lambda \mu} \sin \left( K_\lambda X^\lambda \right)
     $$
 
     And we made it!
@@ -947,11 +949,15 @@ We're asked to consider a particle in a dipole field with moment $\vec{M} = M \h
     Keeping only positive values of $r_e$ gives
 
     $$
-    x_1 = \frac{\alpha}{2} \left( 1 + \sqrt{1 - \frac{4}{\alpha}} \right)
-    \, , ~~~
-    x_2 = \frac{\alpha}{2} \left( 1 - \sqrt{1 + \frac{4}{\alpha}} \right)
-    \, , ~~~
-    x_3 = \frac{\alpha}{2} \left( 1 - \sqrt{1 - \frac{4}{\alpha}} \right)
+    x_1 = \frac{\alpha}{2} \left( 1 + \sqrt{1 - \frac{4}{\alpha}} \right) \, ,
+    $$
+
+    $$
+    x_2 = \frac{\alpha}{2} \left( 1 - \sqrt{1 + \frac{4}{\alpha}} \right) \, ,
+    $$
+
+    $$
+    x_3 = \frac{\alpha}{2} \left( 1 - \sqrt{1 - \frac{4}{\alpha}} \right) \, ,
     $$
 
     where $x_1$ is the maximum radius and $x_2$ is the minimum radius.
@@ -1058,25 +1064,25 @@ We're asked to consider a particle in a dipole field with moment $\vec{M} = M \h
 
 !!! question
 
-   Derive the energy of the rocket in frame $S$ as a function of its velocity.
-   If all the mass is converted into photons, what's the final energy of the rocket in frame $S$?
+    Derive the energy of the rocket in frame $S$ as a function of its velocity.
+    If all the mass is converted into photons, what's the final energy of the rocket in frame $S$?
 
 ???+ info "Show working"
 
-   The energy of the rocket in $S$ is
+    The energy of the rocket in $S$ is
 
-   $$
-   E(t) = \gamma_t M(t) c^2 =
-   \frac{M_0 c^2}{\sqrt{1 - v^2/c^2}} \sqrt{
-       \frac{1 - v/c}{1 + v/c}
-   }
-   $$
+    $$
+    E(t) = \gamma_t M(t) c^2 =
+    \frac{M_0 c^2}{\sqrt{1 - v^2/c^2}} \sqrt{
+        \frac{1 - v/c}{1 + v/c}
+    }
+    $$
 
-   which simplifies to
+    which simplifies to
 
-   $$
-   E(t) = \frac{M_0 c^2}{ 1 + v/c} \, .
-   $$
+    $$
+    E(t) = \frac{M_0 c^2}{ 1 + v/c} \, .
+    $$
 
-   If all the mass is converted into photons, the final mass $M = 0$, which gives exactly $v = c$.
-   This would give $E = M_0 c^2 / 2$.
+    If all the mass is converted into photons, the final mass $M = 0$, which gives exactly $v = c$.
+    This would give $E = M_0 c^2 / 2$.
