@@ -9,7 +9,7 @@ theme:
     # The dark theme.
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: cyan
+      primary: black
       accent: lime
       toggle:
         icon: material/weather-sunny
@@ -45,7 +45,7 @@ theme:
 # This sets up the structure of the website.
 nav:
   - Home: index.md
-  - "Problem sets":
+  - "Teaching":
       - "B2: Symmetry and relativity":
           - "B2: problem set 2": teaching/b2/problem_set_2.md
           - "B2: problem set 3": teaching/b2/problem_set_3.md
