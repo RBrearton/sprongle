@@ -3,6 +3,8 @@ site_name: sprongle.com
 # Details about the theme used in the website.
 theme:
   name: material
+  custom_dir: overrides
+
   font:
     code: Fira Code
   palette:

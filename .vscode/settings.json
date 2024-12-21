@@ -43,6 +43,7 @@
     "propto",
     "pygments",
     "pymdownx",
+    "rbrearton",
     "setuptools",
     "showlegend",
     "skyrmions",
