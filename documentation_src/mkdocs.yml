@@ -28,6 +28,8 @@ theme:
   icon:
     annotation: material/plus-circle
     repo: fontawesome/brands/github
+    logo: material/school
+  favicon: images/favicon.png
 
   features:
     # This sets up the next/previous page links in the footer.
