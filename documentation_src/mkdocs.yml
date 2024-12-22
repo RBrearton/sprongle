@@ -60,6 +60,9 @@ nav:
   - "Oxphys numerics":
       - "Introduction": oxphys_numerics/introduction.md
       - "Getting started": oxphys_numerics/getting_started.md
+      - "Rust API":
+          - "Introduction": oxphys_numerics/rust_api/introduction.md
+          - "Getting started": oxphys_numerics/rust_api/getting_started.md
 
 # Some necessary extensions.
 markdown_extensions:
