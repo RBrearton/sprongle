@@ -85,6 +85,11 @@ markdown_extensions:
 extra:
   generator: false
 
+  # Make it so that the new status says "Recently added" when we mouse over the
+  # new icon.
+  status:
+    new: Recently added
+
 # Set up the github repo link.
 repo_url: https://github.com/RBrearton/sprongle
 repo_name: RBrearton/sprongle
