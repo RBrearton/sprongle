@@ -1,0 +1,1512 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Problem set 1 for the third year condensed matter physics course at Oxford University">
+      
+      
+      
+      
+        <link rel="prev" href="../../b2/problem_set_4/">
+      
+      
+        <link rel="next" href="../problem_set_2/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>B6 problem set 1 - sprongle.com</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#q1-einstein-solid" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="sprongle.com" class="md-header__button md-logo" aria-label="sprongle.com" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            sprongle.com
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              B6 problem set 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RBrearton/sprongle" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RBrearton/sprongle
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../b2/problem_set_2/" class="md-tabs__link">
+          
+  
+  Teaching
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../oxphys_numerics/introduction/" class="md-tabs__link">
+          
+  
+  Oxphys numerics
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="sprongle.com" class="md-nav__button md-logo" aria-label="sprongle.com" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    sprongle.com
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RBrearton/sprongle" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RBrearton/sprongle
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Teaching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Teaching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B2: Symmetry and relativity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            B2: Symmetry and relativity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b2/problem_set_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b2/problem_set_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b2/problem_set_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B6: Condensed matter physics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            B6: Condensed matter physics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    B6: problem set 1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    B6: problem set 1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1-einstein-solid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1: Einstein solid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1: Einstein solid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classical-partition-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classical partition function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heat-capacity-from-the-classical-partition-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heat capacity from the classical partition function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantum-partition-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum partition function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2-debye-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: Debye model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3-drude-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q3: Drude theory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4-sommerfeld-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q4: Sommerfeld model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5-velocities-in-the-free-electron-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q5: Velocities in the free electron model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6-physical-properties-of-the-free-electron-gas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q6: Physical properties of the free electron gas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem_set_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B6: problem set 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Oxphys numerics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Oxphys numerics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Recently added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rust API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Rust API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/rust_api/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/rust_api/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1-einstein-solid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1: Einstein solid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1: Einstein solid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classical-partition-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classical partition function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heat-capacity-from-the-classical-partition-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heat capacity from the classical partition function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantum-partition-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum partition function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2-debye-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: Debye model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3-drude-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q3: Drude theory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4-sommerfeld-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q4: Sommerfeld model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5-velocities-in-the-free-electron-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q5: Velocities in the free electron model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6-physical-properties-of-the-free-electron-gas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q6: Physical properties of the free electron gas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>B6: problem set 1</h1>
+
+<h2 id="q1-einstein-solid">Q1: Einstein solid</h2>
+<p>We're asked to consider a single simple harmonic oscillator, given by <span class="arithmatex">\(H = \frac{p^2}{2m} + \frac{1}{2}kx^2\)</span></p>
+<h3 id="classical-partition-function">Classical partition function</h3>
+<p>We're asked to calculate the classical partition function <span class="arithmatex">\(Z=\int \frac{d^3p}{(2\pi\hbar)^3} \int d^3x e^{-\beta H(\vec{p}, \vec{x})}\)</span></p>
+<details class="abstract" open="open">
+<summary>Show working</summary>
+<p>It's easy however you tackle it, but I decided to solve the 1D partition function, then cube it.
+It's instructive to note that, since we're just looking at heat capacities, we can ignore the prefactor of <span class="arithmatex">\(\frac{1}{2\pi\hbar}\)</span> in the momentum integral.
+We have:
+$$
+Z_\mathrm{1D} = \iint  e^{-\beta \left(\frac{p^2}{2m} + \frac{1}{2}kx^2\right)} dx dp
+$$</p>
+<p>We can then use the standard Gaussian integral:
+$$
+\int e^{-ax^2} dx = \sqrt{\frac{\pi}{a}}
+$$</p>
+<p>to get:</p>
+<div class="arithmatex">\[
+Z_\mathrm{1D} = \sqrt{\frac{\pi}{\beta/2m}} \sqrt{\frac{\pi}{k\beta/2}}
+\]</div>
+<p>Now writing this in terms of <span class="arithmatex">\(\omega = \sqrt{k/m}\)</span>, we get:</p>
+<div class="arithmatex">\[
+Z_\mathrm{1D} = \frac{2\pi}{\beta\omega}
+\]</div>
+<p>We can then cube this to get the 3D partition function.</p>
+</details>
+<details class="success" open="open">
+<summary>Answer</summary>
+<p><span class="arithmatex">\(Z_\mathrm{3D} = \left(\frac{2\pi}{\beta\omega}\right)^3\)</span></p>
+<p>Or, if we would've kept the prefactor in the momentum integral:</p>
+<p><span class="arithmatex">\(Z_\mathrm{3D} = \left(\frac{1}{\beta\hbar\omega}\right)^{3}\)</span></p>
+</details>
+<h3 id="heat-capacity-from-the-classical-partition-function">Heat capacity from the classical partition function</h3>
+<p>Now we're asked to calculate the heat capacity from the classical partition function that we just calculated.</p>
+<details class="abstract" open="open">
+<summary>Show working</summary>
+<p>Another easy calculation. Start by calculating the internal energy <span class="arithmatex">\(U\)</span>:</p>
+<div class="arithmatex">\[
+U = -\frac{\partial}{\partial \beta} \ln Z = -\frac{\partial}{\partial \beta} \ln \left(\frac{2\pi}{\beta\omega}\right)^3 = 3k_BT
+\]</div>
+<p>Then the heat capacity is:</p>
+<div class="arithmatex">\[
+C = \frac{\partial U}{\partial T} = 3k_B
+\]</div>
+</details>
+<details class="success" open="open">
+<summary>Answer</summary>
+<p><span class="arithmatex">\(C = 3k_B\)</span></p>
+</details>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>This means that, for a 3D system containing N oscillators, we have <span class="arithmatex">\(C = 3R\)</span>, which is the Dulong-Petit law.</p>
+</details>
+<h3 id="quantum-partition-function">Quantum partition function</h3>
+<p>We're asked to now calculate the quantum partition function <span class="arithmatex">\(Z = \sum_n e^{-\beta E_n}\)</span></p>
+<details class="abstract" open="open">
+<summary>Show working</summary>
+<p>We can use the fact that the energy levels are <span class="arithmatex">\(E_n = \hbar \omega (n + 1/2)\)</span>, so we have:</p>
+<div class="arithmatex">\[
+Z = \sum_n e^{-\beta \hbar \omega (n + 1/2)} = e^{-\beta \hbar \omega / 2} \sum_n e^{-\beta \hbar \omega n}
+\]</div>
+<p>The sum is a geometric series, so we can write it as:</p>
+<div class="arithmatex">\[
+Z = e^{-\beta \hbar \omega / 2} \frac{1}{1 - e^{-\beta \hbar \omega}}
+\]</div>
+<p>We can then simplify this to:</p>
+<div class="arithmatex">\[
+Z = \frac{e^{-\beta \hbar \omega / 2}}{1 - e^{-\beta \hbar \omega}} = \left(2\sinh(\beta \hbar \omega / 2)\right)^{-1}
+\]</div>
+</details>
+<details class="success" open="open">
+<summary>Answer</summary>
+<p><span class="arithmatex">\(Z = \left(2\sinh(\beta \hbar \omega / 2)\right)^{-1}\)</span></p>
+</details>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>The internal energy, once we calculate it, looks reminiscent of Bose-Einstein statistics.</p>
+<div class="arithmatex">\[
+U = -\frac{\partial}{\partial \beta} \ln Z = \frac{\hbar \omega}{2} + \frac{\hbar \omega}{e^{\beta \hbar \omega} - 1}
+\]</div>
+<p class="annotate">Where the Bose occupation number is <span class="arithmatex">\(n_B = \frac{1}{e^{\beta \hbar \omega} - 1}\)</span>.
+The physical interpretation of this is that a quantum harmonic oscillator is, on average, excited up to the energy level equal to the Bose occupation number.
+I don't believe that there's a deeper physical meaning to this, but it's interesting to note.(1)</p>
+<ol>
+<li>If there's a deeper physical connection, please let me know!</li>
+</ol>
+</details>
+<p>Next we're asked to find an expression for the heat capacity of the quantum harmonic oscillator.</p>
+<details class="abstract" open="open">
+<summary>Show working</summary>
+<p>We can start by calculating the internal energy, as we did above:</p>
+<div class="arithmatex">\[
+U = \frac{\hbar \omega}{2} + \frac{\hbar \omega}{e^{\beta \hbar \omega} - 1}
+\]</div>
+<p>Then the heat capacity is:</p>
+<div class="arithmatex">\[
+C = \frac{\partial U}{\partial T} = \frac{\hbar \omega}{k_B} \frac{e^{\beta \hbar \omega}}{(e^{\beta \hbar \omega} - 1)^2}
+\]</div>
+<p>We can then simplify this to:</p>
+<div class="arithmatex">\[
+C = k_B \left(\frac{\beta \hbar \omega}{2}\right)^2 \frac{e^{\beta \hbar \omega}}{(e^{\beta \hbar \omega} - 1)^2}
+\]</div>
+<p>Note that this is the 1D case.
+To get the 3D case, we would need to cube the partition function, which would give us an extra factor of 3 in the heat capacity.
+Similarly, to generalize for <span class="arithmatex">\(N\)</span> oscillators, we'd end up raising the partition function to the power of <span class="arithmatex">\(N\)</span>, which would give us an extra factor of <span class="arithmatex">\(N\)</span> in the heat capacity.</p>
+</details>
+<details class="success" open="open">
+<summary>Answer</summary>
+<div class="arithmatex">\[
+C = 3 N k_B (\beta \hbar \omega)^2 \frac{e^{\beta \hbar \omega}}{(e^{\beta \hbar \omega} - 1)^2}
+\]</div>
+</details>
+<h2 id="q2-debye-model">Q2: Debye model</h2>
+<p>We're asked to state the assumptions of the Debye model.</p>
+<details class="success" open="open">
+<summary>Answer</summary>
+<p>Linear dispersion relation: <span class="arithmatex">\(\omega = v_s k\)</span></p>
+<p class="annotate">The speed of sound is the same in all directions (isotropy) (1)</p>
+<ol>
+<li>This is a simplification that is easy to relax when using a computer, but with pen and paper calculations, it's a useful assumption.</li>
+</ol>
+<p class="annotate">There's a maximum frequency, the Debye frequency <span class="arithmatex">\(\omega_D\)</span>, which is the highest frequency that can be supported by the lattice, such that <span class="arithmatex">\(N_\mathrm{modes} = 3N_\mathrm{atoms}\)</span>(1)</p>
+<ol>
+<li>We'll learn more about band structure shortly. The idea is that the dispersion relation isn't really linear except for small <span class="arithmatex">\(k\)</span>. The Debye model is a good approximation for small <span class="arithmatex">\(k\)</span>, but as it breaks down for large <span class="arithmatex">\(k\)</span>, we need this fudge to make the theory agree with the law of Dulong and Petit.</li>
+</ol>
+</details>
+<p>Next we're asked to calculate the heat capacity of the Debye model.</p>
+<details class="abstract" open="open">
+<summary>Show working</summary>
+<p class="annotate">We can start by writing down the total internal energy of the system:(1)</p>
+<ol>
+<li>This is just the Einstein model's energy at a particular frequency, integrated over all frequencies, weighting the energy contributed by a particular frequency by the number of modes at that frequency.</li>
+</ol>
+<div class="arithmatex">\[
+E = \int_0^{\omega_D}  g(\omega) \hbar\omega (n_B(\omega) + 1/2)d\omega
+\]</div>
+<p>Figuring out the density of states for a spherical shell in k-space, we get:</p>
+<div class="arithmatex">\[
+E = 3 \left(\frac{L}{2\pi}\right)^3 \int_0^{k_D}  \hbar v_s k (n_B(\omega) + 1/2) d^3 k
+\]</div>
+<p>where we've used our assumption <span class="arithmatex">\(\omega = v_s k\)</span>.
+Now using spherical symmetry, converting to spherical coordinates, and integrating over the angular part, writing the Bose occupation factor out explicitly, and converting everything back to <span class="arithmatex">\(\omega\)</span>, we get:</p>
+<div class="arithmatex">\[
+E = 3 \left(\frac{L}{2\pi}\right)^3 \int_0^{\omega_D} 4\pi \left(\frac{\omega}{v_s}\right)^2 \hbar \omega \left(\frac{1}{e^{\beta \hbar \omega} - 1} + \frac{1}{2}\right) d\omega
+\]</div>
+<p class="annotate">To get the heat capacity, we need to differentiate this with respect to temperature.
+This gets rid of the nasty zero-point energy term, that otherwise would give us a divergence(1) in our internal energy.</p>
+<ol>
+<li>Absolute energies don't matter, only energy differences, so don't worry about the zero-point energy term!</li>
+</ol>
+</details>
+<details class="success" open="open">
+<summary>Answer</summary>
+<div class="arithmatex">\[
+C = \frac{\partial E}{\partial T} = 3 \frac{1}{k_B T^2} \left(\frac{L}{2\pi}\right)^3 \int_0^{\omega_D} 4\pi \left(\frac{\omega}{v_s}\right)^2 (\hbar \omega)^2 \frac{e^{\beta \hbar \omega}}{(e^{\beta \hbar \omega} - 1)^2} d\omega
+\]</div>
+</details>
+<p>Then we're asked to think about the high and low temperature limits of the heat capacity.</p>
+<details class="abstract" open="open">
+<summary>Show working</summary>
+<p>In the low temperature limit, our integrand falls off rapidly as a function of <span class="arithmatex">\(\omega\)</span>.
+This is because our temperature is too low to excite the higher energy modes.
+This means we can approximate <span class="arithmatex">\(\omega\)</span> as being very large, in which case our integral has an exact solution once non-dimensionalized:</p>
+<div class="arithmatex">\[
+C = 9 N k_B \left(\frac{T}{\Theta_D}\right)^3 \int_0^{\infty} \frac{x^4 e^x}{(e^x - 1)^2} dx
+\]</div>
+<p>where <span class="arithmatex">\(\Theta_D = \hbar \omega_D / k_B\)</span> is the Debye temperature.
+We can then directly integrate this to get the low temperature heat capacity.</p>
+<p>In the high temperature limit, we can Taylor expand some exponentials to get the law of Dulong-Petit.</p>
+</details>
+<details class="success" open="open">
+<summary>Answer</summary>
+<p>The low temperature heat capacity is:
+<span class="arithmatex">\(C = \frac{12}{5} N k_B \pi^4 \left(\frac{T}{\Theta_D}\right)^3\)</span></p>
+<p>The high temperature heat capacity is:
+<span class="arithmatex">\(C = 3 R\)</span></p>
+</details>
+<p>Finally, we're asked to interpret some data.</p>
+<details class="success" open="open">
+<summary>Answer</summary>
+<table>
+<thead>
+<tr>
+<th>T(K)</th>
+<th><span class="arithmatex">\(C_V\)</span> (J/K/mol)</th>
+<th><span class="arithmatex">\(\Theta_D\)</span> (K)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>8.5e-7</td>
+<td>132</td>
+</tr>
+<tr>
+<td>1</td>
+<td>8.6e-4</td>
+<td>131</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.12</td>
+<td>127</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.59</td>
+<td>119</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1.1</td>
+<td>121</td>
+</tr>
+<tr>
+<td>15</td>
+<td>2.8</td>
+<td>132</td>
+</tr>
+<tr>
+<td>20</td>
+<td>6.3</td>
+<td>135</td>
+</tr>
+</tbody>
+</table>
+<p>The key thing to note is that you should only really take the first couple of data points seriously.
+Any higher than that and we'll start to excite higher energy modes, and the Debye model will start to break down.</p>
+<p>Also, note that, since the heat capacity is given per mole, we need to set <span class="arithmatex">\(N = N_A\)</span>.</p>
+</details>
+<h2 id="q3-drude-theory">Q3: Drude theory</h2>
+<p>We're first asked to derive the conductivity in the presence of an electric field.</p>
+<div class="admonition note">
+<p class="admonition-title">On Drude theory</p>
+<p>Drude theory is little more than dimensional analysis.
+We're applying crude classical logic to try to solve a highly nontrivial quantum mechanical problem.
+There's absolutely no reason why this should work other than by dimensional analysis, so don't take any of the steps too seriously.</p>
+<p>As you might expect, it is correct about as often as it's incorrect.</p>
+</div>
+<details class="abstract" open="open">
+<summary>Show working</summary>
+<p>Start by Taylor expanding the momentum at a time <span class="arithmatex">\(t + dt\)</span>, assuming that there's a probability of scattering <span class="arithmatex">\(1/\tau\)</span>.</p>
+<div class="arithmatex">\[
+p(t + dt) = p(t) + dt \frac{dp}{dt} = p(t)\left( 1 - \frac{dt}{\tau} \right) + 0 \times (dt/\tau) + F dt/\tau
+\]</div>
+<p>Where we're assuming that, on average, the electrons scatter to zero momentum.
+Rearranging gives us:</p>
+<div class="arithmatex">\[
+\frac{d\vec{p}}{dt} = -\frac{\vec{p}}{\tau} + \vec{F}
+\]</div>
+<p>Now using <span class="arithmatex">\(\vec{F} = -e\vec{E}\)</span> (ignoring <span class="arithmatex">\(\vec{B}\)</span> for now), we get:</p>
+<div class="arithmatex">\[
+\frac{d\vec{p}}{dt} = -\frac{\vec{p}}{\tau} - e\vec{E}
+\]</div>
+<p>In the steady state, we have <span class="arithmatex">\(\frac{d\vec{p}}{dt} = 0\)</span>, giving:</p>
+<div class="arithmatex">\[
+\vec{p} = -\tau e \vec{E}
+\]</div>
+<p>Now write <span class="arithmatex">\(\vec{p} = m\vec{v}\)</span>, and use the definition of current density <span class="arithmatex">\(\vec{J} = -ne\vec{v}\)</span>, to get:</p>
+<div class="arithmatex">\[
+\vec{J} = \frac{ne^2\tau}{m} \vec{E}
+\]</div>
+<p>This is the Drude model's conductivity, as the conductivity is defined as <span class="arithmatex">\(\vec{J} = \sigma \vec{E}\)</span>.</p>
+</details>
+<details class="success" open="open">
+<summary>Answer</summary>
+<p><span class="arithmatex">\(\sigma = \frac{ne^2\tau}{m}\)</span></p>
+</details>
+<p>Then we're asked to find the resistivity matrix in the presence of electric and magnetic fields.</p>
+<details class="abstract" open="open">
+<summary>Show working</summary>
+<p>We can start by writing down the equation of motion for the electron in the presence of both fields:</p>
+<div class="arithmatex">\[
+m\frac{d\vec{v}}{dt} = -e\vec{E} - e\vec{v} \times \vec{B} - \frac{m\vec{v}}{\tau}
+\]</div>
+<p>Once again, in the steady state, we have <span class="arithmatex">\(\frac{d\vec{v}}{dt} = 0\)</span>, giving:</p>
+<div class="arithmatex">\[
+\vec{v} = -\frac{e\tau}{m} \left(\vec{E} + \vec{v} \times \vec{B}\right)
+\]</div>
+<p>Now we just want to turn all of our <span class="arithmatex">\(\vec{v}\)</span>s into <span class="arithmatex">\(\vec{J}\)</span>s.
+We can do this by using the definition of current density <span class="arithmatex">\(\vec{J} = -ne\vec{v}\)</span>.</p>
+<div class="arithmatex">\[
+\vec{E} = \frac{1}{ne} \vec{J}\times\vec{B} + \frac{m}{ne^2\tau} \vec{J}
+\]</div>
+<p>Now using the definition of the resistivity as <span class="arithmatex">\(\vec{E} = \rho \vec{J}\)</span>, we find that it's a matrix.</p>
+</details>
+<details class="success" open="open">
+<summary>Answer</summary>
+<div class="arithmatex">\[
+\rho_{xx} = \rho_{yy} = \rho_{zz} = \frac{m}{ne^2\tau}
+\]</div>
+<div class="arithmatex">\[
+\rho_{xy} = -\rho_{yx} = \frac{B}{ne}
+\]</div>
+<div class="arithmatex">\[
+\rho = \begin{pmatrix} \rho_{xx} &amp; \rho_{xy} &amp; 0 \\ \rho_{yx} &amp; \rho_{yy} &amp; 0 \\ 0 &amp; 0 &amp; \rho_{zz} \end{pmatrix}
+\]</div>
+</details>
+<p>Now we're tasked to find the conductivity matrix, which we can do by just inverting the resistivity matrix.
+It's block diagonal, so it's easy, if algebraic.</p>
+<details class="success" open="open">
+<summary>Answer</summary>
+<p>TODO: type this.</p>
+</details>
+<p>Now we're asked to define the Hall resistivity, which is the positive off-diagonal element <span class="arithmatex">\(R_H = \rho_{yx}/B = -1/ne\)</span>.</p>
+<p>Then we're asked to plug in the numbers for Na. We're told the density is <span class="arithmatex">\(1 \mathrm{g}/\mathrm{cm}^3\)</span>, atomic mass <span class="arithmatex">\(M = 23u\)</span>.</p>
+<details class="abstract" open="open">
+<summary>Show working</summary>
+<p>Start by getting the density of atoms in SI, which is.</p>
+<div class="arithmatex">\[
+\left(\frac{1\mathrm{g}}{\mathrm{cm}^3}\right)
+\left( 10 \frac{\mathrm{cm}} {\mathrm{m}^3} \right)
+\left( \frac{1 \mathrm{mol}}{23 \mathrm{g}} \right)
+\left( 6.02 \times 10^{23} \frac{\mathrm{atoms}}{\mathrm{mol}} \right)
+= 2.6 \times 10^{28} \mathrm{m}^{-3}
+\]</div>
+<p>As the valence is 1, this is the electron density.</p>
+<p>Now using <span class="arithmatex">\(\rho = RA/L\)</span>, <span class="arithmatex">\(V =I R\)</span>, we have that <span class="arithmatex">\(V_H = I \rho L/A\)</span>.</p>
+<p>Now the only tricky thing to think about is what to provide as the area, and what to provide as the length.
+As we're looking at <span class="arithmatex">\(\rho_{xy}\)</span>, the area is still the cross-sectional area of the wire, but the length <span class="arithmatex">\(L\)</span> is the cross-sectional length (as that's the direction over which we're measuring a voltage drop).</p>
+<p>If you find this weird to think about, imagine how you expect the Hall voltage to scale as a function of area and length.
+Holding everything but <span class="arithmatex">\(L\)</span> constant, which direction should <span class="arithmatex">\(L\)</span> be pointing in so that we get a linear increase in <span class="arithmatex">\(V_H\)</span> for a linear increase in <span class="arithmatex">\(L\)</span>?
+Similarly, holding everything but <span class="arithmatex">\(A\)</span> constant, which area should <span class="arithmatex">\(A\)</span> be pointing in so that we get a linear increase in <span class="arithmatex">\(V_H\)</span> for a linear decrease in <span class="arithmatex">\(A\)</span>?</p>
+<p>Then we have enough numbers to get to the answer!</p>
+</details>
+<details class="success" open="open">
+<summary>Answer</summary>
+<p><span class="arithmatex">\(V_H = 4.8 \times 10^{-8} \mathrm{V}\)</span></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note on Hall measurements</p>
+<p>This Voltage is very small.
+Any errors in your experimental setup will lead to measurements that look like:</p>
+<div class="arithmatex">\[
+V_\mathrm{meas}(B) = V_H (B) + V_\mathrm{error}
+\]</div>
+<p>Crucially, <span class="arithmatex">\(V_H\)</span> is a function of magnetic field, so the trick is to measure <span class="arithmatex">\(V_H\)</span> at both positive and negative magnetic fields.
+You want to measure:</p>
+<div class="arithmatex">\[
+V_H = \left[V_\mathrm{meas}(B) - V_\mathrm{meas}(-B)\right]/2
+\]</div>
+</div>
+<p>We're also asked to comment on the properties of metals that Drude theory doesn't explain well.</p>
+<details class="success" open="open">
+<summary>Answer</summary>
+<p>The answer to this is pretty much everything.
+It's a qualitative theory.
+It rather famously often gets the wrong sign for the Peltier and Seebeck coefficients (this is examinable), but it's pretty terrible for everything else, too.</p>
+</details>
+<h2 id="q4-sommerfeld-model">Q4: Sommerfeld model</h2>
+<p>This question starts with some definitions.</p>
+<div class="admonition quote">
+<p class="admonition-title">Definitions</p>
+<p>The <strong><em>Fermi energy</em></strong> is the chemical potential at zero temperature.</p>
+<p>The <strong><em>Fermi temperature</em></strong> is <span class="arithmatex">\(T_F = \frac{E_F}{k_B}\)</span>.</p>
+<p class="annotate">The <strong><em>Fermi surface</em></strong> is the surface in <span class="arithmatex">\(k\)</span>-space where the energy is equal to the Fermi energy. (1)</p>
+<ol>
+<li>Some other definitions are possible. It's also <em>the locus of points in <span class="arithmatex">\(k\)</span>-space with <span class="arithmatex">\(\vec{k} = \vec{k}_F\)</span>.</em>, or <em>the surface in <span class="arithmatex">\(k\)</span>-space separating filled and empty states</em>; many other equivalent definitions are possible.</li>
+</ol>
+</div>
+<p>TODO: finish notes here.</p>
+<div class="admonition note">
+<p class="admonition-title">Notes on this question</p>
+<p>The number you're after <span class="arithmatex">\(E_F = 3.2 \mathrm{eV}\)</span> in the calculation.</p>
+</div>
+<h2 id="q5-velocities-in-the-free-electron-model">Q5: Velocities in the free electron model</h2>
+<h2 id="q6-physical-properties-of-the-free-electron-gas">Q6: Physical properties of the free electron gas</h2>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+<script src="https://giscus.app/client.js" data-repo="rbrearton/sprongle" data-repo-id="R_kgDONS-C0A"
+    data-category="Announcements" data-category-id="DIC_kwDONS-C0M4Cla9H" data-mapping="title" data-strict="0"
+    data-reactions-enabled="1" data-emit-metadata="1" data-input-position="top" data-theme="preferred_color_scheme"
+    data-lang="en" crossorigin="anonymous" async>
+    </script>
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../b2/problem_set_4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: B2: problem set 4">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                B2: problem set 4
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../problem_set_2/" class="md-footer__link md-footer__link--next" aria-label="Next: B6: problem set 2">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                B6: problem set 2
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Richard Brearton
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.path", "content.code.copy", "toc.follow", "navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

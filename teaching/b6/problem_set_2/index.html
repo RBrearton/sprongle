@@ -1,0 +1,2221 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Problem set 2 for the third year symmetry and relativity course at Oxford University">
+      
+      
+      
+      
+        <link rel="prev" href="../problem_set_1/">
+      
+      
+        <link rel="next" href="../../../oxphys_numerics/introduction/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>B2 problem set 2 - sprongle.com</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#q1-chemical-bonding" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="sprongle.com" class="md-header__button md-logo" aria-label="sprongle.com" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            sprongle.com
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              B2 problem set 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RBrearton/sprongle" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RBrearton/sprongle
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../b2/problem_set_2/" class="md-tabs__link">
+          
+  
+  Teaching
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../oxphys_numerics/introduction/" class="md-tabs__link">
+          
+  
+  Oxphys numerics
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="sprongle.com" class="md-nav__button md-logo" aria-label="sprongle.com" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    sprongle.com
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RBrearton/sprongle" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RBrearton/sprongle
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Teaching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Teaching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B2: Symmetry and relativity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            B2: Symmetry and relativity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b2/problem_set_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b2/problem_set_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b2/problem_set_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B6: Condensed matter physics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            B6: Condensed matter physics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem_set_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B6: problem set 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    B6: problem set 2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    B6: problem set 2
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1-chemical-bonding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1: Chemical bonding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1: Chemical bonding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2-covalent-bonding-in-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: Covalent bonding in detail
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3-interatomic-potentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q3: Interatomic potentials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3: Interatomic potentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4-classical-model-of-thermal-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q4: Classical model of thermal expansion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q4: Classical model of thermal expansion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part d
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5-phonons-on-a-one-dimensional-monatomic-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q5: Phonons on a one-dimensional monatomic chain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q5: Phonons on a one-dimensional monatomic chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part e
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part f
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part g
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6-phonons-on-a-one-dimensional-diatomic-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q6: Phonons on a one-dimensional diatomic chain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q6: Phonons on a one-dimensional diatomic chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-e_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part e
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q7-the-tight-binding-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q7: The tight-binding model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q7: The tight-binding model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Oxphys numerics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Oxphys numerics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Recently added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rust API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Rust API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/rust_api/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/rust_api/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1-chemical-bonding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1: Chemical bonding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1: Chemical bonding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2-covalent-bonding-in-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: Covalent bonding in detail
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3-interatomic-potentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q3: Interatomic potentials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3: Interatomic potentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4-classical-model-of-thermal-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q4: Classical model of thermal expansion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q4: Classical model of thermal expansion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part d
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5-phonons-on-a-one-dimensional-monatomic-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q5: Phonons on a one-dimensional monatomic chain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q5: Phonons on a one-dimensional monatomic chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part e
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part f
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part g
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6-phonons-on-a-one-dimensional-diatomic-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q6: Phonons on a one-dimensional diatomic chain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q6: Phonons on a one-dimensional diatomic chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-e_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part e
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q7-the-tight-binding-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q7: The tight-binding model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q7: The tight-binding model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>B6: problem set 2</h1>
+
+<h2 id="q1-chemical-bonding">Q1: Chemical bonding</h2>
+<h3 id="part-a">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Qualitatively describe the five different types of chemical bonds and why they occur.</p>
+</div>
+<p>Just copy the table out of Steve Simon's "The Oxford Solid State Basics" book.
+To avoid <em>direct</em> plagiarism, I won't copy the table here.</p>
+<h3 id="part-b">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Describe qualitatively the phenomenon of Van der Waals forces.
+Explain why the force is attractive and proportional to <span class="arithmatex">\(1/R^7\)</span>.</p>
+</div>
+<p>Van der Waals forces are the attractive forces between molecules.
+They are caused by the fluctuating electric fields of the molecules.
+We can get the <span class="arithmatex">\(1/R^7\)</span> dependence without thinking too hard - it's clear from dimensional analysis, so we don't need to remember exact forms of results from electrostatics.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>In the absence of external forces and fields, we don't expect atoms to be polarized.
+If an electric field is applied, they will develop a polarization</p>
+<div class="arithmatex">\[
+\vec{p} = \chi \vec{E},
+\]</div>
+<p>where <span class="arithmatex">\(\chi\)</span> is the polarizability.
+Now imagine that we have two atoms separated by a distance <span class="arithmatex">\(R\)</span>.
+If the first atom develops, for whatever reason, a spontaneous polarization <span class="arithmatex">\(\vec{p}_1=p_1 \hat{z}\)</span>, it will produce a field</p>
+<div class="arithmatex">\[
+E \propto \frac{p_1}{R^3}
+\]</div>
+<p>at the location of the second atom.
+The second atom will then develop a polarization <span class="arithmatex">\(p_2 = \chi E\)</span>.
+Just thinking about dimensions, the potential energy of this interaction has to be proportional to <span class="arithmatex">\(p_1 p_2 / R^3\)</span>, so that</p>
+<div class="arithmatex">\[
+V \propto \frac{1}{R^6}.
+\]</div>
+<p>So that the force is proportional to <span class="arithmatex">\(1/R^7\)</span>.</p>
+</details>
+<h3 id="part-c">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>The ionization energy of a sodium atom is 5.14 eV.
+The electron affinity of a chlorine atom is 3.62 eV.
+The bond length of a NaCl molecule is 2.36 Å.
+Calculate the total energy released when a NaCl molecule is formed.</p>
+<p>The actual experimental value is 4.26 eV.
+Comment on the sign of your error.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>The Coloumb energy of the NaCl molecule is</p>
+<div class="arithmatex">\[
+U_\mathrm{coul} = -\frac{e^2}{4\pi\epsilon_0 R} = -\frac{e^2}{4\pi\epsilon_0 (2.36\, Å)} = 6.09 \, \mathrm{eV}.
+\]</div>
+<p>The energy released is then</p>
+<div class="arithmatex">\[
+E_\mathrm{affinity} - E_\mathrm{ionization} + U_\mathrm{coul} = 3.62 - 5.14 + 6.09 = 4.58 \, \mathrm{eV}.
+\]</div>
+<p>This is too big!
+There must be a repulsive force, and this repulsive force must be what's stopping the atoms from collapsing into each other.
+This would be Pauli repulsion, which is not included in our simple model.</p>
+</details>
+<h2 id="q2-covalent-bonding-in-detail">Q2: Covalent bonding in detail</h2>
+<p>I'll write this up if I find the time, as it's the only asterisked problem on the set.</p>
+<h2 id="q3-interatomic-potentials">Q3: Interatomic potentials</h2>
+<h3 id="part-a_1">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Just thinking qualitatively, we expect the potential energy of a pair of atoms to look something like this:</p>
+<p>TODO: inject a Lennard-Jones plotly plot here</p>
+<p>This potential can be expanded about its minimum to give</p>
+<div class="arithmatex">\[
+V(x) = \frac{\kappa}{2} (x - x_0)^2 + \frac{\kappa_3}{3!} (x - x_0)^3 + \ldots
+\]</div>
+<p>The Lennard-Jones potential is one such model with the correct qualitative shape (in fact, it's exactly what I plotted above).
+Its functional form is</p>
+<div class="arithmatex">\[
+V(x) = 4 \epsilon \left[ \left(\frac{\sigma}{x}\right)^{12} - \left(\frac{\sigma}{x}\right)^6 \right].
+\]</div>
+<p>What is the physical meaning of the exponent 6?</p>
+</div>
+<p>The exponent 6 comes from the fact that the Lennard-Jones potential is used to model Van der Waals interactions.
+There are a few interesting things to note here:</p>
+<ul>
+<li>Lennard-Jones is one guy with a double-barrelled surname!</li>
+<li>If we wanted to study interactions in a crystal, we might want to use something like the <a href="https://en.wikipedia.org/wiki/Morse_potential">Morse potential</a>.</li>
+<li>The twelfth power is wrong. It models Pauli repulsion, which has a very different functional form. We keep it because it's extremely easy to square numbers with a computer, and we've already had to calculate the sixth power to get the attractive part of the potential! Really, any power greater than 6 would have worked, and we choose 12 for computational efficiency.</li>
+</ul>
+<h3 id="part-b_1">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Find <span class="arithmatex">\(x_0\)</span>, <span class="arithmatex">\(\kappa\)</span>, and <span class="arithmatex">\(\kappa_3\)</span> for the Lennard-Jones potential.</p>
+</div>
+<p>This is just algebra - Taylor expand the potential and compare coefficients.</p>
+<details class="success">
+<summary>Answer</summary>
+<div class="arithmatex">\[
+x_0 = 2^{\frac{1}{6}}\sigma,
+\]</div>
+<div class="arithmatex">\[
+\kappa = 36 \left( 2^{\frac{2}{3}} \frac{\epsilon}{ \sigma^2} \right),
+\]</div>
+<div class="arithmatex">\[
+\kappa _3 = - 756\sqrt{2} \frac{\epsilon}{\sigma^3}.
+\]</div>
+</details>
+<h2 id="q4-classical-model-of-thermal-expansion">Q4: Classical model of thermal expansion</h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>In classical statistical mechanics, the expectation of <span class="arithmatex">\(x\)</span> is</p>
+<div class="arithmatex">\[
+\langle x \rangle _{\beta} = \frac{\int  x e^{-\beta V(x)} dx}{\int  e^{-\beta V(x)} dx}.
+\]</div>
+<p>We can't do those integrals with arbitrary <span class="arithmatex">\(V(x)\)</span>, but we could expand the exponentials as</p>
+<div class="arithmatex">\[
+e^{-\beta V(x)} = e^{\frac{\beta \kappa}{2} (x - x_0)^2} \left[ 1 + \frac{\beta \kappa_3}{3!} (x - x_0)^3 + \ldots \right],
+\]</div>
+<p>and let the limits of integration go to <span class="arithmatex">\(\pm \infty\)</span>.</p>
+</div>
+<h3 id="part-a_2">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Why is this expansion of the exponent and extension of the limits of integration valid?</p>
+</div>
+<p>The <em>real</em> answer is that we do it because it's the only way to make progress.
+You figure out what it means only if your results are interesting!</p>
+<p>The answer that the question is probably looking for is that, if <span class="arithmatex">\(k_B T\)</span> is small, we're going to have a very peaked Boltzmann distribution, and the integrals will be dominated by the region around the minimum of the potential.</p>
+<p>I hear you though - sure, that lets us expand the limits and write <span class="arithmatex">\(V(x) \approx \frac{\kappa}{2} (x - x_0)^2 + \frac{\kappa_3}{3!} (x - x_0)^3 + \ldots\)</span>, but then why Taylor expand the exponential on the cubic part, and not the quadratic part?</p>
+<p>I'll provide an exact bound on this on the last part of the question, but we're just requiring that the cubic term is appreciably smaller than the quadratic term.</p>
+<h3 id="part-b_2">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Use this to derive <span class="arithmatex">\(\langle x \rangle _{\beta}\)</span> and show that the coefficient of thermal expansion is</p>
+<div class="arithmatex">\[
+\alpha = \frac{1}{L} \frac{\partial L}{\partial T} = \frac{1}{x_0} \frac{k_B \kappa_3}{2 \kappa^2}.
+\]</div>
+</div>
+<p>There are two important tricks here:</p>
+<ol>
+<li>All odd integrals are 0 by symmetry</li>
+<li>Shift all the integrals by <span class="arithmatex">\(x_0\)</span></li>
+</ol>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>Just applying the tricks above leaves us with</p>
+<div class="arithmatex">\[
+\langle x \rangle _{\beta} = \left[\int^\infty_{-\infty} e^{\frac{\beta\kappa}{2} x^2}\left(x_0 + \frac{\beta \kappa_3}{3!} x^4 \right) dx \right]
+/
+\left[ {\int^\infty_{-\infty} e^{\frac{\beta\kappa}{2} x^2} dx}\right] \, .
+\]</div>
+<p>Now, evaluating the Gaussian integrals gives</p>
+<div class="arithmatex">\[
+\langle x \rangle _{\beta} = x_0 + \frac{k_3 k_B T}{2 \kappa^2} + \ldots
+\]</div>
+<p>The coefficient of thermal expansion is then</p>
+<div class="arithmatex">\[
+\alpha = \frac{1}{L} \frac{dL}{dT} = \frac{1}{x_0} \frac{k_B \kappa_3}{2 \kappa^2},
+\]</div>
+<p>as required.</p>
+</details>
+<h3 id="part-c_1">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>In what temperature range is the above expansion valid?</p>
+</div>
+<p>Ok, now it's time to make the terms and conditions surrounding out approximation a bit more precise.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>Rewriting our expression by Taylor expanding the cubic term, but not the quadratic term, is reasonable when</p>
+<div class="arithmatex">\[
+\kappa_3 \Delta x \ll \kappa
+\]</div>
+<p>The typical energies that we'll access are on the order of</p>
+<div class="arithmatex">\[
+k_B T = \frac{\kappa}{2}(x - x_0)^2 - \frac{\kappa_3}{3!} (x - x_0)^3 \, .
+\]</div>
+<p>If the third term is much smaller, as we require for our funky expansion to work, we have</p>
+<div class="arithmatex">\[
+k_B T \approx \frac{\kappa}{2}(x - x_0)^2 = \frac{\kappa}{2} (\Delta x)^2 \, .
+\]</div>
+<p>Rearranging this gives us typical displacements on the order of</p>
+<div class="arithmatex">\[
+\Delta x \approx \sqrt{\frac{2 k_B T}{\kappa}} \, .
+\]</div>
+<p class="annotate">Subbing this back into the original approximation conditions(1) gives us</p>
+<ol>
+<li class="annotate"><h2>Approximation conditions</h2>
+    This is the simplest and most clearly correct statement of our approximation conditions.
+    $$
+    \kappa_3 \sqrt{\frac{2 k_B T}{\kappa}} \ll \kappa
+    $$</li>
+</ol>
+<div class="arithmatex">\[
+\kappa_3^2 \frac{k_B T}{\kappa} \ll \kappa^2 \, ,
+\]</div>
+<p>and then, equivalently,</p>
+<div class="arithmatex">\[
+k_B T \ll \frac{\kappa^3}{\kappa_3^2} \, .
+\]</div>
+</details>
+<h3 id="part-d">Part d</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>This is valid for a 2-particle system, but not a many atom chain.
+Why?
+How would you modify the calculation to account for this?</p>
+</div>
+<p>Well... our potential only has a single distance between two atoms in it!
+As a result, we're basically studying the properties of a bunch of non-interacting harmonic oscillators. (okay, anharmonic oscillators because of the cubic term, but you get the idea!)</p>
+<p>To properly handle the many-atom chain, we need to account for the fact that the coupled differential equations that show up when we try to solve for the motion of the chain are going to lead to normal modes.
+There will be some dispersion relation (<span class="arithmatex">\(\omega(k)\)</span>) that tells us how the normal modes of the chain are going to behave as a function of wavevector <span class="arithmatex">\(k\)</span>.</p>
+<p>We can then think about thermally occupying these modes using Bose statistics, and calculate the average expansion of the chain as a function of temperature.</p>
+<h2 id="q5-phonons-on-a-one-dimensional-monatomic-chain">Q5: Phonons on a one-dimensional monatomic chain</h2>
+<h3 id="part-a_3">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>What is meant by a normal mode?
+What is meant by a phonon?
+Explain why phonons obey Bose-Einstein statistics.</p>
+</div>
+<p>For normal modes, quoting wikipedia:</p>
+<p><em>"A normal mode is a pattern of motion in which all parts of the system move sinusoidally with the same frequency and with a fixed phase relation."</em></p>
+<p>Phonons are quanta of vibration.</p>
+<p>Phonons obey Bose-Einstein statistics because there's no reason to limit the number of phonons in a given mode.</p>
+<h3 id="part-b_3">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Derive the dispersion relation for longitudinal oscillations of a one dimensional chain of N identical atoms of mass <span class="arithmatex">\(m\)</span>, lattice spacing <span class="arithmatex">\(a\)</span> and spring constant <span class="arithmatex">\(\kappa\)</span>.</p>
+</div>
+<p>This is bookwork.</p>
+<details class="success">
+<summary>Answer</summary>
+<div class="arithmatex">\[
+\omega = 2 \sqrt{\frac{\kappa}{m}} \left| \, \sin \left( \frac{ka}{2} \right) \right|
+\]</div>
+</details>
+<h3 id="part-c_2">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Show that the mode with wavevector <span class="arithmatex">\(k\)</span> has the same pattern of mass displacements as the mode with wavevector <span class="arithmatex">\(k + 2 \pi / a\)</span>.
+Show that the dispersion relation is periodic in <span class="arithmatex">\(k\)</span>-space (reciprocal space).</p>
+<p>How many <em>different</em> normal modes are there?</p>
+</div>
+<p>The first part is just a matter of plugging in <span class="arithmatex">\(k + 2 \pi / a\)</span> into the dispersion relation.
+It's a trig function...</p>
+<p>The second part only requires a small amount of algebra.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>From periodic boundary conditions, we have</p>
+<div class="arithmatex">\[
+e^{i(\omega t + kna)} = e^{i(\omega t + k(n+N)a)} \, ,
+\]</div>
+<p>which immediately requires that</p>
+<div class="arithmatex">\[
+e^{i k N a} = 1 \, .
+\]</div>
+<p>This means that <span class="arithmatex">\(kNa = 2\pi p\)</span>, where <span class="arithmatex">\(p\)</span> is an integer.
+Or, equivalently,</p>
+<div class="arithmatex">\[
+k = \frac{2\pi p}{Na} \, .
+\]</div>
+<p>This means that the spacing between adjacent <span class="arithmatex">\(k\)</span> states is</p>
+<div class="arithmatex">\[
+\Delta k = \frac{2\pi}{Na} \, .
+\]</div>
+<p>Noting that <span class="arithmatex">\(L = Na\)</span>, that means <span class="arithmatex">\(\Delta k = 2\pi / L\)</span>.</p>
+<p>We get the number of modes by diving the range of <span class="arithmatex">\(k\)</span> by the spacing between adjacent <span class="arithmatex">\(k\)</span> states, so</p>
+<div class="arithmatex">\[
+N = \frac{\mathrm{range}}{\mathrm{spacing}} = \frac{2\pi/a}{2\pi/L} = L/a = N \, .
+\]</div>
+<p>So... Debye's fudge was correct!</p>
+</details>
+<h3 id="part-d_1">Part d</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<ul>
+<li>Derive the phase and group velocities and sketch them as a function of <span class="arithmatex">\(k\)</span>.</li>
+<li>What is the sound velocity?</li>
+<li>Show that the sound velocity is given by <span class="arithmatex">\(v_s = \sqrt{\beta^{-1}/\rho}\)</span>, where <span class="arithmatex">\(\rho\)</span> is the mass density and <span class="arithmatex">\(\beta\)</span> is the compressibility.</li>
+</ul>
+</div>
+<p>Okay, there are a few small things to show here, so let's get to it.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p class="annotate">We get the group velocity by differentiating the dispersion relation(1) with respect to $k:</p>
+<ol>
+<li class="annotate"><h2>Monatomic phonon dispersion</h2>
+    This is a bookwork result that we derived in part b.<br />
+    $$
+    \omega = 2 \sqrt{\frac{\kappa}{m}} \left| \, \sin \left( \frac{ka}{2} \right) \right|
+    $$</li>
+</ol>
+<div class="arithmatex">\[
+v_g = \frac{d\omega}{dk} = a \sqrt{\frac{\kappa}{m}} \cos \left( \frac{ka}{2} \right) \mathrm{sgn}(k) \, .
+\]</div>
+<p>Be careful about differentiating modulus functions!
+The sgn function is 1 for positive <span class="arithmatex">\(k\)</span> and -1 for negative <span class="arithmatex">\(k\)</span>.</p>
+<p>The phase velocity is simply</p>
+<div class="arithmatex">\[
+v_p = \frac{\omega}{k} =\frac {2}{k} \sqrt{\frac{\kappa}{m}} \left| \, \sin \left( \frac{ka}{2} \right) \right| \, .
+\]</div>
+<p>The sound velocity is just the group velocity at <span class="arithmatex">\(k=0\)</span>, so</p>
+<div class="arithmatex">\[
+v_s = a \sqrt{\frac{\kappa}{m}} \, .
+\]</div>
+<p>To show the final part, we just need an expression for the compressibility.
+The compressibility is defined as</p>
+<div class="arithmatex">\[
+\beta = -\frac{1}{L} \frac{\partial L}{\partial F} \, .
+\]</div>
+<p>We can consider the interatomic distances of atoms in the chain as a function of the force applied:</p>
+<div class="arithmatex">\[
+x(F) = a - \frac{F}{\kappa} \, .
+\]</div>
+<p>This gives us <span class="arithmatex">\(L = N x(F)\)</span>, which we can differentiate to get</p>
+<div class="arithmatex">\[
+\frac{\partial L}{\partial F} = -\frac{N}{\kappa} \, .
+\]</div>
+<p>This means that the compressibility is</p>
+<div class="arithmatex">\[
+\beta = \frac{1}{L} \frac{N}{\kappa} = \frac{1}{\kappa a} \, .
+\]</div>
+<p>Using the fact that <span class="arithmatex">\(\rho = m / a\)</span>, we finally get</p>
+<div class="arithmatex">\[
+v_s = \sqrt{\frac{1}{\beta \rho}} = a \sqrt{\frac{\kappa}{m}} \, .
+\]</div>
+</details>
+<h3 id="part-e">Part e</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Calculate and sketch the density of states per frequency <span class="arithmatex">\(g(\omega)\)</span>.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>The density of states is</p>
+<div class="arithmatex">\[
+g(\omega) = \frac{dN}{d\omega} = \frac{dN}{dk} \frac{dk}{d\omega}
+\]</div>
+</details>
+<p>The rest of the problem is just being careful with the algebra, wavevector degeneracy etc. (<span class="arithmatex">\(+k\)</span> and <span class="arithmatex">\(-k\)</span> have the same <span class="arithmatex">\(\omega\)</span>, which gives an extra factor of 2).</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p class="annotate">Subbing in the expression for the dispersion relation(1) into the density of states(2)</p>
+<ol>
+<li class="annotate"><h2>Monatomic phonon dispersion</h2>
+    This is a bookwork result that we derived in part b.
+    $$
+    \omega = 2 \sqrt{\frac{\kappa}{m}} \left| \, \sin \left( \frac{ka}{2} \right) \right|
+    $$</li>
+<li class="annotate"><h2>Density of states</h2>
+    This is a bookwork result that we just derived.
+    $$
+    g(\omega) = \frac{dN}{d\omega} = \frac{dN}{dk} \frac{dk}{d\omega}
+    $$</li>
+</ol>
+<div class="arithmatex">\[
+\frac{dN}{dk} \frac{dk}{d\omega}
+=
+\frac{2 Na}{2\pi a \sqrt{\kappa / m} \cos({ka/2})} = \frac{Na}{2\pi v_g}
+\]</div>
+<p>This is as a function of <span class="arithmatex">\(k\)</span>, so we just need to use our dispersion relation to swap out <span class="arithmatex">\(k\)</span> for <span class="arithmatex">\(\omega\)</span>.
+Doing this gives</p>
+<div class="arithmatex">\[
+g(\omega) = \frac{N}{\pi\sqrt{\kappa/m - (\omega/2)^2}} \, .
+\]</div>
+</details>
+<h3 id="part-f">Part f</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Write an expression for the heat capacity of this chain.
+You will get an integral that you can't do analytically.</p>
+</div>
+<p>Since the wording of the question is so vague, I'd actually recommend not substituting in the expression for the density of states.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>The internal energy is</p>
+<div class="arithmatex">\[
+U = \int g(\omega) \hbar \omega \left( \frac{1}{e^{\hbar \omega / k_B T} - 1} \right) d\omega \, .
+\]</div>
+<p>The heat capacity is then just <span class="arithmatex">\(C = \frac{dU}{dT}\)</span>, which we may/may not be able to do depending on the form of <span class="arithmatex">\(g(\omega)\)</span>.</p>
+</details>
+<h3 id="part-g">Part g</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Show that, at high temperature, the law of Dulong and Petit is obeyed.</p>
+</div>
+<p>We can do this quite easily because we didn't substitute in the expression for the density of states.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p class="annotate">Using our expression for the heat capacity(1), we can Taylor expand the exponential in the integrand to get</p>
+<ol>
+<li>
+<p><h2>1D monatomic phonon heat capacity</h2>
+    The internal energy is</p>
+<div class="arithmatex">\[
+U = \int g(\omega) \hbar \omega \left( \frac{1}{e^{\hbar \omega / k_B T} - 1} \right) d\omega \, .
+\]</div>
+<p>The heat capacity is then just <span class="arithmatex">\(C = \frac{dU}{dT}\)</span>, which we may/may not be able to do depending on the form of <span class="arithmatex">\(g(\omega)\)</span>.</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+C = \partial _T \int d\omega\, g(\omega) k_B T = N k_B \, .
+\]</div>
+<p class="annotate">where we used the fact that <span class="arithmatex">\(g(\omega) = dN/d\omega\)</span> and we cancelled the <span class="arithmatex">\(d\omega\)</span> terms(1).</p>
+<ol>
+<li>Stay mad, mathematicians <img alt="😆" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f606.svg" title=":laughing:" /></li>
+</ol>
+</details>
+<h2 id="q6-phonons-on-a-one-dimensional-diatomic-chain">Q6: Phonons on a one-dimensional diatomic chain</h2>
+<h3 id="part-a_4">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>What's the difference between an acoustic and an optical mode?</p>
+</div>
+<p>Acoustic modes are modes where adjacent atoms move in phase.
+Optical modes are modes where adjacent atoms move out of phase.</p>
+<h3 id="part-b_4">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Derive the longitudinal dispersion relation <span class="arithmatex">\(\omega(k)\)</span> for a one-dimensional diatomic chain of atoms of masses <span class="arithmatex">\(m_1\)</span> and <span class="arithmatex">\(m_2\)</span>, lattice spacing <span class="arithmatex">\(a\)</span>, and spring constant <span class="arithmatex">\(\kappa\)</span>.</p>
+</div>
+<p>Not quite bookwork, but not far off, as a very similar problem is solved in the book.</p>
+<details class="success">
+<summary>Answer</summary>
+<div class="arithmatex">\[
+\omega^2 = \frac{\kappa}{m_1 m_2}\left[(m_1 + m_2) \pm \sqrt{(m_1 + m_2)^2 - 4 m_1 m_2 \sin^2 \left( \frac{ka}{2} \right)}\right]
+\]</div>
+</details>
+<h3 id="part-c_3">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Determine the frequencies of the acoustic and optical modes at <span class="arithmatex">\(k=0\)</span>, as well as at the Brillouin zone boundary.</p>
+<p>Determine the sound velocity.</p>
+<p>Show that the group velocity is zero at the Brillouin zone boundary.</p>
+<p>Show that the sound velocity is again given by <span class="arithmatex">\(v_s = \sqrt{\beta^{-1}/\rho}\)</span>.</p>
+</div>
+<p class="annotate">There are a few things to get on with here, but it's all just plugging in numbers to the dispersion relation(1) that we quoted in the last part.</p>
+<ol>
+<li>
+<p><h2>1D diatomic phonon dispersion</h2>
+    We wrote this down in the last part.</p>
+<div class="arithmatex">\[
+\omega^2 = \frac{\kappa}{m_1 m_2}\left[(m_1 + m_2) \pm S \right]
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+S = \sqrt{(m_1 + m_2)^2 - 4 m_1 m_2 \sin^2 \left( \frac{ka}{2} \right)}
+\]</div>
+</li>
+</ol>
+<!-- NOTE: it would be nice to get this back natively in mkdocs by injecting the html. -->
+<!-- Let's start by plotting the dispersion relation, to get a feel for what's going on.
+
+!DIATOMIC_DISPERSION_PLOT -->
+
+<details class="info" open="open">
+<summary>Show working</summary>
+<p class="annotate">For the acoustic mode <span class="arithmatex">\(\omega(k=0) = 0\)</span>.
+Subbing in <span class="arithmatex">\(k=0\)</span> into the dispersion(1) gives</p>
+<ol>
+<li>
+<p><h2>1D diatomic phonon dispersion</h2>
+    The dispersion relation for a diatomic chain is</p>
+<div class="arithmatex">\[
+\omega^2 = \frac{\kappa}{m_1 m_2}\left[(m_1 + m_2) \pm S \right]
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+S = \sqrt{(m_1 + m_2)^2 - 4 m_1 m_2 \sin^2 \left( \frac{ka}{2} \right)}
+\]</div>
+</li>
+</ol>
+<div class="arithmatex">\[
+\omega(k=0) = \sqrt{\frac{2\kappa(m_1 + m_2)}{m_1 m_2}}
+\]</div>
+<p>Now, evaluating the dispersion relation at the Brillouin zone boundary gives</p>
+<div class="arithmatex">\[
+\omega^2(k=\frac{\pi}{a}) = \frac{\kappa}{m_1 m_2} \left(m_1 + m_2 \pm (m_1 - m_2)\right) \, ,
+\]</div>
+<p>which gives us two distinct modes at the Brillouin zone boundary</p>
+<div class="arithmatex">\[
+\omega_1 = \sqrt{\frac{2\kappa }{m_1}} \, , ~~~ \omega_2 = \sqrt{\frac{2\kappa }{ m_2}} \, .
+\]</div>
+<p class="annotate">Now let's look at the sound velocity.
+This is just the group velocity at <span class="arithmatex">\(k=0\)</span>.
+The trick here is to make <span class="arithmatex">\(k\)</span> small <em>before</em> taking the derivative, so replace <span class="arithmatex">\(\sin^2\left(\frac{ka}{2}\right)\)</span> with <span class="arithmatex">\(\left(\frac{ka}{2}\right)^2\)</span> in the dispersion relation(1), and you end up with</p>
+<ol>
+<li>
+<p><h2>1D diatomic phonon dispersion</h2>
+    The dispersion relation for a diatomic chain is</p>
+<div class="arithmatex">\[
+\omega^2 = \frac{\kappa}{m_1 m_2}\left[(m_1 + m_2) \pm S \right]
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+S = \sqrt{(m_1 + m_2)^2 - 4 m_1 m_2 \sin^2 \left( \frac{ka}{2} \right)}
+\]</div>
+</li>
+</ol>
+<div class="arithmatex">\[
+\omega = ka\sqrt{\frac{\kappa}{2(m_1 + m_2)}} \, ,
+\]</div>
+<p>where we've of course taken the acoustic branch.
+This means that the sound velocity is</p>
+<div class="arithmatex">\[
+v_s = a\sqrt{\frac{\kappa}{2(m_1 + m_2)}} \, .
+\]</div>
+<p>Now we need to show that the group velocity is zero at the Brillouin zone boundary.
+This is obvious from the plot - however we change the values of <span class="arithmatex">\(m_1\)</span> and <span class="arithmatex">\(m_2\)</span>, so long as they're different, the dispersion relation flattens out at the Brillouin zone boundary.</p>
+<p>Doing this mathematically is as simple as expanding the dispersion relation around <span class="arithmatex">\(k=\pi/a\)</span>, and showing that it's quadratic in <span class="arithmatex">\(k\)</span>.
+This is pretty clear from the fact that we're basically expanding <span class="arithmatex">\(\sin{x}\)</span> around <span class="arithmatex">\(\pi/2\)</span>, where it's stationary.</p>
+<p>Finally, we need to show that the sound velocity is given by <span class="arithmatex">\(v_s = \sqrt{\beta^{-1}/\rho}\)</span> again.
+This time, we have</p>
+<div class="arithmatex">\[
+\rho = \frac{m_1 + m_2}{a} \, ,
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\beta = -\frac{1}{L} \frac{\partial L}{\partial F} = \frac{2}{\kappa a}
+\]</div>
+<p>as the compressibility of 2 sprigs in series is half the compressibility of a single spring.
+This gives us once again</p>
+<div class="arithmatex">\[
+\sqrt{\frac{1}{\beta \rho}} = a\sqrt{\frac{\kappa}{2(m_1 + m_2)}} = v_s \, .
+\]</div>
+</details>
+<h3 id="part-d_2">Part d</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Sketch the dispersion in both the reduced and the extended zone scheme.</p>
+<p>If there are <span class="arithmatex">\(N\)</span> unit cells, how many different normal modes are there?</p>
+<p>How many branches of excitation are there? In other words, how many excitations are there at each <span class="arithmatex">\(k\)</span> in the reduced zone scheme?</p>
+</div>
+<p class="annotate">Well, I already plotted the dispersion relation, so... see above(1).
+If there are <span class="arithmatex">\(N\)</span> unit cells, there are <span class="arithmatex">\(2N\)</span> different normal modes, because there are two atoms per unit cell and so <span class="arithmatex">\(2N\)</span> degrees of freedom.</p>
+<ol>
+<li>If the plot doesn't show up, please send me angry emails <img alt="😅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f605.svg" title=":sweat_smile:" /></li>
+</ol>
+<p>As for the branches, there are two branches of excitation at each <span class="arithmatex">\(k\)</span> in the reduced zone scheme (see the plot).
+This is because there's two atoms in the unit cell.</p>
+<p>If we had 3 atoms in the unit cell, we'd have 3 branches of excitation at each <span class="arithmatex">\(k\)</span> in the reduced zone scheme.
+One of these branches would be acoustic, and the other two would be optical.
+We could never have more than 1 acoustic mode, because there's only one way to make all the atoms move in phase.</p>
+<h3 id="part-e_1">Part e</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>What happens when <span class="arithmatex">\(m_1 = m_2\)</span>?</p>
+</div>
+<p>The optical modes disappear, as the two atoms are indistinguishable.
+The gap between the acoustic and optical modes at the Brillouin zone boundary closes.
+The new lattice constant is <span class="arithmatex">\(a/2\)</span>.
+We have one mode per <span class="arithmatex">\(k\)</span>, but our Brillouin zone is now twice as big, so the total number of modes is the same (as we haven't gained or lost any degrees of freedom).</p>
+<h2 id="q7-the-tight-binding-model">Q7: The tight-binding model</h2>
+<h3 id="part-a_5">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Derive and sketch the dispersion relation for a monatomic one-dimensional chain with hopping integral <span class="arithmatex">\(-t\)</span>, and on-site energy <span class="arithmatex">\(\epsilon\)</span>.</p>
+<p>How many different eigenstates are there in the system?</p>
+<p>What is the effective mass of the electron near the bottom of the band?</p>
+<p>What's the density of states?</p>
+<p>If each atom is monovalent, what's the density of states at the Fermi surface?</p>
+<p>Estimate the heat capacity at low temperature.</p>
+<p>What's the heat capacity if the material is divalent?</p>
+<p>What's the spin susceptibility if the material is divalent?</p>
+</div>
+<p>The derivation of the dispersion relation is covered nicely in Steve Simon's book - I'd recommend following that.
+I'm not going to include the plot, because it's just a cosine function.
+The dispersion relation that we should derive is</p>
+<details class="success">
+<summary>Answer</summary>
+<div class="arithmatex">\[
+E = \epsilon - 2t \cos(ka)
+\]</div>
+</details>
+<p>There are <span class="arithmatex">\(N\)</span> wavevector eigenstates, so, including spin, there are <span class="arithmatex">\(2N\)</span> eigenstates in the system.</p>
+<p>Let's calculate the density of states.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p class="annotate">Let's search for <span class="arithmatex">\(g(E)\)</span>, the density of states per energy.
+Using the spacing between adjacent <span class="arithmatex">\(k\)</span> states(1), gives us</p>
+<ol>
+<li>
+<p><h2>State spacing</h2>
+    We covered this earlier! Here's a recap.
+    From periodic boundary conditions, we have</p>
+<div class="arithmatex">\[
+e^{i(\omega t + kna)} = e^{i(\omega t + k(n+N)a)} \, ,
+\]</div>
+<p>which immediately requires that</p>
+<div class="arithmatex">\[
+e^{i k N a} = 1 \, .
+\]</div>
+<p>This means that <span class="arithmatex">\(kNa = 2\pi p\)</span>, where <span class="arithmatex">\(p\)</span> is an integer.
+Or, equivalently,</p>
+<div class="arithmatex">\[
+k = \frac{2\pi p}{Na} \, .
+\]</div>
+<p>This means that the spacing between adjacent <span class="arithmatex">\(k\)</span> states is</p>
+<div class="arithmatex">\[
+\Delta k = \frac{2\pi}{Na} \, .
+\]</div>
+</li>
+</ol>
+<div class="arithmatex">\[
+g(E) = \frac{dN}{dk} \frac{dk}{dE} = 4\, \frac{Na}{2\pi} \frac{dk}{dE} \, ,
+\]</div>
+<p class="annotate">where the factor of 4 comes from the spin degeneracy, and the fact that both <span class="arithmatex">\(k\)</span> and <span class="arithmatex">\(-k\)</span> give the same energy.
+We can then differentiate the dispersion relation(1) to get</p>
+<ol>
+<li class="annotate"><h2>Monatomic tight-binding dispersion</h2>
+    The electronic tight binding dispersion relation for a monatomic chain is
+    $$
+    E = \epsilon - 2t \cos(ka)
+    $$</li>
+</ol>
+<div class="arithmatex">\[
+g(E) = \frac{N}{\pi t} \frac{1}{\sqrt{1 - \left(\frac{E - \epsilon}{2t}\right)^2}} \, .
+\]</div>
+</details>
+<p>To figure out the density of states at the Fermi energy, we need to understand that a monovalent atom would exactly half-fill the band, as there are a total of <span class="arithmatex">\(2N\)</span> states that can be occupied by electrons.</p>
+<p class="annotate">That means that the highest occupied state is at <span class="arithmatex">\(k =\pm \frac{\pi}{2a}\)</span>.
+Subbing this into the dispersion relation(1) gives us</p>
+<ol>
+<li class="annotate"><h2>Monatomic tight-binding dispersion</h2>
+    The electronic tight binding dispersion relation for a monatomic chain is
+    $$
+    E = \epsilon - 2t \cos(ka)
+    $$</li>
+</ol>
+<details class="success">
+<summary>Answer</summary>
+<div class="arithmatex">\[
+g(E_F) = \frac{N}{\pi t} \, .
+\]</div>
+</details>
+<p>To estimate the heat capacity at low temperature, we should remember from last week that, for an electron gas, the heat capacity per particle is</p>
+<div class="arithmatex">\[
+C = \gamma k_B^2 g(E_F) T \, ,
+\]</div>
+<p>where <span class="arithmatex">\(\gamma\)</span> is a constant of order unity.</p>
+<details class="success">
+<summary>Answer</summary>
+<p class="annotate">To solve the problem, all we need to do is sub in our expression for <span class="arithmatex">\(g(E_F)\)</span>(1) to get</p>
+<ol>
+<li class="annotate"><h2>Fermi surface density of states</h2>
+    We derived this just above.
+    $$
+    g(E_F) = \frac{N}{\pi t} \, .
+    $$</li>
+</ol>
+<div class="arithmatex">\[
+C = \gamma k_B^2 \frac{N}{\pi t} T \, .
+\]</div>
+</details>
+<p>Finally, if the material is divalent, the band will be completely filled.
+This means that the heat capacity will be very large at low temperatures, and the spin susceptibility will be very small, because there are no states available for electrons to move into.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+<script src="https://giscus.app/client.js" data-repo="rbrearton/sprongle" data-repo-id="R_kgDONS-C0A"
+    data-category="Announcements" data-category-id="DIC_kwDONS-C0M4Cla9H" data-mapping="title" data-strict="0"
+    data-reactions-enabled="1" data-emit-metadata="1" data-input-position="top" data-theme="preferred_color_scheme"
+    data-lang="en" crossorigin="anonymous" async>
+    </script>
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../problem_set_1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: B6: problem set 1">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                B6: problem set 1
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../oxphys_numerics/introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Richard Brearton
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.path", "content.code.copy", "toc.follow", "navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

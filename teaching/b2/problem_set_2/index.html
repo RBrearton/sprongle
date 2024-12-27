@@ -1,0 +1,1853 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Problem set 2 for the third year symmetry and relativity course at Oxford University">
+      
+      
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+        <link rel="next" href="../problem_set_3/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>B2 problem set 2 - sprongle.com</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#q1-the-rotation-formula" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="sprongle.com" class="md-header__button md-logo" aria-label="sprongle.com" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            sprongle.com
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              B2 problem set 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RBrearton/sprongle" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RBrearton/sprongle
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Teaching
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../oxphys_numerics/introduction/" class="md-tabs__link">
+          
+  
+  Oxphys numerics
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="sprongle.com" class="md-nav__button md-logo" aria-label="sprongle.com" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    sprongle.com
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RBrearton/sprongle" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RBrearton/sprongle
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Teaching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Teaching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B2: Symmetry and relativity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            B2: Symmetry and relativity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    B2: problem set 2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 2
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1-the-rotation-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1: The rotation formula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2-arbitrary-direction-lorentz-boost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: Arbitrary direction Lorentz boost
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q2: Arbitrary direction Lorentz boost">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3-decomposing-a-lorentz-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q3: Decomposing a Lorentz transformation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3: Decomposing a Lorentz transformation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4-su2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q4: SU(2)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q4: SU(2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part e
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem_set_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem_set_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B6: Condensed matter physics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            B6: Condensed matter physics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b6/problem_set_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B6: problem set 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b6/problem_set_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B6: problem set 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Oxphys numerics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Oxphys numerics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Recently added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rust API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Rust API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/rust_api/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/rust_api/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1-the-rotation-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1: The rotation formula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2-arbitrary-direction-lorentz-boost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: Arbitrary direction Lorentz boost
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q2: Arbitrary direction Lorentz boost">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3-decomposing-a-lorentz-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q3: Decomposing a Lorentz transformation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3: Decomposing a Lorentz transformation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4-su2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q4: SU(2)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q4: SU(2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part e
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>B2: problem set 2</h1>
+
+<h2 id="q1-the-rotation-formula">Q1: The rotation formula</h2>
+<p>This is a fairly simple question to get things started.</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Consider a vector <span class="arithmatex">\(\vec{v}\)</span>.
+A rotation by an angle <span class="arithmatex">\(\theta\)</span> about an axis defined by a unit vector <span class="arithmatex">\(\hat{u}\)</span> transforms <span class="arithmatex">\(\vec{v}\)</span> to <span class="arithmatex">\(\vec{v}' = R \vec{v}\)</span> where</p>
+<div class="arithmatex">\[
+R(\theta, \hat{u}) = I + (1 - \cos \theta) (\hat{u} \cdot J)^2 +  \hat{u} \cdot J \sin {\theta}
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\hat{u} \cdot J = \begin{pmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0 \end{pmatrix}
+\]</div>
+<p>Show that</p>
+<div class="arithmatex">\[
+\vec{v}' = \vec{v} \cos \theta + (\hat{u} \times \vec{v}) \sin \theta + \hat{u} (\hat{u} \cdot \vec{v}) (1 - \cos \theta)
+\]</div>
+</div>
+<details class="note" open="open">
+<summary>Show working</summary>
+<p>This isn't too bad, as it just requires a bit of matrix multiplication.
+For example, from the definitions that we're given, a tiny bit of algebra yields</p>
+<div class="arithmatex">\[
+(\hat{u} \cdot J) \vec{v} = \hat{u} \times \vec{v},
+\]</div>
+<p>Fun note: since <span class="arithmatex">\(\hat{u} \cdot J\)</span> is a rank 2 tensor, we know <span class="arithmatex">\(J\)</span> is a rank 3 tensor.
+The above expression gives</p>
+<div class="arithmatex">\[
+u_j J_{ijk} v_k = \epsilon_{ijk} u_j v_k
+\]</div>
+<p>which means that</p>
+<div class="arithmatex">\[
+\left[\hat{u} \cdot J \right]_{ik} = \epsilon_{ijk} u_j.
+\]</div>
+<p>Ok, back to the question!</p>
+<p>The larger <span class="arithmatex">\((1 - \cos \theta) (\hat{u} \cdot J)^2\)</span> term works out to be</p>
+<div class="arithmatex">\[
+(\hat{u} \cdot J)^2 = \begin{pmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0 \end{pmatrix}
+\]</div>
+<div class="arithmatex">\[
+= \begin{pmatrix} -u_z^2 - u_y^2 &amp; u_x u_y &amp; u_x u_z \\ u_x u_y &amp; -u_z^2 - u_x^2 &amp; u_y u_z \\ u_x u_z &amp; u_y u_z &amp; -u_y^2 - u_x^2 \end{pmatrix},
+\]</div>
+<p>although we could've probably done this more easily using the <span class="arithmatex">\(\epsilon_{ijk}\)</span> representation of <span class="arithmatex">\(\hat{u} \cdot J\)</span>.
+Now also using <span class="arithmatex">\(u_x^2 + u_y^2 + u_z^2 = 1\)</span>, we can rewrite the diagonal terms to get</p>
+<div class="arithmatex">\[
+(\hat{u} \cdot J)^2 = \begin{pmatrix} -1 + u_x^2 &amp; u_x u_y &amp; u_x u_z \\ u_x u_y &amp; -1 + u_y^2 &amp; u_y u_z \\ u_x u_z &amp; u_y u_z &amp; -1 + u_z^2 \end{pmatrix}.
+\]</div>
+<p>Now, applying this to a vector <span class="arithmatex">\(\vec{v}\)</span> and pre-multiplying by <span class="arithmatex">\((1 - \cos \theta)\)</span> gives</p>
+<div class="arithmatex">\[
+(1 - \cos \theta) (\hat{u} \cdot J)^2 \vec{v} = \begin{pmatrix} - v_x + v_x \cos \theta + u_x (u \cdot \vec{v}) (1 - \cos \theta) \\ - v_y + v_y \cos \theta + u_y (u \cdot \vec{v}) (1 - \cos \theta) \\ - v_z + v_z \cos \theta + u_z (u \cdot \vec{v}) (1 - \cos \theta) \end{pmatrix},
+\]</div>
+<p>from which the result follows.</p>
+</details>
+<h2 id="q2-arbitrary-direction-lorentz-boost">Q2: Arbitrary direction Lorentz boost</h2>
+<h3 id="part-a">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Consider a frame <span class="arithmatex">\(S\)</span> with origin <span class="arithmatex">\(O\)</span>, and a frame <span class="arithmatex">\(S'\)</span> with origin <span class="arithmatex">\(O'\)</span> moving with velocity
+<span class="arithmatex">\( \vec{v} =v\hat{n} \)</span> as measured in <span class="arithmatex">\(S\)</span>.
+At time <span class="arithmatex">\(t = 0\)</span> (as measured in <span class="arithmatex">\(S\)</span>), the origins coincide.</p>
+<p>The transformation matrix is given by <span class="arithmatex">\(\Lambda = e^{-\vec{\zeta}\cdot \vec{K}}\)</span> where <span class="arithmatex">\(\vec{\zeta} = \zeta \hat{n}\)</span> is the boost vector and <span class="arithmatex">\(\vec{K}\)</span> is the generator of boosts:</p>
+<div class="arithmatex">\[
+K_x = \begin{pmatrix} 0 &amp; 1 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{pmatrix}, ~~~
+K_y = \begin{pmatrix} 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{pmatrix}, ~~~
+K_z = \begin{pmatrix} 0 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 &amp; 0 \end{pmatrix}
+\]</div>
+<p>Show that <span class="arithmatex">\(\left( \hat{n} \cdot \vec{K} \right)^3 = \hat{n} \cdot \vec{K}\)</span>, then show that</p>
+<div class="arithmatex">\[
+\Lambda = I - (\sinh \zeta) \hat{n} \cdot \vec{K} + (\cosh \zeta - 1) \left( \hat{n} \cdot \vec{K} \right)^2
+\]</div>
+</div>
+<p>Let's start by showing that <span class="arithmatex">\(\left( \hat{n} \cdot \vec{K} \right)^3 = \hat{n} \cdot \vec{K}\)</span>.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>You might find the notation <span class="arithmatex">\(\hat{n} \cdot \vec{K}\)</span> a bit confusing, as <span class="arithmatex">\(\hat{n}\)</span> is a vector in <span class="arithmatex">\(\mathbb{R}^3\)</span> and <span class="arithmatex">\(\vec{K}\)</span> is a vector of matrices.
+Simply evaluate the dot product as</p>
+<div class="arithmatex">\[
+n_i K_i = n_x K_x + n_y K_y + n_z K_z
+\]</div>
+<p>where the <span class="arithmatex">\(n_i\)</span> are just scalars (the components of <span class="arithmatex">\(\hat{n}\)</span>), and it becomes a linear combination of the <span class="arithmatex">\(K_i\)</span> matrices.
+Then we have</p>
+<div class="arithmatex">\[
+\hat{n} \cdot \vec{k} = \begin{pmatrix} 0 &amp; n_x &amp; n_y &amp; n_z \\ n_x &amp; 0 &amp; 0 &amp; 0 \\ n_y &amp; 0 &amp; 0 &amp; 0 \\ n_z &amp; 0 &amp; 0 &amp; 0 \end{pmatrix}.
+\]</div>
+<p>Then, remembering that <span class="arithmatex">\(\hat{n} \cdot \hat{n} = 1\)</span>, we have</p>
+<div class="arithmatex">\[
+\left( \hat{n} \cdot \vec{K} \right)^2 = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; n_x^2 &amp; n_x n_y &amp; n_x n_z \\ 0 &amp; n_x n_y &amp; n_y^2 &amp; n_y n_z \\ 0 &amp; n_x n_z &amp; n_y n_z &amp; n_z^2 \end{pmatrix}
+\]</div>
+<p>and, one more time,</p>
+<div class="arithmatex">\[
+\left( \hat{n} \cdot \vec{K} \right)^3 = \begin{pmatrix} 0 &amp; n_x &amp; n_y &amp; n_z \\ n_x &amp; 0 &amp; 0 &amp; 0 \\ n_y &amp; 0 &amp; 0 &amp; 0 \\ n_z &amp; 0 &amp; 0 &amp; 0 \end{pmatrix} = \hat{n} \cdot \vec{K}.
+\]</div>
+</details>
+<p>Right, now we can move onto the main part of the question.
+This looks a lot like a matrix Taylor expansion.
+We should probably just be able to Taylor expand the exponential, and use the result we just derived.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>Using the Taylor expansion of the exponential, we have</p>
+<div class="arithmatex">\[
+\Lambda = e^{-\zeta \hat{n} \cdot \vec{K}} = I - \zeta \hat{n} \cdot \vec{K} + \frac{1}{2!} \zeta^2 \left( \hat{n} \cdot \vec{K} \right)^2 - \frac{1}{3!} \zeta^3 \left( \hat{n} \cdot \vec{K} \right)^3 + \ldots
+\]</div>
+<p>Ok, so it's pretty clear that there will be two terms that we care about: a <span class="arithmatex">\(\hat{n} \cdot \vec{K}\)</span> term and a <span class="arithmatex">\(\left( \hat{n} \cdot \vec{K} \right)^2\)</span> term, as any higher powers of <span class="arithmatex">\(\hat{n} \cdot \vec{K}\)</span> simplify into one of these two.
+Let's apply that, and write down the full Taylor series using these two separate sums:</p>
+<div class="arithmatex">\[
+\Lambda = I + \sum_{n=1}^{\infty} \frac{(-\zeta)^{2n-1}}{(2n-1)!} \left( \hat{n} \cdot \vec{K} \right) + \sum_{n=1}^{\infty} \frac{(-\zeta)^{2n}}{(2n)!} \left( \hat{n} \cdot \vec{K} \right)^2.
+\]</div>
+<p>... and we have arrived!
+The final trick to spot is easy (with it being a show that question) but we're missing the first term in the Taylor expansion of <span class="arithmatex">\(\cosh\)</span>, which is what gives us the <span class="arithmatex">\((\cosh \zeta - 1)\)</span> term, so we finally have:</p>
+<div class="arithmatex">\[
+\Lambda = I - (\sinh \zeta) \hat{n} \cdot \vec{K} + (\cosh \zeta - 1) \left( \hat{n} \cdot \vec{K} \right)^2.
+\]</div>
+<p>as required.</p>
+</details>
+<h3 id="part-b">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Given that the trajectory of <span class="arithmatex">\(O'\)</span> is <span class="arithmatex">\(\vec{r} = \vec{v}t\)</span> in frame <span class="arithmatex">\(S\)</span> and <span class="arithmatex">\(\vec{r}' = 0\)</span> in frame <span class="arithmatex">\(S'\)</span>, where <span class="arithmatex">\(\vec{r}\)</span> and <span class="arithmatex">\(\vec{r}'\)</span> are the spatial position vectors, show that <span class="arithmatex">\(\tanh \zeta = \beta\)</span>, where <span class="arithmatex">\(\beta \equiv \frac{v}{c}\)</span>.
+Using this result, express <span class="arithmatex">\(\Lambda\)</span> in terms of <span class="arithmatex">\(\gamma = \left(1 - \beta^2\right)^{-1/2}\)</span> and the components of <span class="arithmatex">\(\beta\)</span>.</p>
+</div>
+<p>This is just a matter of writing out the matrix form of <span class="arithmatex">\(\Lambda\)</span> that we just derived, as we were told that this is the transformation matrix for a Lorentz boost.
+From there it should just be matrix multiplication.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>Right, so remembering that</p>
+<div class="arithmatex">\[
+\hat{n} \cdot \vec{K} = \begin{pmatrix} 0 &amp; n_x &amp; n_y &amp; n_z \\ n_x &amp; 0 &amp; 0 &amp; 0 \\ n_y &amp; 0 &amp; 0 &amp; 0 \\ n_z &amp; 0 &amp; 0 &amp; 0 \end{pmatrix},
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\left(\hat{n} \cdot \vec{K}\right)^2 = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; n_x^2 &amp; n_x n_y &amp; n_x n_z \\ 0 &amp; n_x n_y &amp; n_y^2 &amp; n_y n_z \\ 0 &amp; n_x n_z &amp; n_y n_z &amp; n_z^2 \end{pmatrix},
+\]</div>
+<!-- TODO: THIS IS THE PERFECT PLACE FOR A HOVER REFERENCE -->
+<p>we can write out the matrix form of <span class="arithmatex">\(\Lambda\)</span>:</p>
+<div class="arithmatex">\[
+\Lambda = \begin{pmatrix} \cosh \zeta &amp; -n_x \sinh \zeta &amp; -n_y \sinh \zeta &amp; -n_z \sinh \zeta \\ -n_x \sinh \zeta &amp; 1 + n_x^2 \left( \cosh \zeta - 1 \right) &amp; n_x n_y \left( \cosh \zeta - 1 \right) &amp; n_x n_z \left( \cosh \zeta - 1 \right) \\ -n_y \sinh \zeta &amp; n_x n_y \left( \cosh \zeta - 1 \right) &amp; 1 + n_y^2 \left( \cosh \zeta - 1 \right) &amp; n_y n_z \left( \cosh \zeta - 1 \right) \\ -n_z \sinh \zeta &amp; n_x n_z \left( \cosh \zeta - 1 \right) &amp; n_y n_z \left( \cosh \zeta - 1 \right) &amp; 1 + n_z^2 \left( \cosh \zeta - 1 \right) \end{pmatrix}.
+\]</div>
+<p>The Lorentz transformation is $ \vec{x}' = \Lambda \vec{x}$, so full explicit matrix multiplication gives the following expressions for the spatial components of the transformed vector:</p>
+<div class="arithmatex">\[
+x' = - n_x \sinh (\zeta ) c t + \left( 1 + n_x^2 \left( \cosh \zeta  - 1 \right) \right) x + n_x n_y \left( \cosh \zeta  - 1 \right) y + n_x n_z \left( \cosh \zeta  - 1 \right) z,
+\]</div>
+<p>...and similar expressions for <span class="arithmatex">\(y'\)</span> and <span class="arithmatex">\(z'\)</span>.
+Now we just need to sub in.
+From the problem, we have that <span class="arithmatex">\(x' = 0\)</span> when <span class="arithmatex">\(x = n_x v t\)</span>. <!-- ANOTHER HOVER: this comes from definition of n being parallel to the boost. -->
+This gives us</p>
+<div class="arithmatex">\[
+-(\sinh \zeta) c t + (\cosh \zeta - 1) v t = 0,
+\]</div>
+<p>which simplifies to</p>
+<div class="arithmatex">\[
+\tanh \zeta = \frac{v}{c} = \beta.
+\]</div>
+</details>
+<p>That wasn't too bad.
+Now we just need to express <span class="arithmatex">\(\Lambda\)</span> in terms of <span class="arithmatex">\(\gamma\)</span> and the components of <span class="arithmatex">\(\beta\)</span>, which is easier to write than it is to type...</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>It's just a copy-paste exercise really.
+We straightforwardly have</p>
+<div class="arithmatex">\[
+n_x = \frac{\beta_x}{\beta}, ~~~ n_y = \frac{\beta_y}{\beta}, ~~~ n_z = \frac{\beta_z}{\beta}.
+\]</div>
+<p>We can figure out the <span class="arithmatex">\(\cosh \zeta\)</span> and <span class="arithmatex">\(\sinh \zeta\)</span> terms from the definitions of <span class="arithmatex">\(\beta\)</span> and <span class="arithmatex">\(\gamma\)</span></p>
+<div class="arithmatex">\[
+\tanh \zeta = \frac{\sqrt{\cosh^2{\zeta} - 1}}{\cosh \zeta} = \beta,
+\]</div>
+<p>which, rearranging, gives</p>
+<div class="arithmatex">\[
+\cosh \zeta = \frac{1}{\sqrt{1 - \beta^2}} = \gamma, ~~~ \sinh \zeta = \frac{\beta}{\sqrt{1 - \beta^2}} = \beta \gamma.
+\]</div>
+<p>Doing the cut-and-paste of terms gives</p>
+<div class="arithmatex">\[
+\Lambda = \begin{pmatrix} \gamma &amp; -\beta_x \gamma &amp; -\beta_y \gamma &amp; -\beta_z \gamma \\ -\beta_x \gamma &amp; 1 + \beta_x^2 (\gamma - 1) / \beta^2  &amp; \beta_x \beta_y (\gamma - 1) / \beta^2 &amp; \beta_x \beta_z (\gamma - 1) / \beta^2 \\ -\beta_y \gamma &amp; \beta_x \beta_y (\gamma - 1) / \beta^2 &amp; 1 + \beta_y^2 (\gamma - 1) / \beta^2 &amp; \beta_y \beta_z (\gamma - 1) / \beta^2 \\ -\beta_z \gamma &amp; \beta_x \beta_z (\gamma - 1) / \beta^2 &amp; \beta_y \beta_z (\gamma - 1) / \beta^2 &amp; 1 + \beta_z^2 (\gamma - 1) / \beta^2 \end{pmatrix}.
+\]</div>
+</details>
+<h3 id="part-c">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Show that an arbitrary Lorentz transformation can be derived from a rotation, a boost along a coordinate axis, and then another rotation.</p>
+</div>
+<p>Using... logic, we should be able to write any transformation as</p>
+<p><span class="arithmatex">\(\Lambda = R(-\theta, \hat{u}) \Lambda_x(v) R(\theta, \hat{u})\)</span>.</p>
+<p>That starts by rotating the frame so that the boost is along the <span class="arithmatex">\(x\)</span> axis, then boosting along the <span class="arithmatex">\(x\)</span> axis, and then rotating back.
+We're also reminded in the problem to use the result that we derived in question 1, so this is just a case of working through algebra.</p>
+<!-- NOTE: DOUBLE CHECK THE MINUS SIGN HERE. COULD NEED TO REVERSE ORDER OF ROTATIONS. -->
+
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>Ok, first we need to figure out the vector <span class="arithmatex">\(\hat{u}\)</span> that we need to rotate about, so that we can use the equation from question 1.
+We know it has to be orthogonal to both <span class="arithmatex">\(\hat{x}\)</span> and <span class="arithmatex">\(\hat{n}\)</span>, so it must lie along <span class="arithmatex">\(\hat{x} \times \hat{n}\)</span>.
+This gives</p>
+<div class="arithmatex">\[
+\hat{u} = \hat{x} \times \hat{n} = \frac{1}{n_y^2 + n_z^2} ~ \begin{pmatrix} 0 \\ n_z \\ -n_y \end{pmatrix}.
+\]</div>
+<p>Now subbing into the expression from question 1, <span class="arithmatex">\(R(\theta, \hat{u}) = I + (1 - \cos \theta) (\hat{u} \cdot J)^2 +  \hat{u} \cdot J \sin {\theta}\)</span>, we have</p>
+<div class="arithmatex">\[
+R(\theta, \hat{u}) = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; n_x &amp; n_y &amp; n_z \\ 0 &amp; -n_y &amp; 1 - \frac{n_y^2}{1 + n_x} &amp; -\frac{n_y n_z}{1 + n_x} \\ 0 &amp; -n_z &amp; -\frac{n_y n_z}{1 + n_x} &amp; 1 - \frac{n_z^2}{1 + n_x} \end{pmatrix}.
+\]</div>
+<p>Similarly, when we rotate in the opposite direction, we flip the sign of the <span class="arithmatex">\(\sin\theta\)</span> term, so</p>
+<div class="arithmatex">\[
+R(-\theta, \hat{u}) = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; n_x &amp; -n_y &amp; -n_z \\ 0 &amp; n_y &amp; 1 - \frac{n_y^2}{1 + n_x} &amp; -\frac{n_y n_z}{1 + n_x} \\ 0 &amp; n_z &amp; -\frac{n_y n_z}{1 + n_x} &amp; 1 - \frac{n_z^2}{1 + n_x} \end{pmatrix}.
+\]</div>
+<p>Note that I've extended the matrix to 4x4, as we're working in 4D spacetime, but the time component is trivial.
+The matrix <span class="arithmatex">\(\Lambda_x(v)\)</span> is given by</p>
+<div class="arithmatex">\[
+\Lambda_x(v) = \begin{pmatrix} \gamma &amp; -\beta \gamma &amp; 0 &amp; 0 \\ -\beta \gamma &amp; \gamma &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix},
+\]</div>
+<p>Multiplying everything together gives, as expected,</p>
+<div class="arithmatex">\[
+\Lambda = \begin{pmatrix} \gamma &amp; -\beta \gamma n_x &amp; -\beta \gamma n_y &amp; -\beta \gamma n_z \\ -\beta \gamma n_x &amp; 1 + \beta^2 (\gamma - 1) n_x^2 &amp; \beta^2 (\gamma - 1) n_x n_y &amp; \beta^2 (\gamma - 1) n_x n_z \\ -\beta \gamma n_y &amp; \beta^2 (\gamma - 1) n_x n_y &amp; 1 + \beta^2 (\gamma - 1) n_y^2 &amp; \beta^2 (\gamma - 1) n_y n_z \\ -\beta \gamma n_z &amp; \beta^2 (\gamma - 1) n_x n_z &amp; \beta^2 (\gamma - 1) n_y n_z &amp; 1 + \beta^2 (\gamma - 1) n_z^2 \end{pmatrix},
+\]</div>
+<p>which is the same as what we previously derived, as <span class="arithmatex">\(n_x = \beta_x / \beta\)</span> and so on.</p>
+</details>
+<h2 id="q3-decomposing-a-lorentz-transformation">Q3: Decomposing a Lorentz transformation</h2>
+<h3 id="part-a_1">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Consider <span class="arithmatex">\(L\)</span> in <span class="arithmatex">\(\mathrm{SO}(1, 3)\)</span>, meaning that it satisfies <span class="arithmatex">\(L^T g L = g\)</span>.</p>
+<p>Find <span class="arithmatex">\(L^{-1}\)</span> in terms of <span class="arithmatex">\(L\)</span>.</p>
+<p>Show that <span class="arithmatex">\(L^2_{00} - L^2_{01} - L^2_{02} - L^2_{03} = 1\)</span>.</p>
+<p>Show that <span class="arithmatex">\(L_{00}L_{j0} - L_{0k}L_{jk} = 0\)</span> for <span class="arithmatex">\(j = 1, 2, 3\)</span>.</p>
+</div>
+<p>To solve this, we start by finding the inverse of <span class="arithmatex">\(L\)</span>.
+Then, the identities that we're asked to show can be derived by equating the elements of <span class="arithmatex">\(L L^{-1}\)</span> to the elements of the identity matrix.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>Let's just start from the definition we're given and make some progress.</p>
+<div class="arithmatex">\[
+L^T g L = g
+\]</div>
+<p>Multiply on the left by the inverse of <span class="arithmatex">\(g\)</span>:</p>
+<div class="arithmatex">\[
+g^{-1} L^T g L = I.
+\]</div>
+<p>Multiply on the right by the inverse of <span class="arithmatex">\(L\)</span>:</p>
+<div class="arithmatex">\[
+g^{-1} L^T g = L^{-1}.
+\]</div>
+<p>Ok, cool!
+We can evaluate this pretty easily, as <span class="arithmatex">\(g^{-1} = g\)</span>.
+Defining <span class="arithmatex">\(L\)</span> as usual as</p>
+<div class="arithmatex">\[
+L = \begin{pmatrix} L_{00} &amp; L_{01} &amp; L_{02} &amp; L_{03} \\ L_{10} &amp; L_{11} &amp; L_{12} &amp; L_{13} \\ L_{20} &amp; L_{21} &amp; L_{22} &amp; L_{23} \\ L_{30} &amp; L_{31} &amp; L_{32} &amp; L_{33} \end{pmatrix},
+\]</div>
+<p>we have</p>
+<div class="arithmatex">\[
+L^{-1} = \begin{pmatrix} L_{00} &amp; -L_{10} &amp; -L_{20} &amp; -L_{30} \\ -L_{01} &amp; L_{11} &amp; L_{21} &amp; L_{31} \\ -L_{02} &amp; L_{12} &amp; L_{22} &amp; L_{32} \\ -L_{03} &amp; L_{13} &amp; L_{23} &amp; L_{33} \end{pmatrix}.
+\]</div>
+<p>Now, just writing out the matrix multiplication for <span class="arithmatex">\(L L^{-1}\)</span> and equating to the identity matrix gives the results we're looking for:</p>
+<div class="arithmatex">\[
+\begin{pmatrix} L_{00} &amp; L_{01} &amp; L_{02} &amp; L_{03} \\ L_{10} &amp; L_{11} &amp; L_{12} &amp; L_{13} \\ L_{20} &amp; L_{21} &amp; L_{22} &amp; L_{23} \\ L_{30} &amp; L_{31} &amp; L_{32} &amp; L_{33} \end{pmatrix} \begin{pmatrix} L_{00} &amp; -L_{10} &amp; -L_{20} &amp; -L_{30} \\ -L_{01} &amp; L_{11} &amp; L_{21} &amp; L_{31} \\ -L_{02} &amp; L_{12} &amp; L_{22} &amp; L_{32} \\ -L_{03} &amp; L_{13} &amp; L_{23} &amp; L_{33} \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix}.
+\]</div>
+<p>The on-diagonal elements give</p>
+<div class="arithmatex">\[
+L_{00}^2 - L_{01}^2 - L_{02}^2 - L_{03}^2 = 1
+\]</div>
+<p>and the off-diagonal elements give</p>
+<div class="arithmatex">\[
+L_{00} L_{j0} - \sum_{k=1}^{3} L_{0k} L_{jk} = 0
+\]</div>
+</details>
+<h3 id="part-b_1">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Let <span class="arithmatex">\(O\)</span> and <span class="arithmatex">\(O'\)</span> be the origins of <span class="arithmatex">\(S\)</span> and <span class="arithmatex">\(S'\)</span>, respectively.
+Let <span class="arithmatex">\(\vec{v}\)</span> represent the velocity of <span class="arithmatex">\(O'\)</span> as measured in <span class="arithmatex">\(S\)</span>.
+Let <span class="arithmatex">\(O\)</span> and <span class="arithmatex">\(O'\)</span> coincide at <span class="arithmatex">\(t = 0\)</span>.
+Show that <span class="arithmatex">\(\beta_i = -L_{0i}/L_{00}\)</span>.
+Show that <span class="arithmatex">\(L_{00} = \gamma\)</span>.</p>
+</div>
+<p>As Lorentz transformations are members of the Lorentz group <span class="arithmatex">\(\mathrm{SO}(1, 3)\)</span>, this is somewhat trivial.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>The vectors for the spacetime coordinates of <span class="arithmatex">\(O'\)</span> are given by</p>
+<div class="arithmatex">\[
+X = \begin{pmatrix} c t \\ v_x t \\ v_y t \\ v_z t \end{pmatrix}, ~~~ X' = \begin{pmatrix} c t' \\ \vec{0} \end{pmatrix}.
+\]</div>
+<p>While we could work through <span class="arithmatex">\(X' = L X\)</span>, it's actually way quicker to look at <span class="arithmatex">\(X = L^{-1} X'\)</span>, which we can write out in full as</p>
+<div class="arithmatex">\[
+\begin{pmatrix} c t \\ v_x t \\ v_y t \\ v_z t \end{pmatrix} = \begin{pmatrix} L_{00} &amp; -L_{10} &amp; -L_{20} &amp; -L_{30} \\ -L_{01} &amp; L_{11} &amp; L_{21} &amp; L_{31} \\ -L_{02} &amp; L_{12} &amp; L_{22} &amp; L_{32} \\ -L_{03} &amp; L_{13} &amp; L_{23} &amp; L_{33} \end{pmatrix} \begin{pmatrix} c t' \\ 0 \\ 0 \\ 0 \end{pmatrix}.
+\]</div>
+<p>From this we read off that <span class="arithmatex">\(ct = L_{00} c t'\)</span>, and that <span class="arithmatex">\(v_i t = -L_{0i} c t'\)</span>.
+This gives us the result that <span class="arithmatex">\(\beta_i = -L_{0i}/L_{00}\)</span>.</p>
+<p>To show that <span class="arithmatex">\(L_{00} = \gamma\)</span>, we can use the fact that</p>
+<div class="arithmatex">\[
+\beta^2 = \beta_x^2 + \beta_y^2 + \beta_z^2 = \frac{L_{01}^2 + L_{02}^2 + L_{03}^2}{L_{00}^2} = \frac{L_{00}^2 - 1}{L_{00}^2},
+\]</div>
+<p>where we used the result from the previous question that <span class="arithmatex">\(L_{00}^2 - L_{01}^2 - L_{02}^2 - L_{03}^2 = 1\)</span>.
+Now we just need to rearrange to find</p>
+<div class="arithmatex">\[
+L_{00} = \frac{1}{\sqrt{1 - \beta^2}} = \gamma.
+\]</div>
+</details>
+<h3 id="part-c_1">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Let <span class="arithmatex">\(\Lambda(\beta)\)</span> denote the Lorentz transformation with velocity <span class="arithmatex">\(\vec{\beta}c\)</span>.
+Let <span class="arithmatex">\(R = L \Lambda^{-1}(\beta) = L \Lambda(-\beta)\)</span>.
+Show that <span class="arithmatex">\(R\)</span> belongs to <span class="arithmatex">\(\mathrm{SO}(1, 3)\)</span>.
+Using the expression for <span class="arithmatex">\(\Lambda(\beta)\)</span> in terms of <span class="arithmatex">\(\gamma\)</span> and <span class="arithmatex">\(\beta_i\)</span> from the previous question, show that <span class="arithmatex">\(R_{00} = 1\)</span> and <span class="arithmatex">\(R_{0i} = 0\)</span> for <span class="arithmatex">\(i = 1, 2, 3\)</span>.</p>
+</div>
+<p>As <span class="arithmatex">\(\Lambda(\beta)\)</span> is a Lorentz transformation, it belongs to <span class="arithmatex">\(\mathrm{SO}(1, 3)\)</span>.
+The question also tells us that <span class="arithmatex">\(L\)</span> belongs to <span class="arithmatex">\(\mathrm{SO}(1, 3)\)</span>, so <span class="arithmatex">\(R\)</span> is a product of two elements of <span class="arithmatex">\(\mathrm{SO}(1, 3)\)</span>, and hence belongs to <span class="arithmatex">\(\mathrm{SO}(1, 3)\)</span>.</p>
+<p>The rest is tricky algebra; nothing complicated, but some steps are annoying to spot.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>Working through it, we have <span class="arithmatex">\(R_{00} = L_{00} \Lambda_{00}( -\beta) + L_{0k} \Lambda_{k0}(-\beta)\)</span>.
+From the previous question, we know that <span class="arithmatex">\(\Lambda_{00}(-\beta) = \gamma\)</span> and <span class="arithmatex">\(\Lambda_{k0}(-\beta) = \beta_k \gamma\)</span>. <!-- HOVER REFERENCE AGAIN --></p>
+<p>Now using that <span class="arithmatex">\(\beta_k = -L_{0k}/L_{00}\)</span>, we have</p>
+<div class="arithmatex">\[
+R_{00} = L_{00} \gamma + L_{0k} \beta_k \gamma = \gamma L_{00} - \gamma \frac{L_{0k}L_{0k}}{L_{00}}  = \gamma L_{00} - \gamma = 1.
+\]</div>
+<p>Where we used <span class="arithmatex">\(L^2_{00} - L^2_{01} - L^2_{02} - L^2_{03} = 1\)</span> from the previous part of this question.</p>
+<p>Similarly, we have</p>
+<div class="arithmatex">\[
+R_{i0} = L_{i0} \Lambda_{00}(-\beta) + L_{ik} \Lambda_{k0}(-\beta) = L_{i0} \gamma + L_{ik} \beta_k \gamma
+\]</div>
+<p>Again we can use that <span class="arithmatex">\(\beta_k = -L_{0k}/L_{00}\)</span> to get</p>
+<div class="arithmatex">\[
+R_{i0} = L_{i0} \gamma - L_{ik} \frac{L_{0k}}{L_{00}} \gamma = 0.
+\]</div>
+<p>where we used <span class="arithmatex">\(L_{00}L_{j0} - L_{0k}L_{jk} = 0\)</span> from the previous part of this question.</p>
+<p>This is all we need to show!
+We've already argued that <span class="arithmatex">\(R\)</span> belongs to <span class="arithmatex">\(\mathrm{SO}(1, 3)\)</span>, it satisfies the equations that we derived in the first part of the question</p>
+<div class="arithmatex">\[
+(R R^{-1})_{00} = R_{00}^2 - \sum_{i=1}^{3} R_{0i}^2 = 1
+\]</div>
+<p>which is only true if <span class="arithmatex">\(R_{0i} = 0\)</span>.</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Argue that <span class="arithmatex">\(R\)</span> represents a rotation.</p>
+</div>
+<p>The previous part of the problem showed that <span class="arithmatex">\(R\)</span> leaves time invariant.
+As it's in <span class="arithmatex">\(\mathrm{SO}(1, 3)\)</span>, it must also leave <span class="arithmatex">\(-(c \delta t)^2 + (\delta \vec{x})^2\)</span> invariant.
+Therefore, as it doesn't affect time, it must also leave <span class="arithmatex">\(|\delta \vec{x}|\)</span> invariant, and hence it must be a rotation.</p>
+<h2 id="q4-su2">Q4: SU(2)</h2>
+<h3 id="part-a_2">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>SU(2) is the group of unitary 2x2 complex matrices with determinant 1.
+Show that the group has 3 generators.</p>
+</div>
+<p>This is a very standard/easy to google result.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>A general element of SU(2) is</p>
+<div class="arithmatex">\[
+M = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}
+\]</div>
+<p>where the complex numbers aren't independent because the determinant must be 1, and the unitarity condition gives <span class="arithmatex">\(M^\dagger M = I\)</span>.
+The inverse of the matrix is</p>
+<div class="arithmatex">\[
+M^{-1} = \frac{1}{\det M} \begin{pmatrix} d &amp; -b \\ -c &amp; a \end{pmatrix} = \begin{pmatrix} d &amp; -b \\ -c &amp; a \end{pmatrix}.
+\]</div>
+<p>Unitarity gives <span class="arithmatex">\(d = a^*\)</span>, <span class="arithmatex">\(c = -b^*\)</span>.
+This narrows down the number of independent real parameters to 4.
+The determinant condition gives <span class="arithmatex">\(|a|^2 + |b|^2 = 1\)</span>, which is one constraint, dropping the number of independent parameters to 3.</p>
+<p>This means that any element of SU(2) can be constructed from 3 independent parameters, so the group has 3 generators.</p>
+</details>
+<h3 id="part-b_2">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Let <span class="arithmatex">\(J_i\)</span> be the generators of SU(2).
+<span class="arithmatex">\(M\)</span> in <span class="arithmatex">\(\mathrm{SU}(2)\)</span> can be written as <span class="arithmatex">\(M = I + i z_k J_k\)</span> to first order in some small complex parameters <span class="arithmatex">\(z_k\)</span>.
+Show that <span class="arithmatex">\(K_i = z_i J_i\)</span> are Hermitian.
+Express the components of <span class="arithmatex">\(K_i\)</span> in terms of real numbers, showing that <span class="arithmatex">\(M = I - i(a_k \sigma_k)\)</span> where the <span class="arithmatex">\(\sigma_k\)</span> are the Pauli matrices.</p>
+</div>
+<p>Begin, as suggested, with <span class="arithmatex">\(z_2 = z_3 = 0\)</span>.
+Then, generalize to the full case.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>We start with</p>
+<div class="arithmatex">\[
+M = I + i K_1.
+\]</div>
+<p>Taking the Hermitian conjugate gives</p>
+<div class="arithmatex">\[
+M^\dagger = I - i K_1^\dagger.
+\]</div>
+<p>Requiring that the matrix is Hermitian gives</p>
+<div class="arithmatex">\[
+(I - i K_1^\dagger)(I + i K_1) = I.
+\]</div>
+<p>To first order in <span class="arithmatex">\(z_1\)</span>, this implies that <span class="arithmatex">\(K_1^\dagger = K_1\)</span>, so <span class="arithmatex">\(K_1\)</span> is Hermitian.</p>
+<p>Now, trying to figure out the elements of <span class="arithmatex">\(K_1\)</span>, we have</p>
+<div class="arithmatex">\[
+K_1 = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}, ~~~ K_1^\dagger = \begin{pmatrix} a^* &amp; c^* \\ b^* &amp; d^* \end{pmatrix}.
+\]</div>
+<p>Since <span class="arithmatex">\(K_1\)</span> is hermitian, <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(d\)</span> must be real, and <span class="arithmatex">\(b = -c^*\)</span>.
+Expanding the determinant of <span class="arithmatex">\(M\)</span> to first order gives <span class="arithmatex">\(1 + i(a + d) = 1\)</span>, so <span class="arithmatex">\(a = -d\)</span>.
+Writing everything out in terms of real numbers gives</p>
+<div class="arithmatex">\[
+K_1 = a_1 \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} + a_2 \begin{pmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{pmatrix} + a_3 \begin{pmatrix} 0 &amp; i \\ i &amp; 0 \end{pmatrix}.
+\]</div>
+<p>The same results will hold for <span class="arithmatex">\(K_2\)</span> and <span class="arithmatex">\(K_3\)</span>, but we can see that the real basis vectors are the Pauli matrices, so that</p>
+<div class="arithmatex">\[
+M = I - i(a_k \sigma_k).
+\]</div>
+<p>Note that, more generally, any matrix in SU(2) can be written as</p>
+<div class="arithmatex">\[
+M = e^{i a_k \sigma_k}
+\]</div>
+<p>where <span class="arithmatex">\(a_k\)</span> arbitrary real numbers.</p>
+</details>
+<h3 id="part-c_2">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Show that any <span class="arithmatex">\(2 \times 2\)</span> Hermitian matrix <span class="arithmatex">\(S\)</span> can be written as <span class="arithmatex">\(ct I + x_k \sigma_k\)</span>.
+Calculate the determinant of <span class="arithmatex">\(S\)</span>.
+Consider a <span class="arithmatex">\(2 \times 2\)</span> matrix <span class="arithmatex">\(L\)</span> such that <span class="arithmatex">\(\det(L) = 1\)</span>, and define the transformation <span class="arithmatex">\(S' = L S L^\dagger\)</span>.
+Show that <span class="arithmatex">\(S'\)</span> is also Hermitian.
+Argue that it can be interpreted as representing a new spacetime position vector <span class="arithmatex">\(X'\)</span> which is a Lorentz transformation of the original spacetime position vector <span class="arithmatex">\(X = (ct, x, y, z)^\intercal\)</span>.</p>
+</div>
+<p>Quite a few small steps to get through here, but none are too conceptually demanding.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>As <span class="arithmatex">\(S\)</span> is Hermitian, it can be written as</p>
+<div class="arithmatex">\[
+S = \begin{pmatrix} \alpha &amp; \beta - i\gamma \\ \beta + i\gamma &amp; \delta \end{pmatrix}.
+\]</div>
+<p>which is of the desired form. Writing that explicitly:</p>
+<div class="arithmatex">\[
+S = \begin{pmatrix} ct + z &amp; x - iy \\ x + iy &amp; ct - z \end{pmatrix}.
+\]</div>
+<p>The determinant of <span class="arithmatex">\(S\)</span> is</p>
+<div class="arithmatex">\[
+\det S = (ct + z)(ct - z) - (x - iy)(x + iy) = c^2 t^2 - z^2 - x^2 - y^2.
+\]</div>
+<p>Now think about <span class="arithmatex">\(S' = L S L^\dagger\)</span>.
+We want to prove that <span class="arithmatex">\(S'\)</span> is Hermitian.
+Remember that <span class="arithmatex">\((AB)^\dagger = B^\dagger A^\dagger\)</span>?
+Of course you do.</p>
+<div class="arithmatex">\[
+S'^\dagger = (L S L^\dagger)^\dagger = (L^\dagger)^\dagger S^\dagger L^\dagger = L S L^\dagger = S'.
+\]</div>
+<p>Because <span class="arithmatex">\(S'\)</span> is hermitian, it can also be written in the form</p>
+<div class="arithmatex">\[
+S' = \begin{pmatrix} c't + z' &amp; x' - iy' \\ x' + iy' &amp; c't - z' \end{pmatrix}.
+\]</div>
+<p>with determinant</p>
+<div class="arithmatex">\[
+\det S' = c'^2 t^2 - z'^2 - x'^2 - y'^2.
+\]</div>
+<p>We can go one step further though, because we're told that <span class="arithmatex">\(\det (L) = 1\)</span>.
+This means that <span class="arithmatex">\(\det(S') = \det(L) \det(S) \det(L^\dagger) = \det(S)\)</span>, where I used the fact (that you of course remember) that <span class="arithmatex">\(\det(A B) = \det(A) \det(B)\)</span>.
+This means that</p>
+<div class="arithmatex">\[
+c'^2 t^2 - z'^2 - x'^2 - y'^2 = c^2 t^2 - z^2 - x^2 - y^2,
+\]</div>
+<p>which is a defining property of Lorentz transformations.</p>
+</details>
+<h3 id="part-d">Part d</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Assume that <span class="arithmatex">\(L\)</span> is of the form</p>
+<div class="arithmatex">\[
+L = \begin{pmatrix} a &amp; 0 \\ 0 &amp; b \end{pmatrix},
+\]</div>
+<p>where <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> are real.
+Argue that <span class="arithmatex">\(LSL^\dagger\)</span> represents a boost along the <span class="arithmatex">\(z\)</span>-axis.
+Demonstrate that <span class="arithmatex">\(L = (\cosh q) I + (\sinh q) \sigma_3\)</span>, where <span class="arithmatex">\(q\)</span> is the rapidity.</p>
+</div>
+<p>These are getting tiresome!
+This is a lot of algebra...</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<div class="arithmatex">\[
+S' = LSL^\dagger = \begin{pmatrix} a^2 (ct + z) &amp; x - iy \\ x + iy &amp; b^2 (ct - z) \end{pmatrix}.
+\]</div>
+<p>This is a boost along the <span class="arithmatex">\(z\)</span>-axis, as the off-diagonal elements are the same as the original matrix.
+Disentangling <span class="arithmatex">\(z\)</span> and <span class="arithmatex">\(ct\)</span> gives</p>
+<div class="arithmatex">\[
+ct' = \frac{a^2 + b^2}{2}ct + \frac{a^2 - b^2}{2}z, ~~~ z' = \frac{a^2 - b^2}{2}ct + \frac{a^2 + b^2}{2}z.
+\]</div>
+<p>Using our knowledge of relativity</p>
+<div class="arithmatex">\[
+ct' = \gamma (ct - \beta z), ~~~ z' = \gamma (z - \beta ct),
+\]</div>
+<p>we can match coefficients to find that</p>
+<div class="arithmatex">\[
+\gamma = \frac{a^2 + b^2}{2}, ~~~ -\beta\gamma = \frac{a^2 - b^2}{2}.
+\]</div>
+<p>To squeeze the rapidity into things, we can use the <span class="arithmatex">\(det(L) = 1\)</span> condition to find that <span class="arithmatex">\(ab = 1\)</span> and therefore if <span class="arithmatex">\(a = e^{q/2}\)</span> then <span class="arithmatex">\(b = e^{-q/2}\)</span>.
+Subbing this in, we find that</p>
+<div class="arithmatex">\[
+\gamma = \cosh q, ~~~ \beta\gamma = \sinh q.
+\]</div>
+<p>as we would expect.
+This allows us to represent <span class="arithmatex">\(L\)</span> as</p>
+<div class="arithmatex">\[
+L = \begin{pmatrix} e^{q/2} &amp; 0 \\ 0 &amp; e^{-q/2} \end{pmatrix} = I \cosh \frac{q}{2}  - \sigma_3 \sinh \frac{q}{2} \,,
+\]</div>
+<p>as required-ish (typo in problem?)</p>
+</details>
+<h3 id="part-e">Part e</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Now let's think about pure rotations.
+The time coordinate must remain unchanged, so think about <span class="arithmatex">\(S = x_k \sigma_k\)</span>.
+Show that <span class="arithmatex">\(\mathrm{tr}(S') = \mathrm{tr}(S) = 0\)</span> implies that <span class="arithmatex">\(L\)</span> is unitary.
+This means <span class="arithmatex">\(L\)</span> can be written as</p>
+<div class="arithmatex">\[
+L = e^{i a_k \sigma_k}.
+\]</div>
+<p>where the <span class="arithmatex">\(a_k\)</span> are real.
+Consider <span class="arithmatex">\(a_1 = a_2 = 0\)</span> and <span class="arithmatex">\(a_3 = \theta\)</span>.
+Show that</p>
+<div class="arithmatex">\[
+L(0, 0, \theta) = e^{i \theta \sigma_3} = \begin{pmatrix} e^{-i \theta} &amp; 0 \\ 0 &amp; e^{i \theta} \end{pmatrix}.
+\]</div>
+<p>Which rotation does <span class="arithmatex">\(L(0, 0, \theta) S L^\dagger(0, 0, \theta)\)</span> represent?
+Is there another element of SU(2) that represents the same rotation?</p>
+</div>
+<p>Wow that's a lot of questions.</p>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>Since rotations don't mix space and time coordinates, instead of writing</p>
+<div class="arithmatex">\[
+S = ct I + x_k \sigma_k,
+\]</div>
+<p>we can write</p>
+<div class="arithmatex">\[
+S = x_k \sigma_k,
+\]</div>
+<p>which is transformed into <span class="arithmatex">\(S' = x_k' \sigma_k\)</span>.</p>
+<p>Since the Pauli are traceless, again using <span class="arithmatex">\(\mathrm{tr} (AB) = \mathrm{tr} (BA)\)</span>, we have</p>
+<div class="arithmatex">\[
+\mathrm{tr} (S') = \mathrm{tr} (LSL^\dagger) = \mathrm{tr} (L^\dagger L S) = \mathrm{tr} (S) = 0.
+\]</div>
+<p>Let <span class="arithmatex">\(a_{ij}\)</span> denote the components of <span class="arithmatex">\(L^\dagger L\)</span>. We have:</p>
+<div class="arithmatex">\[
+\mathrm{tr} \left( L^\dagger L S \right) = (a_{00} - a_{11}) x + (a_{01} + a_{10}) x + i (a_{01} - a_{10}) y.
+\]</div>
+<p>For this to be zero for all values of <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span>, and <span class="arithmatex">\(z\)</span>, we require</p>
+<div class="arithmatex">\[
+a_{01} = a_{10} = 0, ~~~ a_{00} = a_{11}
+\]</div>
+<p>which means <span class="arithmatex">\(L^\dagger L = a_{00} I\)</span>.</p>
+<p>Also, since <span class="arithmatex">\(\det(L) = 1\)</span>, we have <span class="arithmatex">\(a_{00} = 1\)</span>, which gives <span class="arithmatex">\(L^\dagger L = I\)</span>.</p>
+<p>Similarly, considering</p>
+<div class="arithmatex">\[
+\mathrm{tr}(S) = \mathrm{tr} \left( L^{-1} S' \left( L^{\dagger} \right)^{-1} \right) = \mathrm{tr} \left( \left( L^{\dagger} \right)^{-1} L^{-1} S' \right) = 0,
+\]</div>
+<p>we find that</p>
+<div class="arithmatex">\[
+\left( L^\dagger \right)^{-1} L^{-1} = \left( L L^\dagger \right)^{-1} = I,
+\]</div>
+<p>implying <span class="arithmatex">\(L L^\dagger = I\)</span>. Hence, <span class="arithmatex">\(L\)</span> is unitary.
+As shown in part (b), this means that:</p>
+<div class="arithmatex">\[
+L = e^{-i (a_1 \sigma_1 + a_2 \sigma_2 + a_3 \sigma_3)},
+\]</div>
+<p>where the <span class="arithmatex">\(a_i\)</span> are real.</p>
+<p>For the case <span class="arithmatex">\(a_1 = a_2 = 0\)</span> and <span class="arithmatex">\(a_3 = \theta\)</span>, we have:</p>
+<div class="arithmatex">\[
+L(0, 0, \theta) = e^{-i \theta \sigma_3} = \sum_{k=0}^{\infty} \frac{(-i \theta \sigma_3)^k}{k!}.
+\]</div>
+<p>Since <span class="arithmatex">\(\sigma_3^2 = I\)</span>, we have <span class="arithmatex">\(\sigma_3^{2k} = I\)</span> and <span class="arithmatex">\(\sigma_3^{2k+1} = \sigma_3\)</span> for all <span class="arithmatex">\(k\)</span>. This yields:</p>
+<div class="arithmatex">\[
+L = I \sum_{k=0}^{\infty} \frac{(-1)^k \theta^{2k}}{(2k)!} - i \sigma_3 \sum_{k=0}^{\infty} \frac{(-1)^k \theta^{2k+1}}{(2k+1)!} = I \cos \theta - i \sigma_3 \sin \theta.
+\]</div>
+<p>In matrix form, this becomes:</p>
+<div class="arithmatex">\[
+L(0, 0, \theta) = \begin{pmatrix} \cos \theta - i \sin \theta &amp; 0 \\ 0 &amp; \cos \theta + i \sin \theta \end{pmatrix} = \begin{pmatrix} e^{-i \theta} &amp; 0 \\ 0 &amp; e^{i \theta} \end{pmatrix}.
+\]</div>
+<p>Now, calculating <span class="arithmatex">\(S' = L S L^{\dagger}\)</span> gives the transformed components</p>
+<div class="arithmatex">\[
+z' = z, ~~~ x' = x \cos (2 \theta) - y \sin (2 \theta), ~~~ y' = x \sin (2 \theta) + y \cos (2 \theta).
+\]</div>
+<p>This represents a rotation by an angle <span class="arithmatex">\(2 \theta\)</span> around the <span class="arithmatex">\(z\)</span>-axis.
+Therefore, there is a correspondence <span class="arithmatex">\(L (0, 0, \theta) \to R (0, 0, 2 \theta)\)</span>, where <span class="arithmatex">\(R\)</span> is a rotation matrix in <span class="arithmatex">\(\mathrm{SO}(3)\)</span>.</p>
+<p>Note that <span class="arithmatex">\(-L = L(0, 0, \theta + \pi)\)</span> corresponds to the same rotation in <span class="arithmatex">\(\mathrm{SO}(3)\)</span>, since <span class="arithmatex">\(R(0, 0, 2 (\theta + \pi)) = R(0, 0, 2 \theta)\)</span>. This is consistent with <span class="arithmatex">\(L S L^{\dagger} = (-L) S (-L)^{\dagger}\)</span>.
+Therefore, there is a two-to-one correspondence between <span class="arithmatex">\(\mathrm{SU}(2)\)</span> and <span class="arithmatex">\(\mathrm{SO}(3)\)</span>.
+For this reason, <span class="arithmatex">\(\mathrm{SU}(2)\)</span> is called the double cover of <span class="arithmatex">\(\mathrm{SO}(3)\)</span>.</p>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+<script src="https://giscus.app/client.js" data-repo="rbrearton/sprongle" data-repo-id="R_kgDONS-C0A"
+    data-category="Announcements" data-category-id="DIC_kwDONS-C0M4Cla9H" data-mapping="title" data-strict="0"
+    data-reactions-enabled="1" data-emit-metadata="1" data-input-position="top" data-theme="preferred_color_scheme"
+    data-lang="en" crossorigin="anonymous" async>
+    </script>
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../problem_set_3/" class="md-footer__link md-footer__link--next" aria-label="Next: B2: problem set 3">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                B2: problem set 3
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Richard Brearton
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.path", "content.code.copy", "toc.follow", "navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

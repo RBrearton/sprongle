@@ -1,0 +1,1935 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Problem set 4 for the third year symmetry and relativity course at Oxford University">
+      
+      
+      
+      
+        <link rel="prev" href="../problem_set_3/">
+      
+      
+        <link rel="next" href="../../b6/problem_set_1/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>B2 problem set 4 - sprongle.com</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#q1-sticky-collision" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="sprongle.com" class="md-header__button md-logo" aria-label="sprongle.com" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            sprongle.com
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              B2 problem set 4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RBrearton/sprongle" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RBrearton/sprongle
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../problem_set_2/" class="md-tabs__link">
+          
+  
+  Teaching
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../oxphys_numerics/introduction/" class="md-tabs__link">
+          
+  
+  Oxphys numerics
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="sprongle.com" class="md-nav__button md-logo" aria-label="sprongle.com" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    sprongle.com
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RBrearton/sprongle" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RBrearton/sprongle
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Teaching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Teaching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B2: Symmetry and relativity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            B2: Symmetry and relativity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem_set_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem_set_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    B2: problem set 4
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    B2: problem set 4
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1-sticky-collision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1: Sticky collision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2-pair-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: Pair production
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3-decay-of-a-particle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q3: Decay of a particle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3: Decay of a particle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part d
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4-motion-in-an-electromagnetic-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q4: Motion in an electromagnetic field
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q4: Motion in an electromagnetic field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5-interactions-between-two-charged-beams-in-a-magnetic-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q5: Interactions between two charged beams in a magnetic field
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q5: Interactions between two charged beams in a magnetic field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6-covariant-generalisation-of-ohms-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q6: Covariant generalisation of Ohm's law
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q6: Covariant generalisation of Ohm's law">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q7-angular-momentum-of-the-electromagnetic-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q7: Angular momentum of the electromagnetic field
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q7: Angular momentum of the electromagnetic field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B6: Condensed matter physics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            B6: Condensed matter physics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b6/problem_set_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B6: problem set 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b6/problem_set_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B6: problem set 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Oxphys numerics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Oxphys numerics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Recently added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rust API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Rust API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/rust_api/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oxphys_numerics/rust_api/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1-sticky-collision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1: Sticky collision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2-pair-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: Pair production
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3-decay-of-a-particle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q3: Decay of a particle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3: Decay of a particle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part d
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4-motion-in-an-electromagnetic-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q4: Motion in an electromagnetic field
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q4: Motion in an electromagnetic field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5-interactions-between-two-charged-beams-in-a-magnetic-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q5: Interactions between two charged beams in a magnetic field
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q5: Interactions between two charged beams in a magnetic field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6-covariant-generalisation-of-ohms-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q6: Covariant generalisation of Ohm's law
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q6: Covariant generalisation of Ohm's law">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q7-angular-momentum-of-the-electromagnetic-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q7: Angular momentum of the electromagnetic field
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q7: Angular momentum of the electromagnetic field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part c
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>B2: problem set 4</h1>
+
+<h2 id="q1-sticky-collision">Q1: Sticky collision</h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>A particle of rest mass <span class="arithmatex">\(m\)</span> and kinetic energy <span class="arithmatex">\(mc^2\)</span> strikes a stationary
+particle of rest mass <span class="arithmatex">\(2m\)</span> and combines with it while still conserving energy
+and momentum. Find the rest mass and speed of the composite particle.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>The incident particle has</p>
+<div class="arithmatex">\[
+E = 4mc^2 \,, ~~~ p^2 c^2 = E^2 - (mc^2)^2 = 15m^2 c^4 \,.
+\]</div>
+<p>Meanwhile, the 4-momentum of the target is <span class="arithmatex">\(\left(2m c, 0\right)\)</span>.
+This means that the final 4-momentum is <span class="arithmatex">\(\left(6m c, p\right)\, ,\)</span> where <span class="arithmatex">\(p = \sqrt{15} m c\)</span>.
+The rest mass of the final particle is then</p>
+<div class="arithmatex">\[
+M_f = \sqrt{(6m)^2 - 15m^2} = \sqrt{21} m
+\]</div>
+<p>The speed is given by</p>
+<div class="arithmatex">\[
+\beta = \frac{p}{E} = \frac{\sqrt{15}}{6}
+\]</div>
+</details>
+<h2 id="q2-pair-production">Q2: Pair production</h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Two photons may collide to produce an electron-positron pair.
+If one photon has energy <span class="arithmatex">\(E_0\)</span> and the other has energy <span class="arithmatex">\(E\, ,\)</span> find the
+threshold value of <span class="arithmatex">\(E\)</span> for this reaction, in terms of <span class="arithmatex">\(E_0\)</span> and the electron
+rest mass <span class="arithmatex">\(m\)</span>.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>momentum conservation <span class="arithmatex">\(P^\mu_0 + P^\mu = P^\mu_+ + P^\mu_-\, ,\)</span> squaring
+both sides (and staying in energy units for convenience), we can evaluate the
+left side in the lab frame, and the right side in the CM frame.
+For the left side, <span class="arithmatex">\(P^\mu_0 = (E_0, E_0)\)</span> and <span class="arithmatex">\(P^\mu = (E, -E)\, ,\)</span> so</p>
+<div class="arithmatex">\[
+P^\mu_0 + P^\mu = (E_0 + E, E_0 - E)
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+(P^\mu_0 + P^\mu)^2 = -4E_0E.
+\]</div>
+<p>On the right side, we have</p>
+<div class="arithmatex">\[
+-4m^2c^4.
+\]</div>
+<p>Therefore</p>
+<p>$$
+E = \frac{m^2c^4}{E_0}.
+$</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>High energy photons of galactic origin pass through the cosmic microwave
+background radiation, which can be regarded as a gas of photons of energy
+<span class="arithmatex">\(2.3 \times 10^{-4} \, \text{eV}\)</span>. Calculate the threshold energy of the
+galactic photons for the production of electron-positron pairs.</p>
+</div>
+<details class="success">
+<summary>Show answer</summary>
+<div class="arithmatex">\[
+E = 1.14 \times 10^{15} \, \text{eV}
+\]</div>
+<p>This is a ridiculously large energy!
+<!-- Note: could make comparison to things like rest mass of small animals --></p>
+</details>
+<h2 id="q3-decay-of-a-particle">Q3: Decay of a particle</h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>A particle with known rest mass <span class="arithmatex">\(M\)</span> and energy <span class="arithmatex">\(E\)</span> decays into two products with
+known rest masses <span class="arithmatex">\(m_1\)</span> and <span class="arithmatex">\(m_2\)</span>. Find the energies <span class="arithmatex">\(E_1\)</span> and <span class="arithmatex">\(E_2\)</span> (in the
+lab frame) of the products, by the following steps:</p>
+</div>
+<h3 id="part-a">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Find the energies <span class="arithmatex">\(E'_1\)</span> and <span class="arithmatex">\(E'_2\)</span> of the products in the CM frame.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>In the CM frame, <span class="arithmatex">\(P^\mu = (Mc, 0)\)</span>.
+From 4-momentum conservation, we have <span class="arithmatex">\(P^\mu_1 = P^\mu - P^\mu_2\, ,\)</span> from which we obtain</p>
+<div class="arithmatex">\[
+-m_1^2 c^2 = -M^2 c^2 - m_2^2 c^2 - 2 P^\mu (P_2)_{\mu} = -M^2 c^2 - m_2^2 c^2 + 2 M E_2
+\]</div>
+<div class="arithmatex">\[
+E'_2 = \frac{1}{2M} \left( -m_1^2 + M^2 + m_2^2 \right) c^2 = \frac{M^2c^2 + m_2^2c^2 - m_1^2 c^2}{2M}
+\]</div>
+<p>and similarly</p>
+<div class="arithmatex">\[
+E'_1 = \frac{M^2c^2 + m_1^2c^2 - m_2^2 c^2}{2M}
+\]</div>
+</details>
+<h3 id="part-b">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Show that the momentum of either decay product in the CM frame is</p>
+<div class="arithmatex">\[
+p = \frac{c}{2M} \left[ (m_1^2 + m_2^2 - M^2)^2 - 4 m_1^2 m_2^2 \right]^{1/2}
+\]</div>
+</div>
+<details class="success">
+<summary>Show answer</summary>
+<div class="arithmatex">\[
+p'^2 = \frac{(E'_1)^2}{c^2} - m_1^2 c^2 = \frac{1}{4M^2} \left[ (m_1^2 + m_2^2 - M^2)^2 - 4 m_1^2 m_2^2 \right] c^2
+\]</div>
+</details>
+<h3 id="part-c">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Find the Lorentz factor and the speed <span class="arithmatex">\(v\)</span> of the CM frame relative to the lab.</p>
+</div>
+<details class="info" open="open">
+<summary>Show answer</summary>
+<p>The Lorentz factor is simply <span class="arithmatex">\(\gamma = \frac{E}{Mc^2}\, ,\)</span> and the speed</p>
+<div class="arithmatex">\[
+\beta = \sqrt{1 - \frac{M^2 c^4}{E^2}}
+\]</div>
+</details>
+<h3 id="part-d">Part d</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Write down, in terms of <span class="arithmatex">\(v\, ,\)</span> <span class="arithmatex">\(\gamma\, ,\)</span> <span class="arithmatex">\(p\, ,\)</span> <span class="arithmatex">\(E'_1\)</span> and <span class="arithmatex">\(E'_2\, ,\)</span> expressions for
+<span class="arithmatex">\(E_1\)</span> and <span class="arithmatex">\(E_2\)</span> when the products are emitted (1) along the line of flight, and
+(2) at right angles to the line of flight in the CM frame."""</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>To solve this problem, we just Lorentz transform from the CM frame.</p>
+<p>(1) Along the line of flight,</p>
+<div class="arithmatex">\[
+E_1 = \gamma \left( E'_1 - \beta p'_1 c \right)
+\]</div>
+<div class="arithmatex">\[
+E_2 = \gamma \left( E'_2 + \beta p'_2 c \right)
+\]</div>
+<p>(2) emitted at right angles to the CM line of flight, <span class="arithmatex">\(p'_\parallel = 0\, ,\)</span> so</p>
+<div class="arithmatex">\[
+E_1 = \gamma E'_1 \quad \text{and} \quad E_2 = \gamma E'_2.
+\]</div>
+</details>
+<h2 id="q4-motion-in-an-electromagnetic-field">Q4: Motion in an electromagnetic field</h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Consider a particle with mass <span class="arithmatex">\(m\)</span> and charge <span class="arithmatex">\(q\)</span> moving in a constant electric
+field <span class="arithmatex">\(\vec{E} = E \hat{x}\)</span> and magnetic field <span class="arithmatex">\(\vec{B} = B \hat{y}\)</span> in
+an inertial frame (S).</p>
+</div>
+<h3 id="part-a_1">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Consider a frame (S') moving with velocity <span class="arithmatex">\(\vec{v} = v \hat{z}\)</span> relative
+to (S). Write the fields <span class="arithmatex">\(\vec{E'}\)</span> and <span class="arithmatex">\(\vec{B'}\)</span> in this frame in terms
+of <span class="arithmatex">\(\vec{E}\, ,\)</span> <span class="arithmatex">\(\vec{B}\, ,\)</span> and <span class="arithmatex">\(\vec{v}\)</span>. Calculate <span class="arithmatex">\(\vec{v}\)</span>
+corresponding to <span class="arithmatex">\(\vec{E'} = 0\)</span> in (S') and show that this leads
+to <span class="arithmatex">\(\vec{B'} = \frac{\vec{B}}{\gamma_v}\, ,\)</span> where
+<span class="arithmatex">\(\gamma_v = \left( 1 - \frac{v^2}{c^2} \right)^{-1/2}\)</span>.
+What condition must the fields satisfy for such a frame to exist?</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>The fields in frame (S') are related to those in frame (S) by the transformations:</p>
+<div class="arithmatex">\[
+\vec{E'}_{\parallel} = \vec{E}_{\parallel}, \quad \vec{E'}_{\perp} = \gamma_v \left( \vec{E}_{\perp} + \vec{v} \times \vec{B} \right),
+\]</div>
+<div class="arithmatex">\[
+\vec{B'}_{\parallel} = \vec{B}_{\parallel}, \quad \vec{B'}_{\perp} = \gamma_v \left( \vec{B}_{\perp} - \frac{\vec{v} \times \vec{E}}{c^2} \right),
+\]</div>
+<p>where the subscripts <span class="arithmatex">\(\parallel\)</span> and <span class="arithmatex">\(\perp\)</span> denote components parallel and perpendicular to the velocity <span class="arithmatex">\(\vec{v}\, ,\)</span> respectively. Since <span class="arithmatex">\(\vec{v}\)</span> and <span class="arithmatex">\(\vec{E}\)</span> are orthogonal, <span class="arithmatex">\(\vec{E}_{\parallel}\)</span> and thus <span class="arithmatex">\(\vec{E'}_{\parallel}\)</span> equal zero. For <span class="arithmatex">\(\vec{E'}_{\perp}\)</span> to vanish, we require <span class="arithmatex">\(\vec{E}_{\perp} + \vec{v} \times \vec{B} = \vec{E} + \vec{v} \times \vec{B} = 0\, ,\)</span> which gives:</p>
+<div class="arithmatex">\[
+\vec{v} = \frac{\vec{E} \times \vec{B}}{B^2} = \frac{\vec{E}}{B} \hat{z}.
+\]</div>
+<p>Since <span class="arithmatex">\(\vec{B}_{\parallel}\, ,\)</span> and thus <span class="arithmatex">\(\vec{B'}_{\parallel}\, ,\)</span> equal zero, we have:</p>
+<div class="arithmatex">\[
+\vec{B'}_{\perp} = \vec{B'}_{\perp} = \gamma_v \left( \hat{B} \vec{B} - \frac{\vec{v} \times \vec{E}}{c^2} \right) = \gamma_v \left( \vec{B} - \frac{B v^2}{c^2} \right) \hat{y} = \frac{\vec{B}}{\gamma_v}.
+\]</div>
+<p>This transformation is only possible if <span class="arithmatex">\(v &lt; c\, ,\)</span> which requires <span class="arithmatex">\(\frac{E}{B} &lt; c\)</span>.</p>
+<p>Another way to approach this is by considering the invariance of the electromagnetic field's Lagrangian density, <span class="arithmatex">\(\mathcal{L}\)</span>. It is given by:</p>
+<div class="arithmatex">\[
+\mathcal{L} = \frac{\epsilon_0 E^2}{2} - \frac{B^2}{2 \mu_0}.
+\]</div>
+<p>If there exists a frame in which there is only a magnetic field, then <span class="arithmatex">\(\mathcal{L} &lt; 0\)</span>. This condition ensures that in any other frame, <span class="arithmatex">\(\frac{E}{B} &lt; c\)</span>.</p>
+</details>
+<h3 id="part-b_1">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>We assume this condition is satisfied.
+The particle has a velocity <span class="arithmatex">\(u\)</span> in frame (S) with no initial component along the <span class="arithmatex">\(y\)</span>-axis.
+Write the equation of the trajectory in frame (S') and, from this, establish the parametric equations for the trajectory in (S), using the time <span class="arithmatex">\(t'\)</span> in (S') as the parameter.
+Discuss the nature of the trajectory.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>In frame (S'), the particle is subject only to the magnetic field <span class="arithmatex">\(\vec{B'}\)</span>.
+Its initial velocity in frame (S) is <span class="arithmatex">\(\vec{u}_0 = u_{0x} \hat{x} + u_{0z} \hat{z}\, ,\)</span>
+which corresponds to <span class="arithmatex">\(u_{0x} \hat{x} + u'_{0z} \hat{z}\)</span> in (S'), as the velocity
+components along <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> are preserved.
+Thus, in frame (S'), as shown in Question 4 of Problem Set 3, the particle moves with uniform velocity along circular trajectories in the <span class="arithmatex">\((x', z')\)</span>-plane:</p>
+<div class="arithmatex">\[
+x' = A \cos \omega' t', \quad y' = 0, \quad z' = A \sin \omega' t',
+\]</div>
+<p>with <span class="arithmatex">\(\omega' = \left| q \right| B' / (\gamma_{v'} m)\, ,\)</span>
+where <span class="arithmatex">\(\gamma_{v'} = \left( 1 - \frac{u^2}{c^2} \right)^{-1/2}\)</span> and <span class="arithmatex">\(u'\)</span> is the
+(constant) velocity of the particle in frame (S'). We have <span class="arithmatex">\(A^2 \omega'^2 = u'^2\)</span>.
+Transforming to frame (S), we obtain:</p>
+<div class="arithmatex">\[
+x = x' = A \cos \omega' t', \quad y = y' = 0,
+\]</div>
+<div class="arithmatex">\[
+z = \gamma_v \left( z' + v t' \right) = \gamma_v \left( A \sin \omega' t' + v t' \right).
+\]</div>
+<p>Without the electric field <span class="arithmatex">\(\vec{E}\, ,\)</span> the trajectory would simply be a circle
+in the <span class="arithmatex">\((x, z)\)</span> plane.
+However, the presence of <span class="arithmatex">\(\vec{E}\)</span> introduces a drift of the particle with
+velocity <span class="arithmatex">\(\vec{v} \times \vec{E} \times \vec{B} / B^2\)</span>.</p>
+</details>
+<h3 id="part-c_1">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Assume now that the condition required for the existence of a frame
+with <span class="arithmatex">\(\vec{E'} = 0\)</span> is not satisfied. Instead, demonstrate that there exists a
+frame (S') where <span class="arithmatex">\(\vec{B'} = 0\)</span>. Describe the motion of a particle that is
+initially at rest in this frame (S').</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p class="annotate">In this case, we have <span class="arithmatex">\(E/B &gt; c\)</span>.
+Looking at the magnetic field transformations(1), for <span class="arithmatex">\(\vec{B'}_{\perp}\)</span> to vanish, the condition <span class="arithmatex">\(\vec{B'}_{\perp} - \vec{v} \times \vec{E}/c^2 = \vec{B} - \vec{v} \times \vec{E}/c^2 = 0\)</span> must hold. This leads to:</p>
+<ol>
+<li>
+<p><h2> Magnetic field transformations </h2>
+    The way that the magnetic field transforms.
+    We can get this by Lorentz transforming the Faraday tensor; I should include this in some separate notes and reference it here <img alt="😅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f605.svg" title=":sweat_smile:" /></p>
+<div class="arithmatex">\[
+\vec{B'}_{\parallel} = \vec{B}_{\parallel}, \quad \vec{B'}_{\perp} = \gamma_v \left( \vec{B}_{\perp} - \frac{\vec{v} \times \vec{E}}{c^2} \right),
+\]</div>
+</li>
+</ol>
+<div class="arithmatex">\[
+\vec{v} = \frac{c^2 \vec{E} \times \vec{B}}{E^2} = \frac{c^2 \vec{B}}{E} \hat{z}.
+\]</div>
+<p class="annotate">Since <span class="arithmatex">\(E/B &gt; c\)</span>, we verify that <span class="arithmatex">\(v &lt; c\)</span>.
+Now using the electric field transformations(1), the electric field in frame (S') is given as:</p>
+<ol>
+<li>
+<p><h2> Electric field transformations </h2>
+    The way that the electric field transforms.
+    We can get this by Lorentz transforming the Faraday tensor; I should include this in some separate notes and reference it here <img alt="😅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f605.svg" title=":sweat_smile:" /></p>
+<div class="arithmatex">\[
+\vec{E'}_{\parallel} = \vec{E}_{\parallel}, \quad \vec{E'}_{\perp} = \gamma_v \left( \vec{E}_{\perp} + \vec{v} \times \vec{B} \right),
+\]</div>
+</li>
+</ol>
+<div class="arithmatex">\[
+\vec{E'}_{\perp} = \vec{E}_{\perp} = \gamma_v \left( \vec{E} - \frac{\vec{E} v^2}{c^2} \right) \hat{x} = \frac{\vec{E}}{\gamma_v}.
+\]</div>
+<p>In frame (S'), the particle is subject only to the constant electric field <span class="arithmatex">\(\vec{E'}\)</span>. As shown in Question 4 of Problem Set 3, the particle undergoes hyperbolic motion in the <span class="arithmatex">\((x', c t')\)</span>-spacetime. If the particle is initially at rest at the origin, its motion is described as:</p>
+<div class="arithmatex">\[
+x' = \frac{c^2}{\alpha'} \left( \sqrt{1 + \frac{\alpha'^2 t'^2}{c^2}} - 1 \right),
+\]</div>
+<div class="arithmatex">\[
+y' = 0, \quad z' = 0,
+\]</div>
+<p>where <span class="arithmatex">\(\alpha' = \frac{q \vec{E'}}{m}\)</span>.</p>
+<p>Transforming this motion back into frame (S), we obtain:</p>
+<div class="arithmatex">\[
+x = x', \quad y = y' = 0, \quad z = \gamma_v v t'.
+\]</div>
+</details>
+<h2 id="q5-interactions-between-two-charged-beams-in-a-magnetic-field">Q5: Interactions between two charged beams in a magnetic field</h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>A pair of parallel particle beams separated by a distance <span class="arithmatex">\(d\)</span> have the same uniform charge per unit length <span class="arithmatex">\(\lambda\)</span>. In the laboratory frame, a magnetic field is applied with a direction and strength just sufficient to overcome the repulsion between the beams, so that they both propagate in a straight line at constant speed <span class="arithmatex">\(v\)</span>. Find the size <span class="arithmatex">\(B\)</span> of this magnetic field, by both of the following methods:</p>
+</div>
+<h3 id="part-a_2">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Do the whole calculation in the lab frame.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>The electric field of one line charge at the other is <span class="arithmatex">\(\frac{\lambda}{2 \pi \epsilon_0 d}\)</span>. The magnetic field of one line at the other is <span class="arithmatex">\(B_\lambda = \mu_0 \lambda v / 2 \pi d\)</span>. The configuration is such that the electric force is repulsive, and the magnetic force is attractive, so the total force on any given charge in one of the beams is</p>
+<div class="arithmatex">\[
+f = qE - qv \left( B_\lambda + B \right)
+\]</div>
+<p>(since velocity is perpendicular to the field).
+Setting <span class="arithmatex">\(f = 0\)</span> gives</p>
+<div class="arithmatex">\[
+B = \frac{E}{v} - B_\lambda = \frac{\lambda}{2 \pi \epsilon_0 d v} \left( 1 - \frac{v^2}{c^2} \right).
+\]</div>
+</details>
+<h3 id="part-b_2">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Start with a calculation of the force exerted by either beam on a particle in the
+other, in the rest frame of the beams. Transform this force to the laboratory frame
+and hence deduce the required <span class="arithmatex">\(B\)</span> field in that frame. What form does the
+externally applied field take in the rest frame of the beams?</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>In the rest frame, the charge per unit length is <span class="arithmatex">\(\lambda_0 = \lambda / \gamma\)</span> (i.e., smaller—in the other frame it gets enhanced by contraction).
+The distance between the beams is the same. The force on a charge in either beam is</p>
+<div class="arithmatex">\[
+\frac{q \lambda}{\gamma 2 \pi \epsilon_0 d} + q E_0 = 0
+\]</div>
+<p>where <span class="arithmatex">\(E_0\)</span> is the electric part of the applied field.
+This gives the size of <span class="arithmatex">\(E_0\)</span>. Now transform it to the other frame: it there gives <span class="arithmatex">\(B\)</span> and also an electric field.
+However, the latter is zero, so the applied field must include a magnetic contribution <span class="arithmatex">\(B_0\)</span> in the rest frame.
+From the field transformation we then have</p>
+<div class="arithmatex">\[
+\gamma (E_0 + v B_0) = 0, \quad B = \gamma \left( B_0 + \frac{v E_0}{c^2} \right)
+\]</div>
+<p>where we used that everything is mutually perpendicular. Using the first, <span class="arithmatex">\(B_0 = -E_0 / v\)</span>; putting this in the second we have</p>
+<div class="arithmatex">\[
+B = \gamma \frac{-E_0}{v} \left( 1 - \frac{v^2}{c^2} \right) = \frac{\lambda}{2 \pi \epsilon_0 d v} \left( 1 - \frac{v^2}{c^2} \right)
+\]</div>
+<p>which is the same result as before.</p>
+</details>
+<h2 id="q6-covariant-generalisation-of-ohms-law">Q6: Covariant generalisation of Ohm's law</h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Consider a conductor moving with velocity <span class="arithmatex">\(\vec{v}\)</span> relative to an inertial reference frame (S).
+The covariant generalisation of Ohm's law is expressed as:</p>
+<div class="arithmatex">\[
+J^\mu + \frac{1}{c^2} (U_\nu J^\nu) U^\mu = \sigma_0 F^{\mu \nu} U_\nu,
+\]</div>
+<p>where <span class="arithmatex">\(U^\mu = (\gamma_v c, \gamma_v \vec{v})\)</span> is the 4-velocity of the conductor and <span class="arithmatex">\(J^\mu = (\rho c, \vec{j})\)</span> is the 4-current of the charges in the conductor, with <span class="arithmatex">\(\rho\)</span> and <span class="arithmatex">\(\vec{j}\)</span> representing the charge density and current as measured in (S).
+The tensor <span class="arithmatex">\(F^{\mu \nu}\)</span> describes the electromagnetic field in frame (S) and <span class="arithmatex">\(\sigma_0\)</span> is a scalar which is invariant.</p>
+</div>
+<h3 id="part-a_3">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Show that this equation reduces to <span class="arithmatex">\(j_0 = \sigma_0 E_0\)</span> in the rest frame of the conductor, where the subscript '0' denotes quantities in that frame.
+This establishes <span class="arithmatex">\(\sigma_0\)</span> as the conductivity in the rest frame.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p class="annotate">In the rest frame of the conductor, the 4-velocity is <span class="arithmatex">\(U^\mu = (c, 0)\)</span> and the 4-current is <span class="arithmatex">\(J^\nu = (\rho_0 c, j_0)\)</span>. Consequently, <span class="arithmatex">\(U_\nu J^\nu = - \rho_0 c^2\)</span> and <span class="arithmatex">\(F^{\mu\nu} U_\nu = - c F^{\mu 0}\)</span>.
+Now using the expression for Ohm's law(1), and setting <span class="arithmatex">\(\mu = 0\)</span> gives <span class="arithmatex">\(\rho_0 c - \rho_0 c = 0\)</span>.</p>
+<ol>
+<li>
+<p><h2> Ohm's law </h2>
+    The covariant generalisation of Ohm's law given in the problem</p>
+<div class="arithmatex">\[
+J^\mu + \frac{1}{c^2} (U_\nu J^\nu) U^\mu = \sigma_0 F^{\mu \nu} U_\nu
+\]</div>
+</li>
+</ol>
+<p>For <span class="arithmatex">\(\mu = i\)</span>, we obtain</p>
+<div class="arithmatex">\[
+j_{0,i} = - \sigma_0 c F^{i0}.
+\]</div>
+<p>Since <span class="arithmatex">\(F^{i0} = - E_i / c\)</span>, this simplifies to</p>
+<div class="arithmatex">\[
+j_0 = \sigma_0 E,
+\]</div>
+<p>recovering the familiar form of Ohm's law in the rest frame and confirming that <span class="arithmatex">\(\sigma_0\)</span> is the conductivity in this frame.</p>
+</details>
+<h3 id="part-b_3">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Show that the current in frame (S) is given by:</p>
+<div class="arithmatex">\[
+\vec{j} = \rho v + \gamma_v \sigma_0 \left[ \vec{E} + \vec{v} \times \vec{B} - \frac{\vec{v} (\vec{v} \cdot \vec{E})}{c^2} \right].
+\]</div>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p class="annotate">Starting with the general form of Ohm's law(1), we find:</p>
+<ol>
+<li>
+<p><h2> Ohm's law </h2>
+    The covariant generalisation of Ohm's law given in the problem</p>
+<div class="arithmatex">\[
+J^\mu + \frac{1}{c^2} (U_\nu J^\nu) U^\mu = \sigma_0 F^{\mu \nu} U_\nu
+\]</div>
+</li>
+</ol>
+<div class="arithmatex">\[
+\rho c + \frac{1}{c^2} \left( -\gamma_\nu \rho c^2 + \gamma_\nu \vec{v} \cdot \vec{j} \right) \gamma_\nu c = \sigma_0 \gamma_\nu \frac{\vec{v} \cdot \vec{E}}{c}.
+\]</div>
+<p>For <span class="arithmatex">\(\mu = i\)</span>, this gives:</p>
+<div class="arithmatex">\[
+j_i + \frac{1}{c^2} \left( -\gamma_\nu \rho c^2 + \gamma_\nu \vec{v} \cdot \vec{j} \right) \gamma_\nu v_i = \sigma_0 \gamma_\nu v_i \left[ \frac{E_i}{c} + (\vec{v} \times \vec{B})_i \right],
+\]</div>
+<p>where the equation with <span class="arithmatex">\(\mu = 0\)</span> is used to express the second term on the left-hand side in terms of <span class="arithmatex">\(\vec{E}\)</span>. This can be rewritten as:</p>
+<div class="arithmatex">\[
+j_i = \rho v_i + \gamma_\nu \sigma_0 \left[ E_i + (\vec{v} \times \vec{B})_i - \frac{\vec{v} \cdot \vec{E}}{c^2} v_i \right].
+\]</div>
+</details>
+<h3 id="part-c_2">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Assume the conductor is uncharged in its rest frame, meaning <span class="arithmatex">\(\rho_0 = 0\)</span>. Derive expressions for <span class="arithmatex">\(\rho\)</span> and <span class="arithmatex">\(\vec{j}\)</span> in frame (S) in terms of <span class="arithmatex">\(\vec{v}\)</span>, <span class="arithmatex">\(\vec{E}\)</span>, and <span class="arithmatex">\(\vec{B}\)</span>.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p class="annotate">In the rest frame, <span class="arithmatex">\(U_\nu J^\nu = - \rho_0 c^2 = 0\)</span>, which is an invariant.
+As a result, Ohm's Law(1) simplifies to <span class="arithmatex">\(J^\mu = \sigma_0 F^{\mu\nu} U_\nu\)</span>.
+We can therefore use the equations derived in part (b) for <span class="arithmatex">\(\mu = 0\)</span> and <span class="arithmatex">\(\mu = i\)</span>, excluding the second term on the left-hand side.
+This gives:</p>
+<ol>
+<li>
+<p><h2> Ohm's law </h2>
+    The covariant generalisation of Ohm's law given in the problem</p>
+<div class="arithmatex">\[
+J^\mu + \frac{1}{c^2} (U_\nu J^\nu) U^\mu = \sigma_0 F^{\mu \nu} U_\nu
+\]</div>
+</li>
+</ol>
+<div class="arithmatex">\[
+\rho = \sigma_0 \gamma_\nu \frac{\vec{v} \cdot \vec{E}}{c^2} \,, ~~~ \vec{j} = \sigma_0 \gamma_\nu \left( \vec{E} + \vec{v} \times \vec{B} \right).
+\]</div>
+</details>
+<h2 id="q7-angular-momentum-of-the-electromagnetic-field">Q7: Angular momentum of the electromagnetic field</h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>The momentum density of the electromagnetic field is given by <span class="arithmatex">\(\vec{g} = \frac{\vec{S}}{c^2}\)</span>, where <span class="arithmatex">\(\vec{S} = \frac{\vec{E} \times \vec{B}}{\mu_0}\)</span> is the Poynting vector.
+The angular momentum density of the field can thus be defined as:</p>
+<div class="arithmatex">\[
+\vec{L} = \vec{r} \times \vec{g}.
+\]</div>
+<p>This is related to the third-rank tensor:</p>
+<div class="arithmatex">\[
+M^{\alpha\beta\gamma} = X^\gamma T^{\alpha\beta} - X^\beta T^{\alpha\gamma},
+\]</div>
+<p>where <span class="arithmatex">\(T^{\alpha\beta}\)</span> is the stress-energy tensor.</p>
+</div>
+<h3 id="part-a_4">Part a</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Show that <span class="arithmatex">\(\partial_\alpha M^{\alpha\beta\gamma} = 0\)</span> (note that this equality would not hold if <span class="arithmatex">\(T^{\alpha\beta}\)</span> were not symmetric).</p>
+</div>
+<!-- TODO: ELABORATE ON "Using $\partial_\alpha T^{\alpha\beta}=..." -->
+<!-- TODO: discuss derivation of stress-energy density from Lagrangians. -->
+
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>We have:</p>
+<div class="arithmatex">\[
+\partial_\alpha M^{\alpha\beta\gamma} = X^\gamma \partial_\alpha T^{\alpha\beta} + T^{\gamma\beta} - X^\beta \partial_\alpha T^{\alpha\gamma} - T^{\beta\gamma}.
+\]</div>
+<p>Using <span class="arithmatex">\(\partial_\alpha T^{\alpha\beta} = 0\)</span> and <span class="arithmatex">\(T^{\beta\gamma} = T^{\gamma\beta}\)</span>, we obtain <span class="arithmatex">\(\partial_\alpha M^{\alpha\beta\gamma} = 0\)</span>.
+This calculation demonstrates that the symmetry of <span class="arithmatex">\(T^{\alpha\beta}\)</span> is essential for <span class="arithmatex">\(\partial_\alpha M^{\alpha\beta\gamma} = 0\)</span> to hold, which was a key motivation for constructing a symmetric stress-energy tensor.</p>
+</details>
+<h3 id="part-b_4">Part b</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Rewrite the equation <span class="arithmatex">\(\partial_\alpha M^{\alpha ij} = 0\)</span>, where <span class="arithmatex">\(i, j = 1, \dots, 3\)</span>, in terms of <span class="arithmatex">\(\vec{L}\)</span> and the stress exerted by the electromagnetic field.
+Recall that the stress on a surface with a normal in the <span class="arithmatex">\(k\)</span>-direction is given by <span class="arithmatex">\(T(k) = - \sigma_{ik} \hat{x}_i - \sigma_{jk} \hat{x}_j - \sigma_{kk} \hat{x}_k\)</span>, and that <span class="arithmatex">\(\sigma_{ij}\)</span> is symmetric.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>The components of <span class="arithmatex">\(M^{\alpha ij}\)</span> are:</p>
+<div class="arithmatex">\[
+M^{0ij} = X^j T^{0i} - X^i T^{0j} = c x_j g_i - c x_i g_j = - c (\vec{r} \times \vec{g})_k = - c L_k,
+\]</div>
+<div class="arithmatex">\[
+M^{kij} = X^j T^{k i} - X^i T^{k j} = - x_j \sigma_{ki} + x_i \sigma_{kj}.
+\]</div>
+<p>Substituting into the equation <span class="arithmatex">\(\partial_\alpha M^{\alpha ij} = 0\)</span> gives:</p>
+<div class="arithmatex">\[
+- \frac{\partial L_k}{\partial t} + \frac{\partial}{\partial x_k} \left( - x_j \sigma_{ki} + x_i \sigma_{kj} \right) = 0.
+\]</div>
+<p>Using the symmetry of <span class="arithmatex">\(\sigma_{ij}\)</span>, the term <span class="arithmatex">\(- x_j \sigma_{ki} + x_i \sigma_{kj}\)</span> can be rewritten as <span class="arithmatex">\(- x_j \sigma_{ik} + x_i \sigma_{jk} = - (\vec{r} \times \vec{T}(k))_k\)</span>.</p>
+<p>Thus, the equation <span class="arithmatex">\(\partial_\alpha M^{\alpha ij} = 0\)</span> is a continuity equation for angular momentum:</p>
+<div class="arithmatex">\[
+\frac{\partial L_k}{\partial t} + \partial_i  (\vec{r} \times \vec{T}(k))_i = 0.
+\]</div>
+<p>Inspired by the fact that the term on the right is a divergence, we can integrate this equation over the entire volume <span class="arithmatex">\(\mathcal{V}\)</span> to find the conservation of the <span class="arithmatex">\(k\)</span>-component of angular momentum:</p>
+<div class="arithmatex">\[
+\int_{\mathcal{V}} L_k \, dV = \text{constant},
+\]</div>
+<p>where we found that the integral of the divergence term is zero using the divergence theorem; by the definition of the volume <span class="arithmatex">\(\mathcal{V}\)</span>, the electromagnetic field vanishes at the boundaries.</p>
+</details>
+<h3 id="part-c_3">Part c</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Write the equation <span class="arithmatex">\(\partial_\alpha M^{\alpha 0i} = 0\)</span>, for <span class="arithmatex">\(i = 1 \dots 3\)</span>, and show that it leads to:</p>
+<div class="arithmatex">\[
+\frac{d\vec{R}}{dt} = \frac{c^2 \vec{G}}{E},
+\]</div>
+<p>where <span class="arithmatex">\(\vec{R}\)</span> is the coordinate of the center of mass of the electromagnetic field, defined by:</p>
+<div class="arithmatex">\[
+\vec{R} \int_{\mathcal{V}} \mathcal{E} \, dV = \int_{\mathcal{V}} \vec{r} \mathcal{E} \, dV.
+\]</div>
+<p>Here, <span class="arithmatex">\(\mathcal{E}\)</span> is the electromagnetic energy density, and <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(\vec{G}\)</span> are the total electromagnetic energy and momentum, respectively.</p>
+</div>
+<details class="info" open="open">
+<summary>Show working</summary>
+<p>Integrating <span class="arithmatex">\(\partial_\alpha M^{\alpha 0i} = 0\)</span> over the entire volume <span class="arithmatex">\(\mathcal{V}\)</span> gives:</p>
+<div class="arithmatex">\[
+\int_{\mathcal{V}} \partial_t M^{00i} = 0,
+\]</div>
+<p>since the integral of the divergence term vanishes. We have:</p>
+<div class="arithmatex">\[
+M^{00i} = X^i T^{00} - X^0 T^{0i} = x_i \mathcal{E} - c^2 t g_i.
+\]</div>
+<p>Integrating this over the volume gives: <span class="arithmatex">\(R_i \mathcal{E} - c^2 t G_i\)</span>. Taking the time derivative yields:</p>
+<div class="arithmatex">\[
+\frac{d \vec{R}}{dt} = \frac{c^2 \vec{G}}{\mathcal{E}}.
+\]</div>
+<p>Note: This result is analogous to the case of a system of particles, where the velocity of the center of momentum is given by <span class="arithmatex">\(\vec{v}_{\text{cm}} = \frac{p_{\text{total}} c^2}{E_{\text{total}}}\)</span>.</p>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+<script src="https://giscus.app/client.js" data-repo="rbrearton/sprongle" data-repo-id="R_kgDONS-C0A"
+    data-category="Announcements" data-category-id="DIC_kwDONS-C0M4Cla9H" data-mapping="title" data-strict="0"
+    data-reactions-enabled="1" data-emit-metadata="1" data-input-position="top" data-theme="preferred_color_scheme"
+    data-lang="en" crossorigin="anonymous" async>
+    </script>
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../problem_set_3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: B2: problem set 3">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                B2: problem set 3
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../b6/problem_set_1/" class="md-footer__link md-footer__link--next" aria-label="Next: B6: problem set 1">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                B6: problem set 1
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Richard Brearton
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.path", "content.code.copy", "toc.follow", "navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
