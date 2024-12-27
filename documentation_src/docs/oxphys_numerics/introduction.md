@@ -5,6 +5,8 @@ description: Introduction to the `oxphys_numerics` python package
 status: new
 ---
 
+***`oxphys_numerics` is under active development. This documentation is a work in progress.***
+
 `oxphys_numerics` is a python package that provides general purpose tools for numerical work in python.
 The focuses of the package are:
 
